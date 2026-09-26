@@ -8,6 +8,15 @@ This initial release documents the project architecture described by the author.
 
 The architecture records the reported build. Exact component models, dimensions, pin assignments, power arrangements and calibration values remain to be confirmed. Any newly recreated implementation will be identified as a reconstruction and validated separately.
 
+## Build notes
+
+The current component choices are a DFRobot/OYMotion SEN0240 dry-electrode EMG sensor and a classic Arduino Nano. The owned servos are generic units advertised as 25 kg·cm with 180° travel; their exact model is still unknown. DS3225 specifications are used only as a documented reference for supply and torque calculations.
+
+- [Bill of materials](BOM.md)
+- [Servo torque and travel calculations](SERVO-SIZING.md)
+- [How to measure tendon force](TENDON-TEST.md)
+- [Remaining work](TODO.md)
+
 ## Architecture at a glance
 
 ```mermaid
