@@ -10,6 +10,10 @@
 - Reference rectangular servo bodies have zero volume intersection with the carrier. This excludes horns, ears, connectors, ties and actual manufacturing tolerances.
 - Wiring diagram and CAD preview images rendered and visually inspected.
 
+- Revision B integrated base and lid pass valid-single-solid and watertight-positive-volume mesh checks. Ten electronic/battery/switch envelopes have no detected intersection with the base, lid or each other. Base/lid fit and servo/spool-to-base clearance checks pass. See `cad/integration_checks.json` and the scope limits in `cad/INTEGRATION.md`.
+
+- Three optional fit coupons pass single-solid and watertight-positive-volume checks; see `cad/coupon_checks.json`.
+
 ## Not performed
 
 No board upload, on-device timing measurement, real EMG capture, servo load/temperature/current test, physical print fit, structural analysis, grip test or wearable assessment has been performed. No clinical or production acceptance is claimed. BOM prices are planning allowances, not a completed set of supplier quotes.
@@ -23,6 +27,8 @@ c++ -std=c++11 tests/control_test.cpp -o /tmp/control_test
 c++ -std=c++11 tests/filter_test.cpp firmware/ProstheticHand/EMGFilters.cpp -o /tmp/filter_test
 /tmp/filter_test
 python cad/build.py
+python cad/integrate.py
+python cad/fit_coupons.py
 python docs/draw_wiring.py
 python docs/make_bom.py
 ```

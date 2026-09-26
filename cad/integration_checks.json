@@ -1,0 +1,168 @@
+{
+  "integrated_base": {
+    "size_mm": [
+      196.0,
+      110.0,
+      38.0
+    ],
+    "watertight": true,
+    "volume_mm3": 155020.4797191388
+  },
+  "electronics_lid": {
+    "size_mm": [
+      120.0,
+      110.0,
+      5.000000000000007
+    ],
+    "watertight": true,
+    "volume_mm3": 39474.321587857026
+  },
+  "component_collisions": [],
+  "components": {
+    "Nano": {
+      "size": [
+        45,
+        18,
+        19
+      ],
+      "centre": [
+        70,
+        31
+      ],
+      "z": 7,
+      "source": "Arduino outline; installed height assumed",
+      "color": "#26888b"
+    },
+    "EMG": {
+      "size": [
+        35,
+        22,
+        10
+      ],
+      "centre": [
+        117,
+        31
+      ],
+      "z": 7,
+      "source": "DFRobot outline; component height assumed",
+      "color": "#2c9790"
+    },
+    "servo_regulator": {
+      "size": [
+        40.6,
+        20.3,
+        7.6
+      ],
+      "centre": [
+        68,
+        0
+      ],
+      "z": 7,
+      "source": "Pololu published assembled envelope, excluding added connectors",
+      "color": "#5264bb"
+    },
+    "logic_regulator": {
+      "size": [
+        12.7,
+        10.2,
+        4
+      ],
+      "centre": [
+        104,
+        0
+      ],
+      "z": 7,
+      "source": "Pololu outline; 4 mm height allowance",
+      "color": "#5264bb"
+    },
+    "battery": {
+      "size": [
+        70,
+        32,
+        22
+      ],
+      "centre": [
+        82,
+        -32
+      ],
+      "z": 7,
+      "source": "Assumed protected pack envelope; no exact pack selected",
+      "color": "#d9a54b"
+    },
+    "fuse_holder": {
+      "size": [
+        14,
+        28,
+        12
+      ],
+      "centre": [
+        135,
+        -32
+      ],
+      "z": 7,
+      "source": "Assumed insulated inline holder",
+      "color": "#ba7867"
+    },
+    "distribution": {
+      "size": [
+        12,
+        20,
+        14
+      ],
+      "centre": [
+        140,
+        0
+      ],
+      "z": 7,
+      "source": "Assumed insulated soldered distribution block",
+      "color": "#ba7867"
+    },
+    "capacitor": {
+      "size": [
+        10,
+        10,
+        20
+      ],
+      "centre": [
+        123,
+        0
+      ],
+      "z": 7,
+      "source": "Assumed 1000 uF radial capacitor envelope",
+      "color": "#ba7867"
+    },
+    "main_switch": {
+      "size": [
+        16,
+        20,
+        20
+      ],
+      "centre": [
+        145,
+        31
+      ],
+      "z": 18,
+      "source": "Assumed 12 mm panel-bushing switch; body below lid",
+      "color": "#a34655"
+    },
+    "arm_switch": {
+      "size": [
+        10,
+        10,
+        12
+      ],
+      "centre": [
+        145,
+        -14
+      ],
+      "z": 26,
+      "source": "Assumed 6 mm panel-bushing switch; body below lid",
+      "color": "#a34655"
+    }
+  },
+  "overall_envelope_mm": [
+    196,
+    110,
+    59.5
+  ]
+}

@@ -15,7 +15,9 @@ One servo drives the thumb, one drives the index and middle fingers, and one dri
 - [Checks performed](VALIDATION.md)
 - [What remains](TODO.md)
 
-![Three-servo carrier](cad/exports/carrier_preview.png)
+![Integrated forearm layout](cad/exports/integrated_layout.png)
+
+[Revision B CAD and assembly details](cad/INTEGRATION.md): three motors, Nano, EMG signal board, two regulators, a reference battery pocket and a removable switch-bearing cover. Nominal pack size is 196 × 110 × 59.5 mm; battery and switch dimensions remain assumptions.
 
 ## Status
 

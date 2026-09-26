@@ -1,0 +1,29 @@
+{
+  "servo_fit_coupon": {
+    "size_mm": [
+      54.0,
+      38.0,
+      15.0
+    ],
+    "watertight": true,
+    "volume_mm3": 12335.999988555908
+  },
+  "nut_fit_coupon": {
+    "size_mm": [
+      16.0,
+      16.0,
+      4.0
+    ],
+    "watertight": true,
+    "volume_mm3": 939.6612656292208
+  },
+  "switch_fit_coupon": {
+    "size_mm": [
+      44.0,
+      26.0,
+      3.0
+    ],
+    "watertight": true,
+    "volume_mm3": 2991.1432660453443
+  }
+}

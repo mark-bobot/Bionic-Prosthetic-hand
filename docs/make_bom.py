@@ -3,24 +3,26 @@ from pathlib import Path
 rows=[
 ('Phoenix mechanical supplies',1,21.52,'Screws, return bands, hand tendons, padding, fingertip grips and hand straps; existing five-hand purchase average'),
 ('Phoenix printed parts',1,8,'One hand set; filament allowance, scale dependent'),
-('Printed actuator add-ons',1,5,'Carrier ×1, spools ×3, equalisers ×2, fairleads ×3'),
+('Printed actuator add-ons',1,9,'Integrated base ×1, lid ×1, spools ×3, equalisers ×2, fairleads ×3'),
 ('25 kg·cm positional servo, 180°',3,12,'Owned generic units; DS3225 only a reference; verify before purchasing'),
 ('Classic Arduino Nano',1,25,'A000005 / ATmega328P, 5 V; selected controller'),
 ('DFRobot SEN0240 EMG kit',1,45,'Owned; kit includes dry electrode, signal board, belt and leads'),
 ('Pololu D24V90F5 servo regulator',1,32,'Fixed 5 V; verify thermal/current headroom in enclosure'),
 ('Pololu D24V5F5 logic regulator',1,10,'Fixed 5 V / 500 mA class'),
-('Protected 2S battery pack',1,18,'7.4 V nominal, 1,000 mAh; ≥10 A discharge, balancing/undervoltage protection; dimensions to fit separate pouch'),
+('Protected 2S battery pack',1,18,'7.4 V nominal, 1,000 mAh; ≥10 A discharge, balancing/undervoltage protection; reference CAD pocket assumes a 70 × 32 × 22 mm pack'),
 ('Matching 2S charger',1,20,'Match chemistry and pack connector; off-device charging'),
 ('Metal servo horn',3,3,'Spline must match actual servo; two holes must match spool slots'),
 ('M2 bolts, nuts and washers',1,2,'Six bolts plus six nuts/washers for three horns; length selected after horn fit'),
 ('4.8 mm cable ties',6,.10,'Three servo restraints plus three fairlead restraints; retain spares'),
 ('25 mm carrier straps',2,2,'Separate from original hand straps; length to suit fixture/cuff'),
-('Carrier foam pad',1,2,'76 × 110 mm starting footprint; supplementary to hand padding'),
+('Carrier foam pad',1,2,'196 × 110 mm starting footprint; supplementary to hand padding'),
+('M3 lid hardware',1,2,'Four M3 × 45 screws, nuts and washers; shorten and deburr screws to fit 41 mm stack'),
+('Insulating mounting pads and battery strap',1,3,'Nominal 1 mm board mounting layer; 10 mm soft battery strap'),
 ('PTFE liner',1,2,'2 mm OD / 1 mm ID, 0.5 m stock; cut guide inserts as needed'),
 ('Additional braided tendon',1,2,'2 m allowance for actuator routing, nominal 0.5–0.8 mm; check knots and creep'),
-('Main switch',1,3,'≥10 A DC at battery voltage'),
+('Main switch',1,3,'≥10 A DC at battery voltage; CAD assumes 12 mm bushing and 16 × 20 × 20 mm body'),
 ('7.5 A fuse and holder',1,3,'Fuse at battery; verify inrush and wire protection in testing'),
-('Arm toggle switch',1,1,'Low-current SPST, D2 to GND'),
+('Arm toggle switch',1,1,'Low-current SPST, D2 to GND; CAD assumes 6 mm bushing, 10 × 10 × 12 mm body'),
 ('Power wiring and connectors',1,6,'18 AWG main leads, keyed ≥10 A connectors, distribution and insulation'),
 ('Signal wiring / small perfboard',1,3,'Short connections, strain relief, no breadboard motor-power path'),
 ('Capacitors',1,1,'1,000 µF 10 V; 10 µF 10 V; 100 nF ceramic'),
@@ -54,7 +56,7 @@ text+='''
 
 No display is included in this simple version. The Nano LED indicates calibration/fault status; a screen would add code, wiring and space without helping the first mechanical test. A soldering iron, multimeter, force gauge, ruler/calipers, printer and suitable battery charger are needed; the charger is costed above, other tools are excluded.
 
-The battery needs a separate secured pouch in this revision. There is no printed battery/electronics enclosure or completed wearable cuff in the CAD. Regulator mounting must provide insulation and ventilation. Final part orders still require checking the owned servo spline, voltage and dimensions, plus battery/charger compatibility.
+Revision B includes an electronics enclosure and assumed battery pocket; see [integration details](cad/INTEGRATION.md). There is no completed wearable cuff. Regulator mounting must provide insulation and ventilation. Final part orders still require checking the owned servo spline, voltage and dimensions, plus battery/charger compatibility.
 '''
 p.write_text(text)
 print(f'BOM total GBP {total:.2f}; remaining with three servos and sensor owned {total-81:.2f}')

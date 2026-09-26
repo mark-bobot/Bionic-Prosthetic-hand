@@ -38,7 +38,7 @@ for y in CENTRES:
 for x in [-32,32]:
  for y in [-31,31]: plate=plate.cut(box(3,26,BASE+2,cx=x,cy=y,cz=-1))
 
-# Two winding grooves. Use one groove for thumb and both for each paired group.
+# Two winding grooves. Use one per servo, feeding paired groups via equalisers.
 spool=cq.Workplane('XY').circle(RADIUS).extrude(12)
 for z in [0,5.25,10.5]:
  spool=spool.union(cq.Workplane('XY').circle(RADIUS+2).extrude(1.5).translate((0,0,z)))
