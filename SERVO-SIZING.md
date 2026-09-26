@@ -84,3 +84,15 @@ A 10–12 mm radius drum is a candidate to test, not a final specification. Choo
 4. At 10 mm radius, the provisional 0.9807 N·m allowance and M = 1.5 correspond to a total measured servo-side tension limit of 65.4 N. This is a model-derived test target, not a certified continuous load limit.
 5. Verify the actual servo label, voltage range, angular sweep and spool dimensions. Bench-test both fingers with controlled travel; record current, supply sag, motion, temperatures and holding duration under the intended duty cycle.
 6. Add measured results and revise the calculation before calling the servo sufficient.
+
+## Reference supply choice for the next build
+
+Use DS3225 as the reference model while the owned servo remains unidentified. Its manufacturer specifies **4.8–6.8 V**. Plan around **regulated 5 V** for the first design calculations, not the top of that range. This is a reference design choice, not confirmation of the owned unit's allowable supply.
+
+At the published 5 V rating of 21 kgf·cm, the provisional 40% working allowance is 8.4 kgf·cm = 0.824 N·m. Keeping 60% routing efficiency and the 1.5 load margin gives **16.5 N per finger at a 10 mm radius**, instead of the nominal-25-kgf·cm result of 19.6 N. If measuring at the servo end through the complete routing, the corresponding combined-force limit is **54.9 N**, with no additional routing-loss factor.
+
+These are preliminary screening limits. No manufacturer continuous-duty rating is inferred from the 40% allowance. A different generic servo may have different torque, current or voltage limits.
+
+The reference stall current at 5 V is 1.9 A per servo. Three reference units could therefore demand 5.7 A together at stall, before the rest of the electronics and supply margin. That is a sizing warning, not a normal running-current estimate or permission to run stalled. The final regulator, battery, wiring and connector ratings need the actual actuator count and measured demand.
+
+Follow [the tendon test](TENDON-TEST.md) before choosing the final drum radius.
