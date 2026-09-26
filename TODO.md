@@ -2,14 +2,15 @@
 
 ## First: establish whether the owned servo works
 - [ ] Identify servo model and allowable supply voltage; verify nominal torque and 180° variant.
-- [ ] Measure each finger's tendon travel and maximum pull with return elastics installed.
+- [ ] Follow [the tendon test](TENDON-TEST.md): measure each finger's travel and maximum pull with return elastics installed.
 - [ ] Measure the paired load through the intended routing, including intended contact load.
 - [ ] Select drum radius from travel and rerun [servo sizing](SERVO-SIZING.md).
 - [ ] Test both fingers for motion, current, supply sag, heating and intended hold duration.
 - [ ] Resolve unequal travel/contact using appropriate coupling, compliance or limits.
 
 ## Compact packaging and parts
-- [ ] Confirm DFRobot sensor SKU and controller board.
+- [x] Match the DFRobot dry-electrode sensor to catalogue SKU SEN0240 and select the classic Arduino Nano.
+- [ ] Check the physical sensor connector labels before wiring.
 - [ ] Set hand scale, maximum enclosure dimensions and target mass.
 - [ ] Decide actuator count and which fingers are paired; decide whether a display is needed.
 - [ ] Lay out servos, spools, controller, sensor board, power and cables in CAD.
