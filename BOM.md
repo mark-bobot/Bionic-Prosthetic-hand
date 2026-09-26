@@ -1,65 +1,50 @@
-# Draft bill of materials
+# Bill of materials — three-servo prototype
 
-Status: preliminary; quantities, prices and fit are not final. Updated 26 September 2026.
+One thumb servo, one index/middle servo and one ring/little servo. This is the complete **reference build list**, including power and mounting consumables. Physical servo fit, hand sizing and load validation remain open; do not treat it as a purchase-ready matched kit.
 
-[Servo sizing](SERVO-SIZING.md) · [Tendon measurement guide](TENDON-TEST.md) · [Remaining work](TODO.md)
+[Wiring](docs/WIRING.md) · [CAD](cad/README.md) · [Firmware](firmware/README.md)
 
-## Parts
+All monetary values below are **GBP planning allowances**, except the explicitly historical mechanical subtotal. They are not claimed as current quotes. They exclude shipping, taxes not included in a seller price, tools and labour. Owned items are included to show replacement cost.
 
-| Item | Preliminary quantity per hand | Selection/status |
-| --- | --- | --- |
-| Modified Phoenix Hand v3 printed parts | 1 set | Hand size, CAD modifications and print material to confirm |
-| Generic 25 kgf·cm, 180° servo | 1 for paired-finger test; potentially 3 for a five-digit layout | Owner reports possession; exact models, quantity owned and rated voltage unknown. Three actuators for 2+2+1 is a proposal, not the documented original mapping |
-| Servo horn, screw and grooved tendon drum | 1 per actuator | Confirm spline; candidate 10–12 mm effective radius subject to measured travel and torque |
-| Paired-finger coupling/equaliser | As required | Determine from unequal finger travel and object contact |
-| DFRobot EMG sensor kit | 1 | SEN0240 Gravity Analog EMG Sensor by DFRobot/OYMotion: catalogue match to the owner's DFRobot dry-electrode description |
-| Compact Arduino controller | 1 | Classic Arduino Nano selected for this build; original board model unspecified |
-| Servo power regulator/BEC | 1 appropriately rated branch | Plan around a regulated 5 V servo branch using DS3225 as the reference; actual servo compatibility and measured peak current still need checking |
-| Clean sensor/logic regulator | 1 branch, implementation TBD | Sensor/board-compatible voltage; decoupling and return routing required |
-| Battery, protection, switch, fuse and compatible charging arrangement | 1 system | Chemistry, capacity and protection to size after load/runtime measurements |
-| Tendon line | 1 set | Existing notes reference 80 lb braided fishing line; final diameter/length/knots and abrasion behaviour to verify |
-| Elastic return elements | 1 set | Existing notes reference non-latex dental bands; number and force to measure |
-| Palm/tensioner screws and servo mounts | 1 set | Sizes and quantities from final CAD |
-| Firm foam padding | 1 set | Listed in original mechanical BOM |
-| Fingertip grips | 1 set | Listed in original mechanical BOM |
-| Hook-and-loop straps | As required | Existing note specifies 300 × 25 mm straps |
-| Wires, locking connectors, strain relief and decoupling capacitors | 1 set | Size for current and layout; values/quantities TBD |
-| Small status display | Optional, 1 | Only if required; select module dimensions/interface after controller and power budget. Not part of the existing project description |
+| Item | Qty | Allowance each (£) | Line (£) | Selection / notes |
+| --- | ---: | ---: | ---: | --- |
+| Phoenix mechanical supplies | 1 | 21.52 | 21.52 | Screws, return bands, hand tendons, padding, fingertip grips and hand straps; existing five-hand purchase average |
+| Phoenix printed parts | 1 | 8.00 | 8.00 | One hand set; filament allowance, scale dependent |
+| Printed actuator add-ons | 1 | 5.00 | 5.00 | Carrier ×1, spools ×3, equalisers ×2, fairleads ×3 |
+| 25 kg·cm positional servo, 180° | 3 | 12.00 | 36.00 | Owned generic units; DS3225 only a reference; verify before purchasing |
+| Classic Arduino Nano | 1 | 25.00 | 25.00 | A000005 / ATmega328P, 5 V; selected controller |
+| DFRobot SEN0240 EMG kit | 1 | 45.00 | 45.00 | Owned; kit includes dry electrode, signal board, belt and leads |
+| Pololu D24V90F5 servo regulator | 1 | 32.00 | 32.00 | Fixed 5 V; verify thermal/current headroom in enclosure |
+| Pololu D24V5F5 logic regulator | 1 | 10.00 | 10.00 | Fixed 5 V / 500 mA class |
+| Protected 2S battery pack | 1 | 18.00 | 18.00 | 7.4 V nominal, 1,000 mAh; ≥10 A discharge, balancing/undervoltage protection; dimensions to fit separate pouch |
+| Matching 2S charger | 1 | 20.00 | 20.00 | Match chemistry and pack connector; off-device charging |
+| Metal servo horn | 3 | 3.00 | 9.00 | Spline must match actual servo; two holes must match spool slots |
+| M2 bolts, nuts and washers | 1 | 2.00 | 2.00 | Six bolts plus six nuts/washers for three horns; length selected after horn fit |
+| 4.8 mm cable ties | 6 | 0.10 | 0.60 | Three servo restraints plus three fairlead restraints; retain spares |
+| 25 mm carrier straps | 2 | 2.00 | 4.00 | Separate from original hand straps; length to suit fixture/cuff |
+| Carrier foam pad | 1 | 2.00 | 2.00 | 76 × 110 mm starting footprint; supplementary to hand padding |
+| PTFE liner | 1 | 2.00 | 2.00 | 2 mm OD / 1 mm ID, 0.5 m stock; cut guide inserts as needed |
+| Additional braided tendon | 1 | 2.00 | 2.00 | 2 m allowance for actuator routing, nominal 0.5–0.8 mm; check knots and creep |
+| Main switch | 1 | 3.00 | 3.00 | ≥10 A DC at battery voltage |
+| 7.5 A fuse and holder | 1 | 3.00 | 3.00 | Fuse at battery; verify inrush and wire protection in testing |
+| Arm toggle switch | 1 | 1.00 | 1.00 | Low-current SPST, D2 to GND |
+| Power wiring and connectors | 1 | 6.00 | 6.00 | 18 AWG main leads, keyed ≥10 A connectors, distribution and insulation |
+| Signal wiring / small perfboard | 1 | 3.00 | 3.00 | Short connections, strain relief, no breadboard motor-power path |
+| Capacitors | 1 | 1.00 | 1.00 | 1,000 µF 10 V; 10 µF 10 V; 100 nF ceramic |
+| Resistors | 1 | 0.20 | 0.20 | 220 Ω ×3, 1 MΩ ×1 |
 
-## Selected electronics
+**Planning total: £259.32, including £20 for the charger.** If all three servos and the complete EMG kit are already owned, subtract £81: remaining allowance £178.32. This is not a verified shopping total.
 
-The classic Arduino Nano is 45 × 18 mm. The classic Nano is selected for this build. Allow extra room for connectors, wires and mounting.
+## Sources and quantities
 
-Source: https://docs.arduino.cc/hardware/nano
+- SEN0240 identity and kit contents: [DFRobot](https://www.dfrobot.com/product-1661.html). Manufacturer listing checked 26 September 2026: US$49.50; the £45 above is an allowance, not a currency conversion or UK quote.
+- Nano dimensions and board identity: [Arduino](https://docs.arduino.cc/hardware/nano). Use the classic 5 V board, not a differently powered Nano variant.
+- Servo reference dimensions/electrical data: [DS3225 datasheet](https://dsservo.com/d_file/DS3225%20datasheet.pdf). The owned model remains unknown.
+- Servo regulator: [Pololu #2866](https://www.pololu.com/product/2866), manufacturer listing US$36.82 on the check date. Available continuous current depends on cooling/input voltage; "9 A" is not a guaranteed enclosure rating.
+- Logic regulator: [Pololu #2843](https://www.pololu.com/product/2843), manufacturer listing US$8.95 on the check date.
+- The original mechanical list records £107.59 for five hands, or £21.52 each rounded. This is the first row only; those hand supplies are not separately charged again. The carrier straps, padding and extended tendons are additional.
+- Exact Phoenix pin/screw/band counts depend on the selected hand scale and official assembly instructions. The original-hand row is a supplies set, not a claim that these individual quantities have been verified. [Phoenix v3 source and instructions](https://hub.e-nable.org/p/devices?p=e-NABLE+Phoenix+Hand+v3).
 
-DFRobot lists its Gravity Analog EMG Sensor by OYMotion, with metal dry electrodes, as SKU SEN0240. This matches the owner's description and is the BOM selection; the physical unit has not been inspected. Its signal conditioner and electrode board are each 22 × 35 mm. Supply is 3.3–5.5 V; analog output is 0–3 V around a 1.5 V reference.
+No display is included in this simple version. The Nano LED indicates calibration/fault status; a screen would add code, wiring and space without helping the first mechanical test. A soldering iron, multimeter, force gauge, ruler/calipers, printer and suitable battery charger are needed; the charger is costed above, other tools are excluded.
 
-Source: https://wiki.dfrobot.com/sen0240/
-
-Reserve space for connectors and cable bends, not just PCB outlines. The electrode belongs at the forearm sensing site. Forearm-mounted actuators/power are an option to evaluate if the palm cannot accommodate them; this would require revising tendon routing and friction assumptions.
-
-## Signal-processing implication
-
-SEN0240 provides a fluctuating EMG signal; simply averaging the raw waveform can cancel activity around its baseline. For a new implementation, estimate/remove the baseline, filter as appropriate, then compute a rectified or RMS activity measure and smooth it before applying calibrated thresholds. Verify the actual former code before describing its processing historically.
-
-DFRobot's example uses filtering and squared filtered samples. Preserve its OYMotion copyright/licence notice if reusing that code or its library.
-
-Source: https://wiki.dfrobot.com/sen0240/docs/20737
-
-## Cost status
-
-The existing mechanical BOM records £107.59 for five hands, or £21.52 per hand rounded. Its listed items are screws, tendon/cord, elastic bands, padding, fingertip grips and straps.
-
-This is a historical mechanical-parts subtotal, not a current supplier quotation or complete bionic-hand cost. It does not establish costs for printing, servos, EMG sensing, controller, battery, regulators, wiring or tools. Do not add the individual listed components again on top of this subtotal.
-
-A complete total remains TBD. Record quantity, unit price, source, quote date, shipping/tax and owned-versus-to-buy status when the component choices are fixed.
-
-## First wiring layout to develop
-
-For the classic 5 V Nano, plan sensor A to A0, sensor + to a clean regulated 5 V logic/sensor rail, and sensor - to signal ground. The 0–3 V output fits the classic Nano's default 5 V ADC range. Do not assume that every Nano-family board uses 5 V logic.
-
-One servo signal can use D9, with further signal pins assigned after the actuator count is settled. Power servos from their own adequately rated branch, not through the Nano. Join signal grounds deliberately and keep motor-return currents out of the sensor wiring. Put local decoupling near the electronics; choose values after the supply and wiring layout are fixed.
-
-The DS3225 is a reference part for sizing, not an identification of the generic servo. Its specified supply range is 4.8–6.8 V. A regulated 5 V design point has published torque/current data and also suits the sensor, but the servo branch and clean sensor/logic branch must handle noise separately. The reference upper limit does not authorise applying 6.8 V to an unidentified servo. A two-cell lithium pack must not feed this reference servo directly: its fully charged voltage exceeds that range.
-
-Source: https://dsservo.com/d_file/DS3225%20datasheet.pdf
+The battery needs a separate secured pouch in this revision. There is no printed battery/electronics enclosure or completed wearable cuff in the CAD. Regulator mounting must provide insulation and ventilation. Final part orders still require checking the owned servo spline, voltage and dimensions, plus battery/charger compatibility.

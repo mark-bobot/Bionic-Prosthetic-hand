@@ -1,0 +1,41 @@
+from pathlib import Path
+import html
+P=Path(__file__).parent
+s=['<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1040" viewBox="0 0 1500 1040">', '<rect width="1500" height="1040" fill="#f8fafc"/>','<style>text{font-family:Arial,sans-serif;fill:#182b3a} .small{font-size:17px}.label{font-size:20px}.title{font-size:30px;font-weight:bold}</style>']
+def txt(x,y,t,size=20):s.append(f'<text x="{x}" y="{y}" font-size="{size}">{html.escape(t)}</text>')
+def box(x,y,w,h,title,lines):
+ s.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="9" fill="white" stroke="#54758a" stroke-width="2"/>');txt(x+14,y+30,title,22)
+ for i,t in enumerate(lines):txt(x+14,y+59+i*24,t,17)
+def line(points,col='#d44540',width=3):s.append(f'<polyline points="{points}" fill="none" stroke="{col}" stroke-width="{width}"/>')
+txt(40,45,'Phoenix v3 • three-servo EMG wiring',30)
+txt(40,77,'Classic 5 V Nano / SEN0240 / reference 5 V servo supply — proposed bench wiring',19)
+box(40,115,290,135,'2S protected battery',['7.4 V nominal / 8.4 V full','1,000 mAh, ≥10 A discharge','Charge disconnected from device'])
+box(390,115,270,135,'Input protection',['+ → 7.5 A fuse → DC switch','Switch rated ≥10 A DC','GND → star return below'])
+line('330,160 390,160');txt(339,148,'+',18)
+box(730,115,310,135,'Servo regulator',['Pololu D24V90F5','VIN = switched battery','VOUT = 5 V servo rail'])
+box(730,290,310,135,'Logic regulator',['Pololu D24V5F5','VIN = switched battery','VOUT = 5 V logic rail'])
+line('660,160 730,160');line('695,160 695,335 730,335')
+box(1110,115,345,170,'Servo power distribution',['5 V → all three red / + wires','GND → all three return wires','1,000 µF / 10 V across rail','Do not carry this current via Nano'])
+line('1040,160 1110,160')
+box(380,490,320,265,'Arduino Nano (classic)',['5V ← logic regulator (not VIN)','GND → common star return','A0 ← EMG analogue output','D2 → ARM switch → GND','D9 → thumb signal','D10 → index + middle signal','D11 → ring + little signal'])
+box(40,490,285,200,'DFRobot SEN0240',['+ ← clean logic 5 V','− → signal ground','A → Nano A0','PJ-342 → dry-electrode board','22 × 35 mm signal board'])
+line('1040,335 1070,335 1070,460 190,460 190,490');line('540,460 540,490')
+txt(725,448,'5 V LOGIC / SENSOR',18)
+line('325,585 380,585','#0d8c94');txt(331,574,'A0',16)
+box(40,290,590,130,'Small parts',['A0 to GND: 1 MΩ resistor (unplugged-signal bias).','SEN0240 + to −: 100 nF ceramic + 10 µF electrolytic.','Observe electrolytic capacitor polarity.'])
+box(1110,420,345,105,'Servo 1 • thumb',['D9 → signal (220 Ω series)','5 V + GND from distribution'])
+box(1110,555,345,105,'Servo 2 • index + middle',['D10 → signal (220 Ω series)','5 V + GND from distribution'])
+box(1110,690,345,105,'Servo 3 • ring + little',['D11 → signal (220 Ω series)','5 V + GND from distribution'])
+line('700,635 850,635 850,472 1110,472','#8b62b5');line('700,660 930,660 930,607 1110,607','#8b62b5');line('700,685 850,685 850,742 1110,742','#8b62b5')
+# Ground is shown as a separate explicit net to keep power and signal paths readable.
+line('60,835 1440,835','#263b48',5)
+for x in [185,525,885,1250]:s.append(f'<circle cx="{x}" cy="835" r="6" fill="#263b48"/>')
+txt(60,818,'COMMON GND / STAR RETURN',18)
+txt(60,872,'Battery −, both regulator GNDs, Nano GND, sensor − and servo returns join this net.',19)
+txt(60,901,'Run servo-current return directly to distribution/star; keep it out of the sensor/Nano ground lead.',18)
+txt(40,952,'ARM switch: open = disarmed; closed to GND = armed. This is not a mechanical emergency release.',18)
+txt(40,981,'Disconnect external logic power and electrodes before USB programming. For body-connected testing, use battery only.',18)
+txt(40,1010,'No charging or mains-connected USB while electrodes are worn. Check connector labels; wire colours can vary.',18)
+s.append('</svg>');(P/'wiring.svg').write_text('\n'.join(s))
+import cairosvg
+cairosvg.svg2png(url=str(P/'wiring.svg'),write_to=str(P/'wiring.png'))

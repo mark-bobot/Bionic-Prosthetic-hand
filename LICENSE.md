@@ -6,7 +6,7 @@ Copyright (c) 2026 mark-bobot, for original contributions.
 
 Except where otherwise identified, original documentation in this repository is licensed under the Creative Commons Attribution 4.0 International licence.
 
-Phoenix Hand v3-derived CAD/STL files and this project's mechanical modifications, when added, are released under CC BY 4.0, with original attribution and supplied notices preserved. No CAD/STL files are included in the initial documentation release.
+Phoenix Hand v3-derived CAD/STL files and this project's mechanical modifications, are released under CC BY 4.0, with original attribution and supplied notices preserved. CAD source and exports are now included; see cad/README.md.
 
 - Licence: https://creativecommons.org/licenses/by/4.0/
 - Full legal terms, incorporated by reference: https://creativecommons.org/licenses/by/4.0/legalcode
@@ -19,7 +19,7 @@ When redistributing or adapting CC BY material, retain applicable attribution an
 
 ## Original firmware: MIT
 
-The following MIT licence applies only to original firmware authored for this project when it is added. No firmware is included in the initial documentation release. It does not relicense upstream CAD, third-party code, libraries or other assets.
+The following MIT licence applies only to original firmware authored for this project in this repository. It does not relicense upstream CAD, third-party code, libraries or other assets.
 
 MIT License
 
@@ -46,3 +46,9 @@ SOFTWARE.
 ## Third-party material
 
 Third-party code, photographs, diagrams and other assets retain their own licences. Record their source and terms when adding them. Neither licence above overrides those terms.
+
+## Files added in the reconstruction
+
+`cad/build.py`, all generated mechanical parts, and documentation/drawing scripts are CC BY 4.0. The original Phoenix STEP under `cad/upstream/` retains the upstream CC BY 4.0 attribution recorded in `cad/README.md`.
+
+Original `ProstheticHand.ino`, `HandControl.h` and control tests are MIT. `EMGFilters.cpp` and `EMGFilters.h` retain Copyright 2017 OYMotion Inc. and BSD-2-Clause notices; see `firmware/ProstheticHand/OYMOTION-LICENSE.md`. These files are not relicensed under MIT. Arduino Servo is an external LGPL-2.1-or-later dependency; no compiled firmware binaries are included.

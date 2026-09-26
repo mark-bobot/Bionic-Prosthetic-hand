@@ -1,56 +1,38 @@
 # Bionic Prosthetic Hand
 
-An EMG-controlled, tendon-driven prosthetic-hand project based on the e-NABLE Phoenix Hand v3, exploring access to low-cost bionic prosthetics.
+A three-servo adaptation of the e-NABLE Phoenix Hand v3, using a DFRobot SEN0240 dry-electrode EMG sensor and an Arduino Nano.
 
-## Release status
+One servo drives the thumb, one drives the index and middle fingers, and one drives the ring and little fingers. A muscle contraction closes the groups together; relaxing opens them. The design uses a separate forearm carrier so the original palm and fingers can stay unchanged.
 
-This initial release documents the project architecture described by the author. CAD/STL files, Arduino firmware, wiring diagrams and test data have not yet been uploaded. This is an architecture and documentation release, not a reproducible hardware release.
+## Build files
 
-The architecture records the reported build. Exact component models, dimensions, pin assignments, power arrangements and calibration values remain to be confirmed. Any newly recreated implementation will be identified as a reconstruction and validated separately.
+- [Arduino code and setup](firmware/README.md)
+- [Wiring diagram](docs/WIRING.md)
+- [Editable CAD, STEP and printable STL files](cad/README.md)
+- [Bill of materials and cost allowances](BOM.md)
+- [Torque and tendon-travel calculations](SERVO-SIZING.md)
+- [Measuring tendon force](TENDON-TEST.md)
+- [Checks performed](VALIDATION.md)
+- [What remains](TODO.md)
 
-## Build notes
+![Three-servo carrier](cad/exports/carrier_preview.png)
 
-The current component choices are a DFRobot/OYMotion SEN0240 dry-electrode EMG sensor and a classic Arduino Nano. The owned servos are generic units advertised as 25 kg·cm with 180° travel; their exact model is still unknown. DS3225 specifications are used only as a documented reference for supply and torque calculations.
+## Status
 
-- [Bill of materials](BOM.md)
-- [Servo torque and travel calculations](SERVO-SIZING.md)
-- [How to measure tendon force](TENDON-TEST.md)
-- [Remaining work](TODO.md)
+This is a newly reconstructed bench-prototype design. The Nano sketch compiles and the software control tests pass. The generated CAD passes solid/mesh checks. The hardware has not been assembled or tested: motor fit, tendon load, grip performance, electrical noise and thermal performance remain unverified.
 
-## Architecture at a glance
+The servos owned for this project are generic units advertised as 25 kg·cm with 180° travel. DS3225 dimensions and 5 V electrical specifications are used as a reference, not as identification of those units. The initial code uses a small test movement; calibrate endpoints before expecting full finger closure.
 
-```mermaid
-flowchart LR
-    A["Forearm muscle activity"] --> B["Dry-electrode EMG sensor"]
-    B --> C["Arduino: average consecutive readings"]
-    C --> D["Muscle-tension decision<br/>exact rule to be documented"]
-    D --> E["Servo actuation"]
-    E --> F["Tendon transmission"]
-    F --> G["Finger flexion"]
-```
+The source project description mentions improved electrode contact, averaging sensor readings, tendon actuation and sharing a servo between two fingers. The files here implement a new version of that idea; they are not recovered original firmware or CAD, and do not establish earlier test results.
 
-The reported design modifies the Phoenix Hand v3 to make space for electronics. Improved electrode contact and averaging successive readings were used to address signal interference. Servo-driven tendons flex the fingers when muscle tension is detected.
+## Original design
 
-A reported torque calculation supported using one servo to pull two fingers, reducing the need for independent actuators within a compact assembly. Numerical calculations and the complete actuator-to-finger mapping are still to be documented.
+Phoenix Hand v3 is credited by [e-NABLE](https://hub.e-nable.org/p/devices?p=e-NABLE+Phoenix+Hand+v3) to Jason Bryant, John Diamond, Scott Darrow, Andreas Bastian, Team Unlimbited, e-NABLE France and Jeremy Simon. It derives from Phoenix Hand v2 and Unlimbited Phoenix Hand, with labelled pins among the v3 changes.
 
-See [ARCHITECTURE.md](ARCHITECTURE.md) for the subsystem breakdown and the distinction between reported behaviour and unspecified implementation details.
+The [original Thingiverse design](https://www.thingiverse.com/thing:4056253) is CC BY 4.0. The official STEP file is included unchanged; new carrier, spool, guide and equaliser parts are separate. The mechanical change is rerouting wrist-driven tendons to external servo actuation. No endorsement by the original designers is implied.
 
-## Original design and attribution
+## Licences
 
-This project builds on [e-NABLE Phoenix Hand v3](https://www.thingiverse.com/thing:4056253), credited by [e-NABLE's official catalogue](https://hub.e-nable.org/p/devices?p=e-NABLE+Phoenix+Hand+v3) to Jason Bryant, John Diamond, Scott Darrow, Andreas Bastian, Team Unlimbited, e-NABLE France and Jeremy Simon.
+Documentation and mechanical CAD: **CC BY 4.0**. Original firmware: **MIT**. Included OYMotion filter files: **BSD-2-Clause**, with their notices retained. Arduino's Servo library is an external **LGPL-2.1-or-later** dependency. See [LICENSE.md](LICENSE.md).
 
-Phoenix Hand v3 derives from Phoenix Hand v2 and Unlimbited Phoenix Hand; its documented changes include labels on the pins to aid assembly. The original is wrist-powered. The adaptation described here adds EMG sensing, Arduino processing and servo-driven tendon actuation, with changes to accommodate the electronics.
-
-The upstream listing uses [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Original designers retain their rights. No endorsement by e-NABLE or the original designers is implied.
-
-## Licensing
-
-- Original documentation in this repository: **CC BY 4.0**.
-- Phoenix-derived CAD/STL files and this project's modifications, when added: **CC BY 4.0**, retaining upstream attribution and notices.
-- Original firmware in this repository, when added: **MIT**, excluding third-party material with its own terms.
-
-See [LICENSE.md](LICENSE.md) for the scope, licence links and MIT text. These notices do not imply that CAD or firmware is already included.
-
-## Intended use
-
-Experimental educational prototype. This release does not establish clinical suitability or suitability for use as a fitted prosthesis. Hardware performance and safety require separate validation.
+This is an educational bench prototype, not a validated fitted prosthesis.

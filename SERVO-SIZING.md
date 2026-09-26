@@ -96,3 +96,9 @@ These are preliminary screening limits. No manufacturer continuous-duty rating i
 The reference stall current at 5 V is 1.9 A per servo. Three reference units could therefore demand 5.7 A together at stall, before the rest of the electronics and supply margin. That is a sizing warning, not a normal running-current estimate or permission to run stalled. The final regulator, battery, wiring and connector ratings need the actual actuator count and measured demand.
 
 Follow [the tendon test](TENDON-TEST.md) before choosing the final drum radius.
+
+## Current CAD arrangement
+
+The new CAD uses one spool groove pulling the centre of a floating equaliser for each finger pair. The equations above for a rigid two-groove drive are a preliminary comparison. With nearly parallel equaliser lines, the servo input tension is approximately the sum of the two finger tensions and input travel is their average; angled lines and bar travel require measurement. The thumb uses one line.
+
+The groove-floor radius is 12 mm. For 0.6 mm line the effective radius is about 12.3 mm, so 160 degrees corresponds to 34.3 mm ideal take-up. That 160-degree range is not the firmware default: initial commands span only 200 microseconds, about 18 degrees on the DS3225 reference, or 3.9 mm of take-up. Calibrate endpoints on the actual servo before expecting full closure.

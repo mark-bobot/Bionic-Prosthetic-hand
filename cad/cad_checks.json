@@ -1,0 +1,38 @@
+{
+  "pair_equaliser": {
+    "bounds_mm": [
+      26.0,
+      8.0,
+      4.0
+    ],
+    "volume_mm3": 763.9825102929818,
+    "watertight": true
+  },
+  "servo_carrier": {
+    "bounds_mm": [
+      76.0,
+      110.0,
+      15.0
+    ],
+    "volume_mm3": 44690.59189254267,
+    "watertight": true
+  },
+  "two_groove_spool": {
+    "bounds_mm": [
+      28.0,
+      28.0,
+      12.0
+    ],
+    "volume_mm3": 5516.757555773357,
+    "watertight": true
+  },
+  "tendon_fairlead": {
+    "bounds_mm": [
+      14.0,
+      20.0,
+      8.0
+    ],
+    "volume_mm3": 1941.6620713190023,
+    "watertight": true
+  }
+}
