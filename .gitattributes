@@ -1,0 +1,5 @@
+*.step -diff linguist-generated=true
+*.stl binary linguist-generated=true
+cad/exports/*.png binary linguist-generated=true
+firmware/ProstheticHand/EMGFilters.cpp linguist-vendored=true
+firmware/ProstheticHand/EMGFilters.h linguist-vendored=true
