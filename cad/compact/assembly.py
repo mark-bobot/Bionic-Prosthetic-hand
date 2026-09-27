@@ -32,7 +32,7 @@ for p,c in [(pod,'#506974'),(hand,'#c2cace')]:
   triangles=np.asarray([[v[k] for k in ff] for ff in f])
   normals=np.cross(triangles[:,1]-triangles[:,0],triangles[:,2]-triangles[:,0]);normals/=np.maximum(np.linalg.norm(normals,axis=1)[:,None],1e-12)
   light=np.array([-.3,-.5,1.]);light/=np.linalg.norm(light)
-  brightness=.45+.55*np.maximum(normals@light,0)
+  brightness=.45+.55*np.abs(normals@light)
   faces.extend(triangles);colors.extend(np.array(to_rgb(c))[None,:]*brightness[:,None])
 ax.add_collection3d(Poly3DCollection(faces,facecolor=colors,edgecolor='none'))
 ax.set_xlim(-90,50);ax.set_ylim(-165,160);ax.set_zlim(-35,70);ax.set_box_aspect((140,325,105));ax.view_init(48,-65)
