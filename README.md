@@ -19,6 +19,10 @@ One servo drives the thumb, one drives the index and middle fingers, and one dri
 
 [Revision B CAD and assembly details](cad/INTEGRATION.md): three motors, Nano, EMG signal board, two regulators, a reference battery pocket and a removable switch-bearing cover. Nominal pack size is 196 × 110 × 59.5 mm; battery and switch dimensions remain assumptions.
 
+## New minimal-hand study
+
+[Revision C: original minimal hand and compact housing](cad/compact/README.md) adds replaceable two-joint fingers, an opposed thumb and a 94 × 160 × 65 mm component enclosure. It is an unfitted geometry prototype: the socket, final tendon routing, physical fit and load validation remain unfinished. Both palm handedness variants are supplied. The established Phoenix-based build below remains available.
+
 ## Status
 
 This is a newly reconstructed bench-prototype design. The Nano sketch compiles and the software control tests pass. The generated CAD passes solid/mesh checks. The hardware has not been assembled or tested: motor fit, tendon load, grip performance, electrical noise and thermal performance remain unverified.

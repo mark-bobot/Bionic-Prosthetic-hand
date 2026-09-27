@@ -1,0 +1,142 @@
+{
+  "component_envelopes": {
+    "battery": [
+      [
+        70,
+        32,
+        22
+      ],
+      0,
+      112,
+      7,
+      "#d5a451"
+    ],
+    "servo_regulator": [
+      [
+        40.6,
+        20.3,
+        7.6
+      ],
+      -12,
+      60,
+      7,
+      "#697ac3"
+    ],
+    "fuse_holder": [
+      [
+        14,
+        28,
+        12
+      ],
+      25,
+      66,
+      7,
+      "#af7963"
+    ],
+    "distribution": [
+      [
+        12,
+        20,
+        14
+      ],
+      -22,
+      83,
+      7,
+      "#af7963"
+    ],
+    "capacitor": [
+      [
+        10,
+        10,
+        20
+      ],
+      0,
+      80,
+      7,
+      "#af7963"
+    ],
+    "Nano": [
+      [
+        18,
+        45,
+        19
+      ],
+      -22,
+      109,
+      33,
+      "#32988e"
+    ],
+    "EMG": [
+      [
+        22,
+        35,
+        10
+      ],
+      7,
+      115,
+      33,
+      "#32988e"
+    ],
+    "logic_regulator": [
+      [
+        12.7,
+        10.2,
+        4
+      ],
+      20,
+      86,
+      33,
+      "#697ac3"
+    ],
+    "main_switch": [
+      [
+        16,
+        20,
+        20
+      ],
+      23,
+      58,
+      42,
+      "#aa5767"
+    ],
+    "arm_switch": [
+      [
+        10,
+        10,
+        12
+      ],
+      23,
+      74,
+      50,
+      "#aa5767"
+    ]
+  },
+  "checks": {
+    "compact_base": {
+      "size_mm": [
+        94.0,
+        160.0,
+        62.0
+      ],
+      "watertight": true
+    },
+    "compact_tray": {
+      "size_mm": [
+        74.0,
+        68.0,
+        2.0
+      ],
+      "watertight": true
+    },
+    "compact_lid": {
+      "size_mm": [
+        94.0,
+        160.0,
+        3.0
+      ],
+      "watertight": true
+    }
+  },
+  "collisions": [],
+  "socket_status": "Not designed: mounting use and arm dimensions required"
+}

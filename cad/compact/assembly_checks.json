@@ -1,0 +1,10 @@
+{
+  "hand_housing_collisions": [],
+  "reference_assembly_bounds_mm": [
+    133.5159641390726,
+    310.0,
+    69.0
+  ],
+  "socket": "absent",
+  "tendon_routing": "not complete"
+}

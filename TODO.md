@@ -29,3 +29,12 @@
 - [ ] Choose hand scale and design a proper cuff; validate retention and cooling in the new enclosure.
 - [ ] Record cost quotations, final assembly photos, test data and demonstration video.
 - [ ] Review historical project claims separately from results of this reconstruction.
+
+## Minimal-hand study (revision C)
+- [x] Generate new palm, two-joint fingers, opposed thumb, wrist plate and compact housing CAD.
+- [x] Check printable solids, component clashes and sampled finger/thumb motion.
+- [ ] Confirm left/right hand, amputation level, residual-limb dimensions and socket/interface requirements with the intended user and prosthetist.
+- [ ] Complete constrained tendon routing, equaliser mounts and service access.
+- [ ] Establish joint stops, return-elastic preload, friction and required tendon travel on one finger.
+- [ ] Verify real servo ears, horns, battery, switches and cable bends in the compact enclosure.
+- [ ] Validate wrist fasteners, housing cooling and load retention on a bench before fitting.

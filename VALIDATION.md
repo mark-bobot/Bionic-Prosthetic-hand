@@ -34,3 +34,7 @@ python docs/make_bom.py
 ```
 
 Install Arduino Servo through Library Manager. CAD generation uses CadQuery 2.8.0, trimesh and matplotlib; wiring rendering uses CairoSVG. The physical build tasks are tracked in `TODO.md`.
+
+## Revision C geometry study — 27 September 2026
+
+The original minimal-hand and compact-pack scripts export 15 valid single-solid printable part variants (including both mirrored palms). STL meshes are watertight with positive volume. Reference component/fixture pairs, the static hand assembly and the hand-to-housing assembly have no detected volume clashes. Each long finger was checked against its adjacent link and palm at synchronized 0/15/30/45/60-degree joint positions; thumb-to-palm checks use the same samples. These checks pass after adding thumb relief. They do not establish independent-joint swept clearance, tendon routing, grip function, structural strength or arm fit. See `cad/compact/*checks.json` and [revision C scope](cad/compact/README.md).

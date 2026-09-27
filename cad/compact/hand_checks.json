@@ -1,0 +1,103 @@
+{
+  "parts": {
+    "minimal_palm_right": {
+      "size_mm": [
+        95.08814239501953,
+        82.997802734375,
+        19.79899024963379
+      ],
+      "watertight": true
+    },
+    "minimal_palm_left": {
+      "size_mm": [
+        95.08814239501953,
+        82.997802734375,
+        19.79899024963379
+      ],
+      "watertight": true
+    },
+    "index_proximal": {
+      "size_mm": [
+        16.0,
+        44.995606899261475,
+        12.0
+      ],
+      "watertight": true
+    },
+    "index_distal": {
+      "size_mm": [
+        16.0,
+        34.997804164886475,
+        11.999999899999999
+      ],
+      "watertight": true
+    },
+    "middle_proximal": {
+      "size_mm": [
+        16.0,
+        49.995606899261475,
+        12.0
+      ],
+      "watertight": true
+    },
+    "middle_distal": {
+      "size_mm": [
+        16.0,
+        36.997804164886475,
+        11.999999899999999
+      ],
+      "watertight": true
+    },
+    "ring_proximal": {
+      "size_mm": [
+        16.0,
+        46.995606899261475,
+        12.0
+      ],
+      "watertight": true
+    },
+    "ring_distal": {
+      "size_mm": [
+        16.0,
+        34.997804164886475,
+        11.999999899999999
+      ],
+      "watertight": true
+    },
+    "little_proximal": {
+      "size_mm": [
+        16.0,
+        37.995606899261475,
+        12.0
+      ],
+      "watertight": true
+    },
+    "little_distal": {
+      "size_mm": [
+        16.0,
+        29.997804164886475,
+        11.999999899999999
+      ],
+      "watertight": true
+    },
+    "thumb_distal": {
+      "size_mm": [
+        16.0,
+        49.997804164886475,
+        11.999999899999999
+      ],
+      "watertight": true
+    },
+    "wrist_bridge": {
+      "size_mm": [
+        48.0,
+        34.0,
+        4.0
+      ],
+      "watertight": true
+    }
+  },
+  "static_collisions": [],
+  "motion_checks": [],
+  "status": "Experimental hand; socket and physical validation absent"
+}
