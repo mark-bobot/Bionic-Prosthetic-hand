@@ -1,4 +1,8 @@
-# Minimal hand and compact component housing — experimental revision C
+# Compact housing retained; custom hand superseded
+
+**Use the [Phoenix v3 version](../phoenix_v3/README.md) for the current hand.** The housing, tray and lid here remain in use. The custom palm, finger, thumb and wrist-bridge files below are historical alternatives and are no longer the selected design. Their joint hardware list and motion checks do not apply to Phoenix.
+
+## Earlier experimental revision C
 
 An original CAD study of a tendon-driven hand with three actuators: thumb, index/middle and ring/little. This version replaces the Phoenix geometry with a simpler two-joint finger mechanism and a single-joint opposed thumb. It is a separate experimental branch of the design, not a verified upgrade to the Phoenix build.
 

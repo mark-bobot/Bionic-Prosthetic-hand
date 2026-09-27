@@ -30,7 +30,7 @@
 - [ ] Record cost quotations, final assembly photos, test data and demonstration video.
 - [ ] Review historical project claims separately from results of this reconstruction.
 
-## Minimal-hand study (revision C)
+## Superseded custom-hand study (revision C)
 - [x] Generate new palm, two-joint fingers, opposed thumb, wrist plate and compact housing CAD.
 - [x] Check printable solids, component clashes and sampled finger/thumb motion.
 - [ ] Confirm left/right hand, amputation level, residual-limb dimensions and socket/interface requirements with the intended user and prosthetist.
@@ -38,3 +38,12 @@
 - [ ] Establish joint stops, return-elastic preload, friction and required tendon travel on one finger.
 - [ ] Verify real servo ears, horns, battery, switches and cable bends in the compact enclosure.
 - [ ] Validate wrist fasteners, housing cooling and load retention on a bench before fitting.
+
+## Current Phoenix v3 adaptation
+- [x] Restore original Phoenix v3 palm, finger and pin geometry as the selected hand.
+- [x] Export original source parts and add a wrist-pivot cradle study for the compact housing.
+- [ ] Confirm side, Phoenix scale, residual-limb requirements and socket/interface dimensions.
+- [ ] Verify the original thumb orientation against the official assembly guide; remove the exploded-view offset only after confirming fit.
+- [ ] Select and verify wrist axle/retention, and complete a neutral-position wrist lock.
+- [ ] Complete servo-to-Phoenix tendon routing and restrained paired-finger equalisers.
+- [ ] Verify original joints, tendon forces/travel, motor limits, enclosure fit and loaded assembly on a bench.

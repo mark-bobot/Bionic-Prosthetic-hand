@@ -31,7 +31,7 @@ rows=[
 p=Path(__file__).resolve().parents[1]/'BOM.md'
 text='''# Bill of materials — three-servo prototype
 
-One thumb servo, one index/middle servo and one ring/little servo. This is the complete **reference build list**, including power and mounting consumables. Physical servo fit, hand sizing and load validation remain open; do not treat it as a purchase-ready matched kit.
+One thumb servo, one index/middle servo and one ring/little servo. The current hand is the [original Phoenix v3 adaptation](cad/phoenix_v3/README.md); the costs below remain the revision B baseline. Compact-housing/cradle hardware and any fitted socket are not yet fully costed. This is the complete **reference build list**, including power and mounting consumables. Physical servo fit, hand sizing and load validation remain open; do not treat it as a purchase-ready matched kit.
 
 [Wiring](docs/WIRING.md) · [CAD](cad/README.md) · [Firmware](firmware/README.md)
 

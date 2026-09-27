@@ -1,5 +1,7 @@
 # Mechanical build
 
+**Current direction:** [original Phoenix v3 hand with compact motor housing](phoenix_v3/README.md). The custom hand study is superseded.
+
 The Phoenix v3 palm, fingers and joints are kept unchanged. The new parts form an external forearm actuator pack. Tendons are rerouted from the original wrist-powered actuation to the servos. This is the current reconstruction; it is not evidence that the original project used this exact arrangement.
 
 ## Current integrated revision

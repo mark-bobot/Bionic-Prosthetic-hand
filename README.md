@@ -15,13 +15,13 @@ One servo drives the thumb, one drives the index and middle fingers, and one dri
 - [Checks performed](VALIDATION.md)
 - [What remains](TODO.md)
 
-![Integrated forearm layout](cad/exports/integrated_layout.png)
+[Earlier revision B carrier and assembly details](cad/INTEGRATION.md): three motors, Nano, EMG signal board, two regulators, a reference battery pocket and a removable switch-bearing cover. Nominal pack size is 196 × 110 × 59.5 mm; battery and switch dimensions remain assumptions.
 
-[Revision B CAD and assembly details](cad/INTEGRATION.md): three motors, Nano, EMG signal board, two regulators, a reference battery pocket and a removable switch-bearing cover. Nominal pack size is 196 × 110 × 59.5 mm; battery and switch dimensions remain assumptions.
+## Current CAD: Phoenix v3 with compact motor housing
 
-## New minimal-hand study
+[Use the Phoenix-based design](cad/phoenix_v3/README.md). It retains the official Phoenix v3 palm, fingers and joints, adds a trial wrist cradle and uses the compact three-servo housing. The previous custom two-joint hand is superseded. Socket fit, the wrist lock and final tendon routing remain unfinished.
 
-[Revision C: original minimal hand and compact housing](cad/compact/README.md) adds replaceable two-joint fingers, an opposed thumb and a 94 × 160 × 65 mm component enclosure. It is an unfitted geometry prototype: the socket, final tendon routing, physical fit and load validation remain unfinished. Both palm handedness variants are supplied. The established Phoenix-based build below remains available.
+![Phoenix v3 motorisation study](cad/phoenix_v3/exports/phoenix_preview.png)
 
 ## Status
 

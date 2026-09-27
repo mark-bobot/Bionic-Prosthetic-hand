@@ -1,0 +1,231 @@
+{
+  "source_sha256": "3d7086af7fd8a3b8f33ca87d8af6b10bdc7fc9038eb923bf920633acd7227620",
+  "source_parts": {
+    "original_arm_guard": {
+      "source_solid": 0,
+      "cad_valid": true,
+      "watertight": false,
+      "volume_mm3": 12748.097735609688
+    },
+    "original_palm_left": {
+      "source_solid": 1,
+      "cad_valid": true,
+      "watertight": false,
+      "volume_mm3": 47729.32334451546
+    },
+    "original_palm_right": {
+      "source_solid": 2,
+      "cad_valid": true,
+      "watertight": false,
+      "volume_mm3": 47729.70065609724
+    },
+    "proximal_finger_a": {
+      "source_solid": 22,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 2636.7167465975263
+    },
+    "proximal_finger_b": {
+      "source_solid": 23,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 2636.41693872011
+    },
+    "proximal_thumb": {
+      "source_solid": 24,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 3111.105511826374
+    },
+    "proximal_finger_c": {
+      "source_solid": 25,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 2636.416938720114
+    },
+    "proximal_finger_d": {
+      "source_solid": 26,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 2636.416938720103
+    },
+    "distal_thumb": {
+      "source_solid": 27,
+      "cad_valid": true,
+      "watertight": false,
+      "volume_mm3": 4660.577882510073
+    },
+    "distal_long_a": {
+      "source_solid": 28,
+      "cad_valid": true,
+      "watertight": false,
+      "volume_mm3": 3290.7785701860876
+    },
+    "distal_short_a": {
+      "source_solid": 29,
+      "cad_valid": true,
+      "watertight": false,
+      "volume_mm3": 2880.031678413603
+    },
+    "distal_short_b": {
+      "source_solid": 30,
+      "cad_valid": true,
+      "watertight": false,
+      "volume_mm3": 2880.031686086006
+    },
+    "distal_long_b": {
+      "source_solid": 31,
+      "cad_valid": true,
+      "watertight": false,
+      "volume_mm3": 3290.7785701860385
+    },
+    "original_pin_or_spacer_03": {
+      "source_solid": 3,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 229.13653580088598
+    },
+    "original_pin_or_spacer_04": {
+      "source_solid": 4,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 107.47443752927518
+    },
+    "original_pin_or_spacer_05": {
+      "source_solid": 5,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 107.47443359667393
+    },
+    "original_pin_or_spacer_06": {
+      "source_solid": 6,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 229.13653580088354
+    },
+    "original_pin_or_spacer_07": {
+      "source_solid": 7,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 107.47443101184041
+    },
+    "original_pin_or_spacer_08": {
+      "source_solid": 8,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 152.48117487013798
+    },
+    "original_pin_or_spacer_09": {
+      "source_solid": 9,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 134.41214103549885
+    },
+    "original_pin_or_spacer_10": {
+      "source_solid": 10,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 107.47443619211398
+    },
+    "original_pin_or_spacer_11": {
+      "source_solid": 11,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 134.41217618011575
+    },
+    "original_pin_or_spacer_12": {
+      "source_solid": 12,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 531.6275300670593
+    },
+    "original_pin_or_spacer_13": {
+      "source_solid": 13,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 178.12568018566822
+    },
+    "original_pin_or_spacer_14": {
+      "source_solid": 14,
+      "cad_valid": true,
+      "watertight": false,
+      "volume_mm3": 531.6275300670624
+    },
+    "original_pin_or_spacer_15": {
+      "source_solid": 15,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 284.13599765463374
+    },
+    "original_tensioner_part_16": {
+      "source_solid": 16,
+      "cad_valid": true,
+      "watertight": false,
+      "volume_mm3": 3258.2211868387794
+    },
+    "original_tensioner_part_17": {
+      "source_solid": 17,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 514.6680159725698
+    },
+    "original_tensioner_part_18": {
+      "source_solid": 18,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 514.6680159725701
+    },
+    "original_tensioner_part_19": {
+      "source_solid": 19,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 514.668015972572
+    },
+    "original_tensioner_part_20": {
+      "source_solid": 20,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 514.6680159725701
+    },
+    "original_tensioner_part_21": {
+      "source_solid": 21,
+      "cad_valid": true,
+      "watertight": true,
+      "volume_mm3": 514.668015972572
+    }
+  },
+  "reference_collisions": [],
+  "notes": [
+    "Source solids retain their geometry and source scale.",
+    "Assembly pose is a study, not verified pin insertion or travel."
+  ],
+  "thumb_pose": "Exploded 22 mm lateral and 12 mm upward; joint orientation not validated",
+  "contacts_below_0_001_mm3": [
+    [
+      "phoenix_palm_right",
+      "index_proximal",
+      0.0008949313583263616
+    ],
+    [
+      "phoenix_palm_right",
+      "middle_proximal",
+      0.0008950147877471854
+    ],
+    [
+      "phoenix_palm_right",
+      "ring_proximal",
+      0.0008949313786306044
+    ],
+    [
+      "phoenix_palm_right",
+      "little_proximal",
+      0.0008949313786308429
+    ]
+  ],
+  "cradle": {
+    "watertight": true,
+    "pivot_bore_mm": 6.4,
+    "pivot_z_mm": 8.412814652027004,
+    "scale": "upstream only; regenerate after sizing"
+  }
+}
