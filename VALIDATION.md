@@ -62,3 +62,9 @@ The rebuilt Phoenix reference assembly reports no larger static collisions. The 
 The open saddle and EMG-band carrier pass valid-single-solid and positive-volume watertight STL checks. The new parts have no modelled volume collisions with one another, the probe envelope, or the complete current Phoenix/housing assembly. The front housing bridge includes relief around the existing cradle plate. The saddle does not intrude into its placeholder lumen. These are geometric checks, not tissue-pressure, suspension or strength tests.
 
 Personal-statement v4 was read locally from current IWA text and its embedded preview. DFRobot confirms a 22 × 35 mm dry-electrode board and placement along muscle direction on exposed skin. Electrode thickness, contact protrusion, residual-limb dimensions, straps, liner and anatomical alignment remain unverified. No patient-specific socket or wrist lock has been completed. Firmware and earlier force calculations remain unchanged.
+
+## Prototype 0.1 package finalisation — 5 October 2026
+
+Selected parts and firmware sources are listed with SHA-256 hashes in `release/manifest.json`. `release/package.py` verifies required files and existing collision reports and checks ZIP integrity. This is packaging validation, not a new CAD solve or physical acceptance. No geometry or firmware changed in this finalisation.
+
+Host control tests passed again: calibration, debounce, release, arming, timeout, fault handling and arithmetic. The real included OYMotion filter/controller integration test passed with synthetic rest/contraction/rest input. The earlier Arduino compile result remains historical; no fresh board compile or upload was performed. Current hand-scale, thumb, wrist lock, tendon/equaliser retention, real component fit and individual socket fitting gates remain open in `BUILD.md`.

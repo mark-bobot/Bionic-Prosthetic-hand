@@ -1,0 +1,86 @@
+{
+  "version": "0.1.0-prototype",
+  "status": "Bench-development package; unfinished mechanics and unfitted arm interface",
+  "entrypoint": "BUILD.md",
+  "selected_files": {
+    "cad/compact/exports/compact_base.stl": {
+      "quantity": 1,
+      "sha256": "5e76dde0432725e6cc233d22415401b1fe87a3de3a579d182862afe4bfb9d568",
+      "bytes": 354684
+    },
+    "cad/compact/exports/compact_tray.stl": {
+      "quantity": 1,
+      "sha256": "89302799d9d1b4b621b8042a2bfc123ce7ac0eaf0421dd1b184e42e4dd3c1128",
+      "bytes": 69684
+    },
+    "cad/compact/exports/compact_lid.stl": {
+      "quantity": 1,
+      "sha256": "2fc0024c76af39f236dd495abecd014417237238383f7e0ecf7ea916e918be8f",
+      "bytes": 347684
+    },
+    "cad/compact/exports/single_groove_spool.stl": {
+      "quantity": 3,
+      "sha256": "ad4ef80ad9aed4a60d7c3b086ec5ec83d06dda9cd9ca4804c6b96f29c6599652",
+      "bytes": 197384
+    },
+    "cad/exports/pair_equaliser.stl": {
+      "quantity": 2,
+      "sha256": "04e66dd97da42fd31786ed773efb06ac55d40bad54cfb8925136129418f07015",
+      "bytes": 68484
+    },
+    "cad/exports/tendon_fairlead.stl": {
+      "quantity": 3,
+      "sha256": "0fed1d4780c3ddb59e0fc6081dd2c94935eeac72b661084d7b89c754ba8e30f1",
+      "bytes": 36684
+    },
+    "cad/phoenix_v3/exports/phoenix_wrist_cradle.stl": {
+      "quantity": 1,
+      "sha256": "dca50b4fc5b95648117d85e547c5267304be24f77562f48a1308a23562a1cd75",
+      "bytes": 121484
+    },
+    "cad/arm_interface/exports/right_open_saddle.stl": {
+      "quantity": 1,
+      "sha256": "b2f1d4ca9d5897ff59c048ca82d1365b53abd58fa2bd741b3b64dcb21087f70f",
+      "bytes": 136684
+    },
+    "cad/arm_interface/exports/emg_band_carrier.stl": {
+      "quantity": 1,
+      "sha256": "02e1f71066334caca755a4198971975505977560084abe3ab9e2974c90fbe671",
+      "bytes": 50684
+    },
+    "cad/arm_interface/exports/right_arm_reference.step": {
+      "quantity": null,
+      "sha256": "aabfa260dec71d0f83c493ef556f5196279344d77210ab4cd8ce953b5577fc22",
+      "bytes": 23807080
+    },
+    "firmware/ProstheticHand/ProstheticHand.ino": {
+      "quantity": null,
+      "sha256": "d1d353ccb2f149d2a1a77b7723f52050f7b8c67efa44b32ae4b751b657a343d9",
+      "bytes": 2842
+    },
+    "firmware/ProstheticHand/HandControl.h": {
+      "quantity": null,
+      "sha256": "4231ba96a5af74dc7be7ca8708b1e6987ef3b8e8b9b6ff70cb1d29a57245f079",
+      "bytes": 1889
+    },
+    "firmware/ProstheticHand/EMGFilters.h": {
+      "quantity": null,
+      "sha256": "d7d5907331b2d83c024b6da7c031e900e7304b8ef52fd9c3f3ee79df5a2c4694",
+      "bytes": 3140
+    },
+    "firmware/ProstheticHand/EMGFilters.cpp": {
+      "quantity": null,
+      "sha256": "4f4e728c668ee0d7c08ee8dd27df55165c116c2c17743769ca56ef6702494358",
+      "bytes": 8498
+    }
+  },
+  "fairlead_quantity": "Up to three; mounting/path unresolved",
+  "open_gates": [
+    "Measured servo/battery/switch/electrode fit",
+    "Thumb joint orientation",
+    "Wrist lock and axle retention",
+    "Restrained equalisers, tendon routing and manual release",
+    "Physical force, electrical and thermal testing",
+    "Individual socket and suspension fit"
+  ]
+}

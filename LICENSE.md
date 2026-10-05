@@ -11,7 +11,7 @@ Phoenix Hand v3-derived CAD/STL files and this project's mechanical modification
 - Licence: https://creativecommons.org/licenses/by/4.0/
 - Full legal terms, incorporated by reference: https://creativecommons.org/licenses/by/4.0/legalcode
 - Original Phoenix Hand v3: https://www.thingiverse.com/thing:4056253
-- Attribution and modification summary: [README.md](README.md#original-design-and-attribution)
+- Attribution and modification summary: [README.md](README.md#original-design)
 
 Credit the original designers: Jason Bryant, John Diamond, Scott Darrow, Andreas Bastian, Team Unlimbited, e-NABLE France and Jeremy Simon. Original rights remain with their respective holders.
 

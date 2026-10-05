@@ -4,9 +4,11 @@
 
 The Phoenix v3 palm, fingers and joints are kept unchanged. The new parts form an external forearm actuator pack. Tendons are rerouted from the original wrist-powered actuation to the servos. This is the current reconstruction; it is not evidence that the original project used this exact arrangement.
 
-## Current integrated revision
+## Current build selection
 
-Use [Revision B: integrated electronics and battery pack](INTEGRATION.md) for the complete reference assembly. It replaces the standalone carrier with `integrated_base.stl` and adds `electronics_lid.stl`. The original carrier below remains available for a smaller motor-only bench test.
+Use [Prototype 0.1 build guide](../BUILD.md) for the definitive print list and acceptance gates. It selects the compact 60 mm housing, single-groove spools, Phoenix v3 source hand and right-arm attachment concept. The complete reference STEP is `arm_interface/exports/right_arm_reference.step`.
+
+[Revision B](INTEGRATION.md) and the motor-only files below are historical designs. Their base, lid and double-groove spool must not be substituted into the current package.
 
 ## Original motor-only files
 

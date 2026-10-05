@@ -4,6 +4,10 @@ A three-servo adaptation of the e-NABLE Phoenix Hand v3, using a DFRobot SEN0240
 
 One servo drives the thumb, one drives the index and middle fingers, and one drives the ring and little fingers. A muscle contraction closes the groups together; relaxing opens them. The design uses a separate forearm carrier so the original palm and fingers can stay unchanged.
 
+## Prototype 0.1
+
+[Start with the definitive build guide](BUILD.md). The package is organised for bench development; thumb alignment, wrist locking, restrained tendon routing and individual socket fit remain open. It is not a completed functional or wearable hand.
+
 ## Build files
 
 - [Arduino code and setup](firmware/README.md)
@@ -26,7 +30,7 @@ One servo drives the thumb, one drives the index and middle fingers, and one dri
 
 ## Status
 
-This is a newly reconstructed bench-prototype design. The Nano sketch compiles and the software control tests pass. The generated CAD passes solid/mesh checks. The hardware has not been assembled or tested: motor fit, tendon load, grip performance, electrical noise and thermal performance remain unverified.
+This is a newly reconstructed bench-prototype design. The Nano sketch compiles and the software control tests pass. The newly generated add-on parts pass solid/mesh checks; some original Phoenix STEP-to-STL conversions fail watertightness checks, so use the official source STLs. The hardware has not been assembled or tested: motor fit, tendon load, grip performance, electrical noise and thermal performance remain unverified.
 
 The servos owned for this project are generic units advertised as 25 kg·cm with 180° travel. DS3225 dimensions and 5 V electrical specifications are used as a reference, not as identification of those units. The initial code uses a small test movement; calibrate endpoints before expecting full finger closure.
 
