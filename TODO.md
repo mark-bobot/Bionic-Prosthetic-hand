@@ -40,6 +40,8 @@
 - [ ] Validate wrist fasteners, housing cooling and load retention on a bench before fitting.
 
 ## Current Phoenix v3 adaptation
+- [x] Remove the unused spool groove and lower maximum enclosure height to 60 mm; calculate force/travel at the retained radius.
+- [ ] Verify thinner-spool horn bolts, tendon anchors and 2.75 mm nominal roof clearance; measure force/travel through the complete routing.
 - [x] Round the housing corners, lower the rear roof and recess the controls/cover screws.
 - [ ] Slice the curved lid with suitable supports; test thin screw seats, actual low-profile heads and both fastener lengths.
 - [x] Restore original Phoenix v3 palm, finger and pin geometry as the selected hand.

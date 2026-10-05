@@ -2,7 +2,9 @@
 
 One thumb servo, one index/middle servo and one ring/little servo. The current hand is the [original Phoenix v3 adaptation](cad/phoenix_v3/README.md); the costs below remain the revision B baseline. Compact-housing/cradle hardware and any fitted socket are not yet fully costed. This is the complete **reference build list**, including power and mounting consumables. Physical servo fit, hand sizing and load validation remain open; do not treat it as a purchase-ready matched kit.
 
-**Current rounded-cover hardware:** four M3 through-fastener sets, with heads at most 6 mm diameter × 2 mm high to fit the recesses. Front/rear overall housing heights are 65/59 mm; measure from the recessed screw seat to the nut before selecting or trimming lengths. The older M3 × 45 revision B row below does not fit this housing. Inspect the 1 mm screw-seat thickness in a print sample. Switches need measured bushings and nuts for the 3 mm recessed panel. See [current housing notes](cad/compact/README.md).
+**Current spool set:** print three `cad/compact/exports/single_groove_spool.stl` parts (6.75 mm high); keep two equaliser parts. Recheck M2 horn bolts and knot clearance for the thinner spool. Older double-groove spools do not fit the lowered roof.
+
+**Current rounded-cover hardware:** four M3 through-fastener sets, with heads at most 6 mm diameter × 2 mm high to fit the recesses. Front/rear overall housing heights are 60/57 mm; measure from the recessed screw seat to the nut before selecting or trimming lengths. The older M3 × 45 revision B row below does not fit this housing. Inspect the 1 mm screw-seat thickness in a print sample. Switches need measured bushings and nuts for the 3 mm recessed panel. See [current housing notes](cad/compact/README.md).
 
 [Wiring](docs/WIRING.md) · [CAD](cad/README.md) · [Firmware](firmware/README.md)
 

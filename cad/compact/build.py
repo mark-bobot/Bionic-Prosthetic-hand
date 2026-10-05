@@ -61,43 +61,49 @@ for x in [-40,40]:
  for y in [15,110]:base=base.cut(box(3,26,6,x,y,-1))
 # Wrist bridge prototype pattern, matching hand.py after assembly rotation.
 for x in [-18,18]:base=base.cut(cyl(4.4,6,x,-6,-1))
-# Smooth rear roof: original 65 mm at motors, falling to 59 mm over rear boards.
+# Single-groove spools allow a 60 mm front roof and 57 mm rear roof.
 def roof_cap(offset=0):
- points=[(y,62+3*math.cos(math.pi*(y-100)/30)) for y in range(125,99,-5)]
- profile=(cq.Workplane('YZ').moveTo(-30,-10).lineTo(170,-10).lineTo(170,59)
-          .lineTo(130,59).spline(points,includeCurrent=True,tangents=[(-1,0),(-1,0)])
-          .lineTo(-30,65).close().extrude(120).translate((-60,0,offset)))
+ points=[(y,58.5+1.5*math.cos(math.pi*(y-100)/30)) for y in range(125,99,-5)]
+ profile=(cq.Workplane('YZ').moveTo(-30,-10).lineTo(170,-10).lineTo(170,57)
+          .lineTo(130,57).spline(points,includeCurrent=True,tangents=[(-1,0),(-1,0)])
+          .lineTo(-30,60).close().extrude(120).translate((-60,0,offset)))
  return profile
 outer_cap=roof_cap();inner_cap=roof_cap(-3)
 base=base.intersect(inner_cap)
 lid=rounded(94,160,70,0,68,0).intersect(outer_cap).cut(inner_cap)
 # Recess switch panel by 5 mm; switch bodies move down with its mounting face.
-lid=lid.cut(rounded(28,46,12,23,66,56,r=4))
-well=rounded(28,46,8,23,66,57,r=4).cut(rounded(24,42,7,23,66,60,r=2))
+lid=lid.cut(rounded(28,46,12,23,66,51,r=4))
+well=rounded(28,46,8,23,66,52,r=4).cut(rounded(24,42,7,23,66,55,r=2))
 lid=lid.union(well)
 for name in ['main_switch','arm_switch']:
- sz,x,y,z,c=C[name];C[name]=(sz,x,y,z-5,c)
+ sz,x,y,z,c=C[name];C[name]=(sz,x,y,z-10,c)
 # Counterbores assume heads <= 6 mm diameter and <= 2 mm high; verify thin seats.
 for x,y in bosses:
- top=65 if y<100 else 59
+ top=60 if y<100 else 57
  lid=lid.cut(cyl(3.4,12,x,y,top-10)).cut(cyl(6.4,2.2,x,y,top-2))
 for name,d in [('main_switch',12.2),('arm_switch',6.2)]:
- _,x,y,_,_=C[name];lid=lid.cut(cyl(d,6,x,y,56))
+ _,x,y,_,_=C[name];lid=lid.cut(cyl(d,6,x,y,51))
 # Rounded ventilation slots arranged as two compact groups.
-def vent(x,y,length,z=54):
+def vent(x,y,length,z=49):
  return cq.Workplane('XY').center(x,y).slot2D(length,2.5,angle=90).extrude(14).translate((0,0,z))
 for x in [-28,-22,-16,-10]:lid=lid.cut(vent(x,61,18))
 for x in [-28,0,28]:lid=lid.cut(vent(x,22,18))
 # Inspect the selected screw head and switch bushing lengths on a fit coupon.
 models={n:box(*sz,x,y,z) for n,(sz,x,y,z,c) in C.items()}
-spool=cq.importers.importStep(str(R.parent/'exports/two_groove_spool.step'))
+# One groove per servo feeds either a floating equaliser or the thumb.
+# Keep radius and metal-horn mounting slots; remove unused second groove.
+spool=cq.Workplane('XY').circle(12).extrude(6.75)
+for z in [0,5.25]:spool=spool.union(cyl(28,1.5,0,0,z))
+spool=spool.cut(cyl(6,9,0,0,-1))
+for x in [-8,8]:spool=spool.cut(cq.Workplane('XY').center(x,0).slot2D(5,2.3).extrude(9).translate((0,0,-1)))
+spool=spool.cut(cq.Workplane('YZ').center(0,3.4).circle(1).extrude(30,both=True))
 for i,x in enumerate([-28,0,28]):
  # Ear envelope is an explicit layout allowance, not an identified servo specification.
  models[f'servo_{i}']=box(20,40,40.5,x,20,4).union(box(24,54,6,x,20,34))
  models[f'spool_{i}']=spool.translate((x,30 if i==1 else 10,47.5))
 # Export valid parts at Z=0. Curved lid needs slicer orientation/support review.
-parts={'compact_base':base,'compact_tray':tray.translate((0,0,-30)), 'compact_lid':lid.translate((0,0,-56))}
-report={'component_envelopes':C,'checks':{},'collisions':[],'socket_status':'Not designed: mounting use and arm dimensions required','profile':{'outer_corner_radius_mm':12,'front_height_mm':65,'rear_height_mm':59,'switch_recess_mm':5,'cover_vertical_thickness_mm':3}}
+parts={'compact_base':base,'compact_tray':tray.translate((0,0,-30)), 'compact_lid':lid.translate((0,0,-52)), 'single_groove_spool':spool}
+report={'component_envelopes':C,'checks':{},'collisions':[],'socket_status':'Not designed: mounting use and arm dimensions required','profile':{'outer_corner_radius_mm':12,'front_height_mm':60,'rear_height_mm':57,'switch_recess_mm':5,'cover_vertical_thickness_mm':3}}
 for n,p in parts.items():
  assert len(p.solids().vals())==1 and p.val().isValid(),n
  cq.exporters.export(p,str(O/f'{n}.step'));cq.exporters.export(p,str(O/f'{n}.stl'),tolerance=.08,angularTolerance=.15)
@@ -127,7 +133,7 @@ for n,p in allshapes.items():
  faces.extend([[v[j] for j in ff] for ff in f]);colors.extend([color]*len(f))
 ax.add_collection3d(Poly3DCollection(faces,facecolor=colors,edgecolor='none'))
 ax.set_xlim(-50,50);ax.set_ylim(-15,150);ax.set_zlim(0,68);ax.set_box_aspect((100,165,68));ax.view_init(55,-65)
-ax.set_title('Rounded housing — cover removed\n94 × 160 mm; 65 mm motor end / 59 mm rear; arm interface pending')
+ax.set_title('Rounded housing — cover removed\n94 × 160 mm; 60 mm motor end / 57 mm rear; arm interface pending')
 ax.set_xlabel('mm');ax.set_ylabel('mm');ax.set_zlabel('mm')
 fig.savefig(O/'compact_preview.png',dpi=160);plt.close(fig)
 print(json.dumps({'checks':report['checks'],'collisions':report['collisions']},indent=2))

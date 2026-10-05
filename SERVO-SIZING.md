@@ -1,5 +1,7 @@
 # Preliminary two-finger servo sizing
 
+**Current design calculation:** [single-groove spool force/travel model](calculations/README.md), with a reproducible Python script and 5 V reference torque. The analysis below retains earlier radius comparisons.
+
 Status: calculation with assumptions, not a verified capability or a recovered historical calculation. Prepared 26 September 2026.
 
 ## Known inputs and unknowns

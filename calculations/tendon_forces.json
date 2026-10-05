@@ -1,0 +1,85 @@
+{
+  "reference": "DS3225 at 5 V, https://dsservo.com/d_file/DS3225%20datasheet.pdf",
+  "assumptions": {
+    "stall_kgcm": 21.0,
+    "working_fraction": 0.4,
+    "load_margin": 1.5,
+    "effective_radius_mm": 12.3,
+    "tip_example_return_equivalent_N": 4,
+    "tip_example_moment_arm_mm": 5,
+    "tip_example_contact_lever_mm": 50,
+    "equaliser": "ideal equal arms and parallel output lines"
+  },
+  "working_torque_Nm": 0.8237586000000001,
+  "servo_side_total_tension_screen_N": 44.64816260162602,
+  "sensitivity": [
+    {
+      "routing_efficiency": 0.4,
+      "pair_tendon_N_each": 8.929632520325205,
+      "thumb_tendon_N": 17.85926504065041,
+      "illustrative_tip_N_each": 0.4929632520325205
+    },
+    {
+      "routing_efficiency": 0.6,
+      "pair_tendon_N_each": 13.394448780487805,
+      "thumb_tendon_N": 26.78889756097561,
+      "illustrative_tip_N_each": 0.9394448780487805
+    },
+    {
+      "routing_efficiency": 0.8,
+      "pair_tendon_N_each": 17.85926504065041,
+      "thumb_tendon_N": 35.71853008130082,
+      "illustrative_tip_N_each": 1.385926504065041
+    }
+  ],
+  "loads": [
+    {
+      "required_finger_side_tendon_N_each": 5,
+      "design_torque_Nm": 0.3075,
+      "design_torque_kgcm": 3.1356273549071294,
+      "within_assumed_working_allowance": true
+    },
+    {
+      "required_finger_side_tendon_N_each": 10,
+      "design_torque_Nm": 0.615,
+      "design_torque_kgcm": 6.271254709814259,
+      "within_assumed_working_allowance": true
+    },
+    {
+      "required_finger_side_tendon_N_each": 15,
+      "design_torque_Nm": 0.9225,
+      "design_torque_kgcm": 9.406882064721389,
+      "within_assumed_working_allowance": false
+    },
+    {
+      "required_finger_side_tendon_N_each": 20,
+      "design_torque_Nm": 1.23,
+      "design_torque_kgcm": 12.542509419628518,
+      "within_assumed_working_allowance": false
+    }
+  ],
+  "travel": [
+    {
+      "sweep_deg": 18,
+      "take_up_mm": 3.864158963915446
+    },
+    {
+      "sweep_deg": 120,
+      "take_up_mm": 25.761059759436304
+    },
+    {
+      "sweep_deg": 160,
+      "take_up_mm": 34.34807967924841
+    },
+    {
+      "sweep_deg": 180,
+      "take_up_mm": 38.64158963915446
+    }
+  ],
+  "limitations": [
+    "Friction, return tension and finger lever arms are assumed, not measured.",
+    "Equaliser travel and routing are unfinished; no grip or structural acceptance.",
+    "Measure full-path input force without applying routing loss twice.",
+    "No current limiting or force feedback is inferred from this calculation."
+  ]
+}

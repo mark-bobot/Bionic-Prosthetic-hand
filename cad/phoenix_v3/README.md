@@ -9,7 +9,7 @@ This is the requested Phoenix-based version. The palm, finger sections, tendon p
 | Retained from Phoenix v3 | Added for motorisation |
 | --- | --- |
 | Original left and right palms | Compact three-servo housing, electronics tray and lid |
-| Original five proximal and five distal sections | Three servo spools and two paired-finger equalisers |
+| Original five proximal and five distal sections | Three single-groove servo spools and two paired-finger equalisers |
 | Original finger joints, pin geometry and tendon passages | A trial wrist cradle using the existing palm pivot bores |
 | Original return-element approach | Arduino Nano, SEN0240 signal board, power electronics and battery |
 
@@ -23,7 +23,7 @@ The intended actuation remains one servo for the thumb, one for index/middle and
 
 The cradle is a **pivot-alignment prototype**, not a finished wrist connector. It still requires a retained axle, neutral-position lock/stops, strength checks and adaptation to the selected hand scale. The pivot must not remain free under loaded tendons. Do not substitute the original short wrist pins without checking their engagement in the wider cradle. The complete motorised wrist load path is not validated.
 
-The rounded enclosure retains a 94 × 160 mm footprint and 65 mm maximum height at the motors. The roof falls smoothly to 59 mm at the rear, with 12 mm outer corner radii, recessed switch controls and recessed cover screws. The lid requires slicer support/orientation review. See [component dimensions and assumptions](../compact/README.md). Its reference motor ears, battery and switches are not measurements of the user's parts. Board, connector and cable fit still require physical checks.
+The rounded enclosure retains a 94 × 160 mm footprint and 60 mm maximum height at the motors. The roof falls smoothly to 57 mm at the rear, with 12 mm outer corner radii, recessed switch controls and recessed cover screws. The 6.75 mm-high spools retain the 12 mm groove-floor radius while removing the unused second groove. Print these from `cad/compact/exports`, not the older two-groove part. The lid requires slicer support/orientation review. See [component dimensions and assumptions](../compact/README.md). Its reference motor ears, battery and switches are not measurements of the user's parts. Board, connector and cable fit still require physical checks.
 
 ## Arm fit
 

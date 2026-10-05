@@ -2,17 +2,21 @@
 
 **Use the [Phoenix v3 version](../phoenix_v3/README.md) for the current hand.** The housing, tray and lid here remain in use. The custom palm, finger, thumb and wrist-bridge files below are historical alternatives and are no longer the selected design. Their joint hardware list and motion checks do not apply to Phoenix.
 
-## Current rounded housing — 5 October 2026
+## Current lower housing — 5 October 2026
 
-The Phoenix assembly now uses a rounded enclosure with 12 mm outer corner radii, a smooth roof falling from 65 mm at the motors to 59 mm at the rear, and a switch panel recessed by 5 mm. The maximum footprint remains 94 × 160 mm: the servos still set the width. The original Phoenix hand geometry is unchanged.
+The current Phoenix module is **94 × 160 × 60 mm maximum**, with a smooth roof falling to 57 mm at the rear and 12 mm outer corner radii. This is 5 mm lower at the motor end and 2 mm lower at the rear than the preceding rounded enclosure. The footprint is unchanged. Original Phoenix palm and finger geometry remains unchanged.
 
-The cover has 6.4 mm diameter, 2 mm deep screw-head recesses and grouped rounded ventilation slots. Choose low-profile M3 heads no larger than 6 mm diameter and 2 mm high if they are to sit flush. Only 1 mm of cover remains below each recess; print and inspect a fastener sample and check clamp load before committing to the cover. The front and rear housing heights at the screws are 65 and 59 mm respectively; select screw lengths from the actual recessed bearing faces and nut engagement, not the old 65 mm stack alone. Switch bodies move down with the panel; verify the actual bushings, nuts, levers and finger access.
+Three new **single-groove spools** replace the old double-groove spools in this assembly. Each is 6.75 mm high, with a 12 mm groove-floor radius and 14 mm flange radius. One tendon feeds each paired-finger equaliser; one feeds the thumb. The unused groove was removed without changing the winding radius, so ideal tendon force and travel are unchanged. At the assumed mounting height the spool tops reach 54.25 mm and the front lid underside is 57 mm: 2.75 mm nominal clearance, excluding actual horn bolts, knots and dimensional error. The rear Nano envelope reaches 52 mm below the 54 mm underside: 2 mm nominal clearance, excluding wiring. Check both physically.
 
-Print one base, one tray and one lid for this housing. The lid export is at Z=0 but its curved underside is **not a flat printing face**. Review orientation and supports in the slicer, including the recessed panel and curved roof; remove support without damaging the thin screw seats. Test the cover and switch fit before a full assembled print. Cooling, wiring bends and manufacturing tolerances still require physical testing.
+The controls sit in a panel recessed 5 mm below the motor-end roof. The mounting panel remains 3 mm thick; body positions moved down with it. Actual switch levers, nuts and bushing fit remain unverified. The cover has 6.4 mm diameter × 2 mm deep screw-head recesses. Heads must be at most 6 mm diameter × 2 mm high to sit flush. Only 1 mm remains below the recesses: print a seat sample and verify clamp load. Front/rear overall screw-station heights are 60/57 mm; select lengths from the recessed seats to full nut engagement. Old cover lengths no longer apply.
 
-Run `python cad/compact/build.py`, then `python cad/phoenix_v3/build.py --assembly-only` to refresh the current assembly using the already exported source parts. The full Phoenix build remains available for re-extracting the hash-verified upstream source.
+Print one base, one tray, one lid and **three `single_groove_spool` parts** from this folder. Reuse the two equaliser designs. Verify metal-horn hole spacing, shaft access and M2 screw length on the thinner spools; no printed spline is provided. Anchor knots and winding must remain clear of the lid and fasteners. This is a packaging design, not a demonstrated tendon-routing solution.
 
-The sections below describe the superseded custom-hand study. Its hand, wrist and joint hardware are not the selected Phoenix build.
+The lid export is at Z=0 but its curved underside is not a flat printing face. Review orientation and supports in the slicer, including the recessed panel. Test cover, screw-seat and switch fit before a full assembly. Cooling, wiring bends and manufacturing tolerances still require physical checks.
+
+Run `python cad/compact/build.py`, then `python cad/phoenix_v3/build.py --assembly-only`. The full Phoenix build re-extracts the hash-verified upstream parts. [Force and travel calculations](../../calculations/README.md) use the actual winding radius but assumed friction and servo performance.
+
+The sections below record the superseded custom-hand study; its hand parts and original housing dimensions are historical.
 
 ## Earlier experimental revision C
 
@@ -67,7 +71,7 @@ This is a **replacement hand**, so do not buy the Phoenix pin/band set just for 
 | M3 joint bolts, washers and locknuts | 9 sets | Starting stock M3 × 25; verify shank, washers and clearance; avoid clamping joints |
 | Elastic return elements | 9 | One per joint; dimensions/preload selected by testing |
 | M4 wrist bridge fasteners | 4 sets | Two through hand + bridge, two through housing floor + bridge; select length after checking heads/nuts |
-| M3 cover fasteners | 4 sets | Current cover: 65 mm front / 59 mm rear overall heights, recessed bearing faces; measure actual length and full nut engagement |
+| M3 cover fasteners | 4 sets | Current cover: 60 mm front / 57 mm rear overall heights, recessed bearing faces; measure actual length and full nut engagement |
 | M3 tray fasteners | 4 sets | 32 mm nominal stack to underside; verify nut engagement and non-protruding ends |
 | Insulated mounting material | As needed | Nominal 1 mm above pads/tray; verify actual thickness |
 | Soft battery strap | 1 | 10 mm wide, no compression of pouch cell |

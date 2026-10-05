@@ -96,7 +96,7 @@
       ],
       23,
       58.1,
-      37,
+      32,
       "#aa5767"
     ],
     "arm_switch": [
@@ -107,7 +107,7 @@
       ],
       23,
       74,
-      45,
+      40,
       "#aa5767"
     ]
   },
@@ -116,10 +116,10 @@
       "size_mm": [
         94.0,
         160.0,
-        62.0
+        57.0
       ],
       "watertight": true,
-      "volume_mm3": 160438.9231911063
+      "volume_mm3": 155028.28431153545
     },
     "compact_tray": {
       "size_mm": [
@@ -134,18 +134,27 @@
       "size_mm": [
         94.0,
         160.0,
-        9.0
+        8.0
       ],
       "watertight": true,
-      "volume_mm3": 44445.22619467322
+      "volume_mm3": 44445.22619726501
+    },
+    "single_groove_spool": {
+      "size_mm": [
+        28.0,
+        28.0,
+        6.75
+      ],
+      "watertight": true,
+      "volume_mm3": 3183.037185461515
     }
   },
   "collisions": [],
   "socket_status": "Not designed: mounting use and arm dimensions required",
   "profile": {
     "outer_corner_radius_mm": 12,
-    "front_height_mm": 65,
-    "rear_height_mm": 59,
+    "front_height_mm": 60,
+    "rear_height_mm": 57,
     "switch_recess_mm": 5,
     "cover_vertical_thickness_mm": 3
   }

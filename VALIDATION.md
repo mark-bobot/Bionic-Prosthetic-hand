@@ -48,3 +48,11 @@ The selected hand now uses the 32 solids extracted from the hash-verified offici
 The compact base, tray and curved lid pass valid-single-solid and positive-volume watertight STL checks. All modelled component/fixture pairs have zero reported volume clashes. The rebuilt Phoenix reference assembly reports no larger static collisions; inherited source contacts and source mesh limitations remain recorded separately. Both assembly and internal-layout previews were visually inspected. Original Phoenix source geometry remains unchanged.
 
 The housing has 12 mm outer corner radii, a 65 mm motor-end roof falling to 59 mm at the rear, a 5 mm recessed switch panel and 2 mm screw-head recesses. These are CAD dimensions, not measured print results. Thin screw seats, actual switch/head fit, curved-cover support removal, cable clearance and cooling require physical checks. Servo and battery envelopes remain assumptions. No firmware changes or new hardware tests were performed in this revision.
+
+## Lower single-groove revision — 5 October 2026
+
+Supersedes the preceding rounded housing dimensions. Current front/rear roof heights are 60/57 mm. The base, tray, lid and new 6.75 mm single-groove spool are valid single solids with positive-volume watertight STL meshes. Modelled component/fixture pairs have no volume collisions. The new spool retains a 12 mm groove-floor radius; measured hardware and line-layer build-up are not represented.
+
+`python3 calculations/tendon_forces.py` regenerates the force/travel report and JSON using the DS3225 5 V reference, explicit working/margin assumptions and 40/60/80% routing-efficiency scenarios. The 60% case gives 13.39 N per paired finger and 34.35 mm take-up at an illustrative 160 degrees. Actual closure tension, fingertip force, structural strength and thermal duty remain unmeasured. Firmware is unchanged.
+
+The rebuilt Phoenix reference assembly reports no larger static collisions. The current exterior preview and force/travel plot were visually inspected. Inherited source mesh limitations and the deliberately exploded thumb remain unchanged.
