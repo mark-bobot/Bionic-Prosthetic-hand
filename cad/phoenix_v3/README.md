@@ -29,7 +29,7 @@ The rounded enclosure retains a 94 × 160 mm footprint and 60 mm maximum height 
 
 The original Phoenix v3 is a wrist-powered design intended for someone with a functional wrist and sufficient palm to operate it. That requirement is documented by [e-NABLE](https://hub.e-nable.org/p/devices?p=e-NABLE+Phoenix+Hand+v3). Motorising the fingers does not make the original palm and arm guard a fitted socket for someone with a missing hand.
 
-For this user's intended missing-hand application, a suitable individual socket and wrist connection remain necessary. Hand side, amputation level, available length and socket/interface dimensions are still unknown. The pictured right-hand arrangement is only a reference; both original palms are exported. Do not use the source scale as a recipient fit prescription.
+For this user's intended missing-hand application, a suitable individual socket and wrist connection remain necessary. Right side and a residual forearm are now specified. Available length, limb shape and socket/interface dimensions are still unknown. An [open saddle and movable electrode-holder concept](../arm_interface/README.md) is now provided with placeholder dimensions; it is not a fitted socket. The pictured right-hand arrangement is only a reference; both original palms are exported. Do not use the source scale as a recipient fit prescription.
 
 ## Files
 

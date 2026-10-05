@@ -56,3 +56,9 @@ Supersedes the preceding rounded housing dimensions. Current front/rear roof hei
 `python3 calculations/tendon_forces.py` regenerates the force/travel report and JSON using the DS3225 5 V reference, explicit working/margin assumptions and 40/60/80% routing-efficiency scenarios. The 60% case gives 13.39 N per paired finger and 34.35 mm take-up at an illustrative 160 degrees. Actual closure tension, fingertip force, structural strength and thermal duty remain unmeasured. Firmware is unchanged.
 
 The rebuilt Phoenix reference assembly reports no larger static collisions. The current exterior preview and force/travel plot were visually inspected. Inherited source mesh limitations and the deliberately exploded thumb remain unchanged.
+
+## Right-arm interface concept — 5 October 2026
+
+The open saddle and EMG-band carrier pass valid-single-solid and positive-volume watertight STL checks. The new parts have no modelled volume collisions with one another, the probe envelope, or the complete current Phoenix/housing assembly. The front housing bridge includes relief around the existing cradle plate. The saddle does not intrude into its placeholder lumen. These are geometric checks, not tissue-pressure, suspension or strength tests.
+
+Personal-statement v4 was read locally from current IWA text and its embedded preview. DFRobot confirms a 22 × 35 mm dry-electrode board and placement along muscle direction on exposed skin. Electrode thickness, contact protrusion, residual-limb dimensions, straps, liner and anatomical alignment remain unverified. No patient-specific socket or wrist lock has been completed. Firmware and earlier force calculations remain unchanged.

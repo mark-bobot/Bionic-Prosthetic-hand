@@ -1,0 +1,16 @@
+{
+  "status": "Unfitted right-forearm bench concept; all limb dimensions are placeholders",
+  "side": "right",
+  "length_mm": 140,
+  "distal_inner_width_mm": 54,
+  "distal_inner_depth_mm": 50,
+  "proximal_inner_width_mm": 70,
+  "proximal_inner_depth_mm": 64,
+  "wall_mm": 3,
+  "centre_z_mm": -40,
+  "distal_y_mm": -25,
+  "open_edge_z_mm": -44,
+  "electrode_board_width_mm": 22,
+  "electrode_board_length_mm": 35,
+  "electrode_thickness_assumed_mm": 6
+}

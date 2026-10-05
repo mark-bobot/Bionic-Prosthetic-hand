@@ -40,13 +40,16 @@
 - [ ] Validate wrist fasteners, housing cooling and load retention on a bench before fitting.
 
 ## Current Phoenix v3 adaptation
+- [x] Add right-arm open saddle and independent EMG-band carrier using the published electrode board outline.
+- [ ] Replace placeholder lumen with assessed right residual-limb/socket geometry; resolve anatomical length, suspension, liner and skin-pressure requirements.
+- [ ] Measure electrode package thickness/contact protrusion and verify its independent soft retention and cable route.
 - [x] Remove the unused spool groove and lower maximum enclosure height to 60 mm; calculate force/travel at the retained radius.
 - [ ] Verify thinner-spool horn bolts, tendon anchors and 2.75 mm nominal roof clearance; measure force/travel through the complete routing.
 - [x] Round the housing corners, lower the rear roof and recess the controls/cover screws.
 - [ ] Slice the curved lid with suitable supports; test thin screw seats, actual low-profile heads and both fastener lengths.
 - [x] Restore original Phoenix v3 palm, finger and pin geometry as the selected hand.
 - [x] Export original source parts and add a wrist-pivot cradle study for the compact housing.
-- [ ] Confirm side, Phoenix scale, residual-limb requirements and socket/interface dimensions.
+- [ ] Right side confirmed; confirm Phoenix scale and residual-limb requirements and socket/interface dimensions.
 - [ ] Verify the original thumb orientation against the official assembly guide; remove the exploded-view offset only after confirming fit.
 - [ ] Select and verify wrist axle/retention, and complete a neutral-position wrist lock.
 - [ ] Complete servo-to-Phoenix tendon routing and restrained paired-finger equalisers.

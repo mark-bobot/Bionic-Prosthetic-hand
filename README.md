@@ -9,6 +9,7 @@ One servo drives the thumb, one drives the index and middle fingers, and one dri
 - [Arduino code and setup](firmware/README.md)
 - [Wiring diagram](docs/WIRING.md)
 - [Editable CAD, STEP and printable STL files](cad/README.md)
+- [Right forearm attachment and movable EMG holder](cad/arm_interface/README.md) — unfitted concept
 - [Bill of materials and cost allowances](BOM.md)
 - [Current force and travel calculation](calculations/README.md) · [Earlier sizing analysis](SERVO-SIZING.md)
 - [Measuring tendon force](TENDON-TEST.md)

@@ -6,6 +6,8 @@ One thumb servo, one index/middle servo and one ring/little servo. The current h
 
 **Current rounded-cover hardware:** four M3 through-fastener sets, with heads at most 6 mm diameter × 2 mm high to fit the recesses. Front/rear overall housing heights are 60/57 mm; measure from the recessed screw seat to the nut before selecting or trimming lengths. The older M3 × 45 revision B row below does not fit this housing. Inspect the 1 mm screw-seat thickness in a print sample. Switches need measured bushings and nuts for the 3 mm recessed panel. See [current housing notes](cad/compact/README.md).
 
+[Right-arm attachment additions](cad/arm_interface/README.md#added-reference-bom): open saddle, separate electrode holder, webbing and cable restraint. These are not included in the older cost total; a fitted socket/liner remains unspecified.
+
 [Wiring](docs/WIRING.md) · [CAD](cad/README.md) · [Firmware](firmware/README.md)
 
 All monetary values below are **GBP planning allowances**, except the explicitly historical mechanical subtotal. They are not claimed as current quotes. They exclude shipping, taxes not included in a seller price, tools and labour. Owned items are included to show replacement cost.
