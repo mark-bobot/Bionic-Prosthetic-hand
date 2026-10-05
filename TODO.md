@@ -40,6 +40,8 @@
 - [ ] Validate wrist fasteners, housing cooling and load retention on a bench before fitting.
 
 ## Current Phoenix v3 adaptation
+- [x] Round the housing corners, lower the rear roof and recess the controls/cover screws.
+- [ ] Slice the curved lid with suitable supports; test thin screw seats, actual low-profile heads and both fastener lengths.
 - [x] Restore original Phoenix v3 palm, finger and pin geometry as the selected hand.
 - [x] Export original source parts and add a wrist-pivot cradle study for the compact housing.
 - [ ] Confirm side, Phoenix scale, residual-limb requirements and socket/interface dimensions.

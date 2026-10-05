@@ -204,28 +204,28 @@
     [
       "phoenix_palm_right",
       "index_proximal",
-      0.0008949313583263616
+      0.000894884949748016
     ],
     [
       "phoenix_palm_right",
       "middle_proximal",
-      0.0008950147877471854
+      0.0008950277940657198
     ],
     [
       "phoenix_palm_right",
       "ring_proximal",
-      0.0008949313786306044
+      0.0008948849497467048
     ],
     [
       "phoenix_palm_right",
       "little_proximal",
-      0.0008949313786308429
+      0.0008948849497468599
     ]
   ],
   "cradle": {
     "watertight": true,
     "pivot_bore_mm": 6.4,
-    "pivot_z_mm": 8.412814652027004,
+    "pivot_z_mm": 8.000680706121539,
     "scale": "upstream only; regenerate after sizing"
   }
 }

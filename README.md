@@ -19,7 +19,7 @@ One servo drives the thumb, one drives the index and middle fingers, and one dri
 
 ## Current CAD: Phoenix v3 with compact motor housing
 
-[Use the Phoenix-based design](cad/phoenix_v3/README.md). It retains the official Phoenix v3 palm, fingers and joints, adds a trial wrist cradle and uses the compact three-servo housing. The previous custom two-joint hand is superseded. Socket fit, the wrist lock and final tendon routing remain unfinished.
+[Use the Phoenix-based design](cad/phoenix_v3/README.md). It retains the official Phoenix v3 palm, fingers and joints, adds a trial wrist cradle and uses the compact three-servo housing. The housing now has larger rounded corners, a curved rear roof 6 mm lower than the motor end, and a recessed switch panel. Its maximum dimensions remain 94 × 160 × 65 mm. The previous custom two-joint hand is superseded. Socket fit, the wrist lock and final tendon routing remain unfinished.
 
 ![Phoenix v3 motorisation study](cad/phoenix_v3/exports/phoenix_preview.png)
 

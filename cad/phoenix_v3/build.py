@@ -2,7 +2,7 @@
 Keep source bodies unchanged. Repositioning only in reference assembly. mm.
 """
 from pathlib import Path
-import hashlib,json,math,tempfile
+import hashlib,json,math,tempfile,sys
 import cadquery as cq
 import trimesh
 import numpy as np
@@ -20,16 +20,19 @@ N={0:'original_arm_guard',1:'original_palm_left',2:'original_palm_right',22:'pro
 for i in range(3,16):N[i]=f'original_pin_or_spacer_{i:02d}'
 for i in range(16,22):N[i]=f'original_tensioner_part_{i:02d}'
 report={'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'source_parts':{},'reference_collisions':[], 'notes':['Source solids retain their geometry and source scale.','Assembly pose is a study, not verified pin insertion or travel.']}
-for i,n in N.items():
- p=S[i];assert p.isValid()
- # Exports retain source layout coordinates; no scale or shape modification.
- cq.exporters.export(p,str(O/f'{n}.step'))
- with tempfile.TemporaryDirectory() as tmp:
-  trial=Path(tmp)/'trial.stl';cq.exporters.export(p,str(trial),tolerance=.06,angularTolerance=.12)
-  m=trimesh.load_mesh(trial)
- # Source print meshes are obtained from the official release; conversion is diagnostic only.
- (O/f'{n}.stl').unlink(missing_ok=True)
- report['source_parts'][n]={'source_solid':i,'cad_valid':True,'watertight':bool(m.is_watertight),'volume_mm3':p.Volume()}
+if '--assembly-only' in sys.argv:
+ report['source_parts']=json.loads((R/'checks.json').read_text())['source_parts']
+else:
+ for i,n in N.items():
+  p=S[i];assert p.isValid()
+  # Exports retain source layout coordinates; no scale or shape modification.
+  cq.exporters.export(p,str(O/f'{n}.step'))
+  with tempfile.TemporaryDirectory() as tmp:
+   trial=Path(tmp)/'trial.stl';cq.exporters.export(p,str(trial),tolerance=.06,angularTolerance=.12)
+   m=trimesh.load_mesh(trial)
+  # Source print meshes are obtained from the official release; conversion is diagnostic only.
+  (O/f'{n}.stl').unlink(missing_ok=True)
+  report['source_parts'][n]={'source_solid':i,'cad_valid':True,'watertight':bool(m.is_watertight),'volume_mm3':p.Volume()}
 # Recover exact centres from cylindrical joint faces, rather than rounded drawings.
 def joint(i,r,y_region=None):
  out=[]
@@ -135,12 +138,15 @@ cq.exporters.export(ass.toCompound(),str(O/'phoenix_motorised_reference.step'))
 fig=plt.figure(figsize=(11,14));ax=fig.add_subplot(111,projection='3d');faces=[];colors=[]
 for n,p in models.items():
  c='#526f7c' if n=='compact_housing' else '#d09a46' if n=='wrist_cradle' else '#bac6cd'
- for s in p.solids().vals():
+ for solid_index,s in enumerate(p.solids().vals()):
+  # Exterior view: omit internal envelope boxes and tray so they do not show through the cover.
+  if n=='compact_housing' and solid_index not in [0,2]:continue
+  if n=='compact_housing':c='#425761' if solid_index==0 else '#9aabb3'
   v,f=s.tessellate(.6);v=[a.toTuple() for a in v];tri=np.asarray([[v[j] for j in ff] for ff in f])
   norm=np.cross(tri[:,1]-tri[:,0],tri[:,2]-tri[:,0]);norm/=np.maximum(np.linalg.norm(norm,axis=1)[:,None],1e-12)
   light=np.array([-.3,-.5,1]);light/=np.linalg.norm(light);bright=.45+.55*np.abs(norm@light)
   faces.extend(tri);colors.extend(np.asarray(to_rgb(c))[None,:]*bright[:,None])
 ax.add_collection3d(Poly3DCollection(faces,facecolor=colors,edgecolor='none'))
 ax.set_xlim(-110,55);ax.set_ylim(-180,150);ax.set_zlim(-10,75);ax.set_box_aspect((165,330,85));ax.view_init(53,-65)
-ax.set_title('Original e-NABLE Phoenix v3 + motor housing\nThumb exploded for joint review; socket and wrist lock unfinished',fontsize=13);ax.set_axis_off();fig.tight_layout();fig.savefig(O/'phoenix_preview.png',dpi=160)
+ax.set_title('Phoenix v3 + rounded motor housing\nThumb exploded for joint review; socket and wrist lock unfinished',fontsize=13);ax.set_axis_off();fig.tight_layout();fig.savefig(O/'phoenix_preview.png',dpi=160)
 print(json.dumps({'source_parts':len(N),'non_watertight_source_parts':[n for n,r in report['source_parts'].items() if not r['watertight']],'reference_collisions':report['reference_collisions']},indent=2))

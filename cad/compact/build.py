@@ -2,7 +2,7 @@
 Run using CadQuery 2.8.0 after ../build.py. Actual servo model remains unknown.
 """
 from pathlib import Path
-import json
+import json, math
 import cadquery as cq
 import trimesh
 import matplotlib
@@ -12,7 +12,7 @@ from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 R=Path(__file__).resolve().parent;O=R/'exports';O.mkdir(exist_ok=True)
 def box(w,l,h,x=0,y=0,z=0):return cq.Workplane('XY').box(w,l,h,centered=(True,True,False)).translate((x,y,z))
 def cyl(d,h,x,y,z):return cq.Workplane('XY').circle(d/2).extrude(h).translate((x,y,z))
-def rounded(w,l,h,x,y,z,r=5):return box(w,l,h,x,y,z).edges('|Z').fillet(r)
+def rounded(w,l,h,x,y,z,r=12):return box(w,l,h,x,y,z).edges('|Z').fillet(r)
 base=rounded(94,160,4,0,68,0)
 # Low motor retainers; rear cables and removable ties. Outer ears remain above walls.
 for x in [-28,0,28]:
@@ -21,7 +21,7 @@ for x in [-28,0,28]:
  base=base.union(wall)
  for dy in [-5,45]:base=base.cut(box(6,3,6,x,dy,-1))
 # Thin full guard. Cover is held using four through screws/nuts.
-wall=rounded(94,160,58,0,68,4).cut(rounded(88,154,59,0,68,4,r=3))
+wall=rounded(94,160,58,0,68,4).cut(rounded(88,154,59,0,68,4,r=9))
 base=base.union(wall)
 bosses=[(-41,52),(41,52),(-41,140),(41,140)]
 for x,y in bosses:
@@ -49,7 +49,7 @@ C={
  'Nano':([18,45,19],-22,109,33,'#32988e'),
  'EMG':([22,35,10],7,115,33,'#32988e'),
  'logic_regulator':([12.7,10.2,4],20,86,33,'#697ac3'),
- 'main_switch':([16,20,20],23,58,42,'#aa5767'),
+ 'main_switch':([16,20,20],23,58.1,42,'#aa5767'),
  'arm_switch':([10,10,12],23,74,50,'#aa5767'),
 }
 for name,(sz,x,y,z,c) in C.items():
@@ -61,25 +61,48 @@ for x in [-40,40]:
  for y in [15,110]:base=base.cut(box(3,26,6,x,y,-1))
 # Wrist bridge prototype pattern, matching hand.py after assembly rotation.
 for x in [-18,18]:base=base.cut(cyl(4.4,6,x,-6,-1))
-lid=rounded(94,160,3,0,68,62)
-for x,y in bosses:lid=lid.cut(cyl(3.4,5,x,y,61))
-for d,x,y in [(12.2,23,58),(6.2,23,74)]:lid=lid.cut(cyl(d,5,x,y,61))
-for x in [-29,-23,-17,-11,-5]:lid=lid.cut(box(2,20,5,x,60,61))
-for x in [-28,0,28]:lid=lid.cut(box(3,22,5,x,22,61))
+# Smooth rear roof: original 65 mm at motors, falling to 59 mm over rear boards.
+def roof_cap(offset=0):
+ points=[(y,62+3*math.cos(math.pi*(y-100)/30)) for y in range(125,99,-5)]
+ profile=(cq.Workplane('YZ').moveTo(-30,-10).lineTo(170,-10).lineTo(170,59)
+          .lineTo(130,59).spline(points,includeCurrent=True,tangents=[(-1,0),(-1,0)])
+          .lineTo(-30,65).close().extrude(120).translate((-60,0,offset)))
+ return profile
+outer_cap=roof_cap();inner_cap=roof_cap(-3)
+base=base.intersect(inner_cap)
+lid=rounded(94,160,70,0,68,0).intersect(outer_cap).cut(inner_cap)
+# Recess switch panel by 5 mm; switch bodies move down with its mounting face.
+lid=lid.cut(rounded(28,46,12,23,66,56,r=4))
+well=rounded(28,46,8,23,66,57,r=4).cut(rounded(24,42,7,23,66,60,r=2))
+lid=lid.union(well)
+for name in ['main_switch','arm_switch']:
+ sz,x,y,z,c=C[name];C[name]=(sz,x,y,z-5,c)
+# Counterbores assume heads <= 6 mm diameter and <= 2 mm high; verify thin seats.
+for x,y in bosses:
+ top=65 if y<100 else 59
+ lid=lid.cut(cyl(3.4,12,x,y,top-10)).cut(cyl(6.4,2.2,x,y,top-2))
+for name,d in [('main_switch',12.2),('arm_switch',6.2)]:
+ _,x,y,_,_=C[name];lid=lid.cut(cyl(d,6,x,y,56))
+# Rounded ventilation slots arranged as two compact groups.
+def vent(x,y,length,z=54):
+ return cq.Workplane('XY').center(x,y).slot2D(length,2.5,angle=90).extrude(14).translate((0,0,z))
+for x in [-28,-22,-16,-10]:lid=lid.cut(vent(x,61,18))
+for x in [-28,0,28]:lid=lid.cut(vent(x,22,18))
+# Inspect the selected screw head and switch bushing lengths on a fit coupon.
 models={n:box(*sz,x,y,z) for n,(sz,x,y,z,c) in C.items()}
 spool=cq.importers.importStep(str(R.parent/'exports/two_groove_spool.step'))
 for i,x in enumerate([-28,0,28]):
  # Ear envelope is an explicit layout allowance, not an identified servo specification.
  models[f'servo_{i}']=box(20,40,40.5,x,20,4).union(box(24,54,6,x,20,34))
  models[f'spool_{i}']=spool.translate((x,30 if i==1 else 10,47.5))
-# Export valid parts, with bed-facing exteriors for tray and cover.
-parts={'compact_base':base,'compact_tray':tray.translate((0,0,-30)), 'compact_lid':lid.translate((0,0,-62))}
-report={'component_envelopes':C,'checks':{},'collisions':[],'socket_status':'Not designed: mounting use and arm dimensions required'}
+# Export valid parts at Z=0. Curved lid needs slicer orientation/support review.
+parts={'compact_base':base,'compact_tray':tray.translate((0,0,-30)), 'compact_lid':lid.translate((0,0,-56))}
+report={'component_envelopes':C,'checks':{},'collisions':[],'socket_status':'Not designed: mounting use and arm dimensions required','profile':{'outer_corner_radius_mm':12,'front_height_mm':65,'rear_height_mm':59,'switch_recess_mm':5,'cover_vertical_thickness_mm':3}}
 for n,p in parts.items():
  assert len(p.solids().vals())==1 and p.val().isValid(),n
  cq.exporters.export(p,str(O/f'{n}.step'));cq.exporters.export(p,str(O/f'{n}.stl'),tolerance=.08,angularTolerance=.15)
  m=trimesh.load_mesh(O/f'{n}.stl');assert m.is_watertight and m.volume>0,n
- report['checks'][n]={'size_mm':m.extents.tolist(),'watertight':True}
+ report['checks'][n]={'size_mm':m.extents.tolist(),'watertight':True,'volume_mm3':float(m.volume)}
 fixtures={'base':base,'tray':tray,'lid':lid}
 allshapes={**fixtures,**models}
 for i,(n,p) in enumerate(allshapes.items()):
@@ -104,7 +127,7 @@ for n,p in allshapes.items():
  faces.extend([[v[j] for j in ff] for ff in f]);colors.extend([color]*len(f))
 ax.add_collection3d(Poly3DCollection(faces,facecolor=colors,edgecolor='none'))
 ax.set_xlim(-50,50);ax.set_ylim(-15,150);ax.set_zlim(0,68);ax.set_box_aspect((100,165,68));ax.view_init(55,-65)
-ax.set_title('Compact packaging study — cover removed\n94 × 160 × 65 mm; arm interface pending')
+ax.set_title('Rounded housing — cover removed\n94 × 160 mm; 65 mm motor end / 59 mm rear; arm interface pending')
 ax.set_xlabel('mm');ax.set_ylabel('mm');ax.set_zlabel('mm')
 fig.savefig(O/'compact_preview.png',dpi=160);plt.close(fig)
 print(json.dumps({'checks':report['checks'],'collisions':report['collisions']},indent=2))

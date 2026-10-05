@@ -2,6 +2,18 @@
 
 **Use the [Phoenix v3 version](../phoenix_v3/README.md) for the current hand.** The housing, tray and lid here remain in use. The custom palm, finger, thumb and wrist-bridge files below are historical alternatives and are no longer the selected design. Their joint hardware list and motion checks do not apply to Phoenix.
 
+## Current rounded housing — 5 October 2026
+
+The Phoenix assembly now uses a rounded enclosure with 12 mm outer corner radii, a smooth roof falling from 65 mm at the motors to 59 mm at the rear, and a switch panel recessed by 5 mm. The maximum footprint remains 94 × 160 mm: the servos still set the width. The original Phoenix hand geometry is unchanged.
+
+The cover has 6.4 mm diameter, 2 mm deep screw-head recesses and grouped rounded ventilation slots. Choose low-profile M3 heads no larger than 6 mm diameter and 2 mm high if they are to sit flush. Only 1 mm of cover remains below each recess; print and inspect a fastener sample and check clamp load before committing to the cover. The front and rear housing heights at the screws are 65 and 59 mm respectively; select screw lengths from the actual recessed bearing faces and nut engagement, not the old 65 mm stack alone. Switch bodies move down with the panel; verify the actual bushings, nuts, levers and finger access.
+
+Print one base, one tray and one lid for this housing. The lid export is at Z=0 but its curved underside is **not a flat printing face**. Review orientation and supports in the slicer, including the recessed panel and curved roof; remove support without damaging the thin screw seats. Test the cover and switch fit before a full assembled print. Cooling, wiring bends and manufacturing tolerances still require physical testing.
+
+Run `python cad/compact/build.py`, then `python cad/phoenix_v3/build.py --assembly-only` to refresh the current assembly using the already exported source parts. The full Phoenix build remains available for re-extracting the hash-verified upstream source.
+
+The sections below describe the superseded custom-hand study. Its hand, wrist and joint hardware are not the selected Phoenix build.
+
 ## Earlier experimental revision C
 
 An original CAD study of a tendon-driven hand with three actuators: thumb, index/middle and ring/little. This version replaces the Phoenix geometry with a simpler two-joint finger mechanism and a single-joint opposed thumb. It is a separate experimental branch of the design, not a verified upgrade to the Phoenix build.
@@ -55,7 +67,7 @@ This is a **replacement hand**, so do not buy the Phoenix pin/band set just for 
 | M3 joint bolts, washers and locknuts | 9 sets | Starting stock M3 × 25; verify shank, washers and clearance; avoid clamping joints |
 | Elastic return elements | 9 | One per joint; dimensions/preload selected by testing |
 | M4 wrist bridge fasteners | 4 sets | Two through hand + bridge, two through housing floor + bridge; select length after checking heads/nuts |
-| M3 cover fasteners | 4 sets | 65 mm nominal stack; start with longer stock and trim/deburr to full nut engagement |
+| M3 cover fasteners | 4 sets | Current cover: 65 mm front / 59 mm rear overall heights, recessed bearing faces; measure actual length and full nut engagement |
 | M3 tray fasteners | 4 sets | 32 mm nominal stack to underside; verify nut engagement and non-protruding ends |
 | Insulated mounting material | As needed | Nominal 1 mm above pads/tray; verify actual thickness |
 | Soft battery strap | 1 | 10 mm wide, no compression of pouch cell |

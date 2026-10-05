@@ -42,3 +42,9 @@ The original minimal-hand and compact-pack scripts export 15 valid single-solid 
 ## Phoenix v3 restoration — 27 September 2026
 
 The selected hand now uses the 32 solids extracted from the hash-verified official Phoenix v3 STEP. No original palm/finger geometry is altered. The new wrist cradle passes valid-single-solid and watertight-positive-volume STL checks. The reference view uses the compact enclosure and original hand parts; the thumb is deliberately exploded because its joint orientation is unresolved. Sub-0.001 mm³ source joint contacts are reported separately from larger clashes. Some diagnostic source STL conversions fail watertightness checks, so the repository supplies source STEP parts and links to the official printable STLs rather than distributing those conversions. See `cad/phoenix_v3/checks.json`. No physical fit or articulation acceptance is claimed.
+
+## Rounded enclosure — 5 October 2026
+
+The compact base, tray and curved lid pass valid-single-solid and positive-volume watertight STL checks. All modelled component/fixture pairs have zero reported volume clashes. The rebuilt Phoenix reference assembly reports no larger static collisions; inherited source contacts and source mesh limitations remain recorded separately. Both assembly and internal-layout previews were visually inspected. Original Phoenix source geometry remains unchanged.
+
+The housing has 12 mm outer corner radii, a 65 mm motor-end roof falling to 59 mm at the rear, a 5 mm recessed switch panel and 2 mm screw-head recesses. These are CAD dimensions, not measured print results. Thin screw seats, actual switch/head fit, curved-cover support removal, cable clearance and cooling require physical checks. Servo and battery envelopes remain assumptions. No firmware changes or new hardware tests were performed in this revision.

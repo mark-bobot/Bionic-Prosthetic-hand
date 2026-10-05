@@ -23,7 +23,7 @@ The intended actuation remains one servo for the thumb, one for index/middle and
 
 The cradle is a **pivot-alignment prototype**, not a finished wrist connector. It still requires a retained axle, neutral-position lock/stops, strength checks and adaptation to the selected hand scale. The pivot must not remain free under loaded tendons. Do not substitute the original short wrist pins without checking their engagement in the wider cradle. The complete motorised wrist load path is not validated.
 
-The enclosure continues to use the previously checked 94 × 160 × 65 mm reference layout. See [component dimensions and assumptions](../compact/README.md). Its reference motor ears, battery and switches are not measurements of the user's parts. Board, connector and cable fit still require physical checks.
+The rounded enclosure retains a 94 × 160 mm footprint and 65 mm maximum height at the motors. The roof falls smoothly to 59 mm at the rear, with 12 mm outer corner radii, recessed switch controls and recessed cover screws. The lid requires slicer support/orientation review. See [component dimensions and assumptions](../compact/README.md). Its reference motor ears, battery and switches are not measurements of the user's parts. Board, connector and cable fit still require physical checks.
 
 ## Arm fit
 
