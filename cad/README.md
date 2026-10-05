@@ -1,12 +1,12 @@
 # Mechanical build
 
-**Current direction:** [original Phoenix v3 hand with compact motor housing](phoenix_v3/README.md). The custom hand study is superseded.
+**Current direction:** [integrated right bionic Phoenix](bionic/README.md). The custom hand study is superseded.
 
 The Phoenix v3 palm, fingers and joints are kept unchanged. The new parts form an external forearm actuator pack. Tendons are rerouted from the original wrist-powered actuation to the servos. This is the current reconstruction; it is not evidence that the original project used this exact arrangement.
 
 ## Current build selection
 
-Use [Prototype 0.1 build guide](../BUILD.md) for the definitive print list and acceptance gates. It selects the compact 60 mm housing, single-groove spools, Phoenix v3 source hand and right-arm attachment concept. The complete reference STEP is `arm_interface/exports/right_arm_reference.step`.
+Use [Prototype 0.2 build guide](../BUILD.md) for the definitive print list and acceptance gates. It selects the compact 60 mm housing, single-groove spools, Phoenix v3 source hand and integrated two-part right-arm shell and tendon cassette. The complete reference STEP is `bionic/exports/complete_right_bionic.step`.
 
 [Revision B](INTEGRATION.md) and the motor-only files below are historical designs. Their base, lid and double-groove spool must not be substituted into the current package.
 

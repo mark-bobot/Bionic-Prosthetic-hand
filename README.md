@@ -4,9 +4,9 @@ A three-servo adaptation of the e-NABLE Phoenix Hand v3, using a DFRobot SEN0240
 
 One servo drives the thumb, one drives the index and middle fingers, and one drives the ring and little fingers. A muscle contraction closes the groups together; relaxing opens them. The design uses a separate forearm carrier so the original palm and fingers can stay unchanged.
 
-## Prototype 0.1
+## Prototype 0.2
 
-[Start with the definitive build guide](BUILD.md). The package is organised for bench development; thumb alignment, wrist locking, restrained tendon routing and individual socket fit remain open. It is not a completed functional or wearable hand.
+[Start with the definitive build guide](BUILD.md). The package now includes a connected thumb fork, palm receiver, two-part forearm shell and guided tendon cassette. Joint/hardware fit, routing friction, structural testing and individual socket fit remain open. It is not a completed functional or wearable hand.
 
 ## Build files
 
@@ -22,11 +22,13 @@ One servo drives the thumb, one drives the index and middle fingers, and one dri
 
 [Earlier revision B carrier and assembly details](cad/INTEGRATION.md): three motors, Nano, EMG signal board, two regulators, a reference battery pocket and a removable switch-bearing cover. Nominal pack size is 196 × 110 × 59.5 mm; battery and switch dimensions remain assumptions.
 
-## Current CAD: Phoenix v3 with compact motor housing
+## Current CAD: integrated right bionic Phoenix
 
-[Use the Phoenix-based design](cad/phoenix_v3/README.md). It retains the official Phoenix v3 palm, fingers and joints, adds a trial wrist cradle and uses the compact three-servo housing. The housing now has larger rounded corners, a curved rear roof and thinner single-groove spools, and a recessed switch panel. Its maximum dimensions remain 94 × 160 × 60 mm. The previous custom two-joint hand is superseded. Socket fit, the wrist lock and final tendon routing remain unfinished.
+[Use the integrated bionic design](cad/bionic/README.md). The original palm and finger shapes are retained. Added parts provide a receiver with connected thumb fork, two-part forearm shell with electrode access, electronics housing and a removable equaliser cassette. The housing is 94 × 160 × 60 mm; the cassette adds 13 mm above its forward roof. The thumb root moves outward/upward on its added mounting fork. Recipient fit and physical operation remain unverified.
 
-![Phoenix v3 motorisation study](cad/phoenix_v3/exports/phoenix_preview.png)
+![Integrated CAD](cad/bionic/exports/complete_preview.png)
+
+[Internal component layout](cad/compact/exports/compact_preview.png) · [Simple averaging code](firmware/README.md) · [Current hardware list](cad/bionic/README.md#added-hardware)
 
 ## Status
 

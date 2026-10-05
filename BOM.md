@@ -1,6 +1,8 @@
+**Prototype 0.2 current mechanical list:** [shells, receiver, connected thumb mount, cassette, inserts, guides, straps and fasteners](cad/bionic/README.md#added-hardware). Use the 0.2 feed-through lid and print list in [BUILD.md](BUILD.md). The older priced electronic/reference list below remains useful for component selection; its total does not price the new integration or patient-specific fitting.
+
 # Bill of materials — three-servo prototype
 
-One thumb servo, one index/middle servo and one ring/little servo. The current hand is the [original Phoenix v3 adaptation](cad/phoenix_v3/README.md); the costs below remain the revision B baseline. Compact-housing/cradle hardware and any fitted socket are not yet fully costed. This is the complete **reference build list**, including power and mounting consumables. Physical servo fit, hand sizing and load validation remain open; do not treat it as a purchase-ready matched kit.
+One thumb servo, one index/middle servo and one ring/little servo. The current hand is the [integrated right bionic Phoenix](cad/bionic/README.md); the costs below remain the revision B baseline. Compact-housing/cradle hardware and any fitted socket are not yet fully costed. This is the complete **reference build list**, including power and mounting consumables. Physical servo fit, hand sizing and load validation remain open; do not treat it as a purchase-ready matched kit.
 
 **Current spool set:** print three `cad/compact/exports/single_groove_spool.stl` parts (6.75 mm high); keep two equaliser parts. Recheck M2 horn bolts and knot clearance for the thinner spool. Older double-groove spools do not fit the lowered roof.
 

@@ -1,7 +1,7 @@
-# Prototype 0.1 — bench-development package
+# Prototype 0.2 — integrated right bionic CAD
 
-Download the ZIP and start with `BUILD.md`. This consolidates the selected right Phoenix v3 hand, 60 mm compact motor housing, single-groove spools, open forearm saddle, movable SEN0240 electrode holder, Nano firmware, wiring and force calculations. STEP/STL sources and original-design attribution are included. Historical variants remain for provenance; the build guide identifies which parts to use.
+Download the ZIP and start with `BUILD.md`. This revision adds a connected thumb fork, fixed palm receiver, two-part residual-forearm shell with EMG access, guided equaliser cassette, thumb slider, liner guide comb and a lid with dedicated liner entries. The original Phoenix palm and finger shapes are retained. STEP/STL exports, parametric sources, current print/hardware lists, wiring, force calculations and simple 32-sample EMG averaging firmware are included.
 
-Selected files have SHA-256 hashes in `release/manifest.json`. ZIP integrity and host control/filter tests pass. The earlier CAD checks are preserved; no new geometry or firmware is introduced by this packaging release.
+New printable parts pass valid-solid and watertight STL checks. Static assembly collision checks, 18 sampled equaliser poses and sampled thumb-root positions pass. Nano firmware compiles (7,228 bytes flash, 653 bytes global RAM) with AVR core 1.8.8 and Servo 1.3.0. Host control and actual-filter integration tests pass using synthetic inputs.
 
-**Pre-release: not a completed functional or wearable prosthesis.** Thumb alignment, wrist locking, retained equalisers/tendon routing, manual release, real component fit and individual socket/suspension fitting remain unfinished. No physical force, grip, thermal or wearer testing is claimed. Read the acceptance gates before printing or powering.
+**Pre-release for bench development.** Socket dimensions and several bought-part outlines remain assumptions. Axle/fastener fit, flexible-line installation, full articulation, structural retention, actual force/EMG/noise/thermal testing and individual socket/suspension fitting remain acceptance gates. No powered-wear approval or historical-performance proof is claimed. The drive cassette increases height above the previous bare housing.

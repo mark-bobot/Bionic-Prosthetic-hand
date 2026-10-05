@@ -1,0 +1,209 @@
+{
+  "status": "Right transradial bionic CAD prototype; placeholder socket, no clinical fit or strength acceptance",
+  "source_sha256": "3d7086af7fd8a3b8f33ca87d8af6b10bdc7fc9038eb923bf920633acd7227620",
+  "thumb_root_sampled_angles_deg": [
+    0,
+    15,
+    30,
+    45
+  ],
+  "thumb_fork_bore_mm": 4.6,
+  "parts": {
+    "socket_dorsal": {
+      "watertight": true,
+      "size_mm": [
+        94.0,
+        143.0,
+        71.99469657614827
+      ],
+      "assembly_zmin_mm": -68.0,
+      "volume_mm3": 123373.98090868218
+    },
+    "socket_ventral_door": {
+      "watertight": true,
+      "size_mm": [
+        94.0,
+        140.0,
+        30.399936013112892
+      ],
+      "assembly_zmin_mm": -75.00000009999997,
+      "volume_mm3": 38255.273442157755
+    },
+    "fixed_palm_receiver": {
+      "watertight": true,
+      "size_mm": [
+        103.5,
+        78.0,
+        25.80069923400879
+      ],
+      "assembly_zmin_mm": -8.0,
+      "volume_mm3": 35633.14072786611
+    },
+    "tendon_cassette_base": {
+      "watertight": true,
+      "size_mm": [
+        94.0,
+        74.0,
+        10.0
+      ],
+      "assembly_zmin_mm": 64.0,
+      "volume_mm3": 23598.7242542364
+    },
+    "tendon_cassette_cover": {
+      "watertight": true,
+      "size_mm": [
+        94.0,
+        74.0,
+        3.0
+      ],
+      "assembly_zmin_mm": 74.0,
+      "volume_mm3": 19635.036996874594
+    },
+    "thumb_line_slider": {
+      "watertight": true,
+      "size_mm": [
+        6.0,
+        12.0,
+        4.0
+      ],
+      "assembly_zmin_mm": 68.0,
+      "volume_mm3": 244.0905699133291
+    },
+    "wrist_guide_comb": {
+      "watertight": true,
+      "size_mm": [
+        82.0,
+        8.0,
+        21.0
+      ],
+      "assembly_zmin_mm": 4.0,
+      "volume_mm3": 7400.66417881224
+    },
+    "housing_lid_with_feedthroughs": {
+      "watertight": true,
+      "size_mm": [
+        94.0,
+        160.0,
+        8.0
+      ],
+      "assembly_zmin_mm": 56.0,
+      "volume_mm3": 44496.81974220782
+    }
+  },
+  "equaliser_sampled_poses": [
+    [
+      -16,
+      -74,
+      -30
+    ],
+    [
+      -16,
+      -74,
+      0
+    ],
+    [
+      -16,
+      -74,
+      30
+    ],
+    [
+      -16,
+      -55,
+      -30
+    ],
+    [
+      -16,
+      -55,
+      0
+    ],
+    [
+      -16,
+      -55,
+      30
+    ],
+    [
+      -16,
+      -36,
+      -30
+    ],
+    [
+      -16,
+      -36,
+      0
+    ],
+    [
+      -16,
+      -36,
+      30
+    ],
+    [
+      16,
+      -74,
+      -30
+    ],
+    [
+      16,
+      -74,
+      0
+    ],
+    [
+      16,
+      -74,
+      30
+    ],
+    [
+      16,
+      -55,
+      -30
+    ],
+    [
+      16,
+      -55,
+      0
+    ],
+    [
+      16,
+      -55,
+      30
+    ],
+    [
+      16,
+      -36,
+      -30
+    ],
+    [
+      16,
+      -36,
+      0
+    ],
+    [
+      16,
+      -36,
+      30
+    ]
+  ],
+  "slider_stroke_mm": 38,
+  "socket_placeholder_parameters": {
+    "status": "Unfitted right-forearm bench concept; all limb dimensions are placeholders",
+    "side": "right",
+    "length_mm": 140,
+    "distal_inner_width_mm": 54,
+    "distal_inner_depth_mm": 50,
+    "proximal_inner_width_mm": 70,
+    "proximal_inner_depth_mm": 64,
+    "wall_mm": 3,
+    "centre_z_mm": -40,
+    "distal_y_mm": -25,
+    "open_edge_z_mm": -44,
+    "electrode_board_width_mm": 22,
+    "electrode_board_length_mm": 35,
+    "electrode_thickness_assumed_mm": 6
+  },
+  "collisions": [],
+  "notes": [
+    "Original palm/finger geometry retained; connected thumb fork offsets the source thumb by 18 mm outward and 6 mm upward.",
+    "Receiver lower support and retention strap restrain the original pivot; clamp load and hardware fit unverified.",
+    "Cassette adds height: installed maximum Z=77 mm; housing alone remains 60 mm high.",
+    "Cassette uses actual existing two equaliser solids; PTFE loops/cords and strap closures require physical installation."
+  ]
+}

@@ -2,6 +2,20 @@
 
 Open `ProstheticHand/ProstheticHand.ino` in Arduino IDE. Select **Arduino Nano / ATmega328P** and install Arduino's **Servo** library. The OYMotion EMG filter is included beside the sketch, so there is no separate EMG library to install. Some older Nano bootloaders require the IDE's Old Bootloader option.
 
+## The simple averaging step
+
+Open `ProstheticHand/ProstheticHand.ino`; keep its helper files in the same folder. The sketch reads A0, filters the signal, averages its activity and moves the three groups together. The averaging helper in `HandControl.h` is:
+
+```cpp
+sum -= history[index];                 // oldest sample out
+history[index] = uint32_t(value * value);
+sum += history[index];                 // newest sample in
+index = (index + 1) % AVERAGE_SAMPLES;
+level = sum / AVERAGE_SAMPLES;          // mean of 32 consecutive activity samples
+```
+
+`value` is the filtered EMG after the arithmetic-range clamp. Squaring before averaging measures activity; averaging the raw signal alone would drift around its DC bias and can hide contraction. `AVERAGE_SAMPLES = 32` gives a 32 ms window at the 1 kHz sampling rate. Change the three `OPEN_US`/`CLOSE_US` pairs only after calibrating the real mechanisms. Calibration, arming and the hold timeout remain in the helper so the main sketch stays short.
+
 ## What it does
 
 The sensor connects to A0. The code samples at nominally 1 kHz, uses OYMotion's 50 Hz notch/high-pass/low-pass filters, squares the filtered signal using 32-bit arithmetic, and averages 32 consecutive samples. This follows the processing direction of [DFRobot's SEN0240 example](https://wiki.dfrobot.com/sen0240/docs/20737), with averaging and servo control added.

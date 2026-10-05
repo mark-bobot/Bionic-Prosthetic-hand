@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-prototype",
+  "version": "0.2.0-prototype",
   "status": "Bench-development package; unfinished mechanics and unfitted arm interface",
   "entrypoint": "BUILD.md",
   "selected_files": {
@@ -13,11 +13,6 @@
       "sha256": "89302799d9d1b4b621b8042a2bfc123ce7ac0eaf0421dd1b184e42e4dd3c1128",
       "bytes": 69684
     },
-    "cad/compact/exports/compact_lid.stl": {
-      "quantity": 1,
-      "sha256": "2fc0024c76af39f236dd495abecd014417237238383f7e0ecf7ea916e918be8f",
-      "bytes": 347684
-    },
     "cad/compact/exports/single_groove_spool.stl": {
       "quantity": 3,
       "sha256": "ad4ef80ad9aed4a60d7c3b086ec5ec83d06dda9cd9ca4804c6b96f29c6599652",
@@ -28,30 +23,55 @@
       "sha256": "04e66dd97da42fd31786ed773efb06ac55d40bad54cfb8925136129418f07015",
       "bytes": 68484
     },
-    "cad/exports/tendon_fairlead.stl": {
-      "quantity": 3,
-      "sha256": "0fed1d4780c3ddb59e0fc6081dd2c94935eeac72b661084d7b89c754ba8e30f1",
-      "bytes": 36684
-    },
-    "cad/phoenix_v3/exports/phoenix_wrist_cradle.stl": {
-      "quantity": 1,
-      "sha256": "dca50b4fc5b95648117d85e547c5267304be24f77562f48a1308a23562a1cd75",
-      "bytes": 121484
-    },
-    "cad/arm_interface/exports/right_open_saddle.stl": {
-      "quantity": 1,
-      "sha256": "b2f1d4ca9d5897ff59c048ca82d1365b53abd58fa2bd741b3b64dcb21087f70f",
-      "bytes": 136684
-    },
     "cad/arm_interface/exports/emg_band_carrier.stl": {
       "quantity": 1,
       "sha256": "02e1f71066334caca755a4198971975505977560084abe3ab9e2974c90fbe671",
       "bytes": 50684
     },
-    "cad/arm_interface/exports/right_arm_reference.step": {
+    "cad/bionic/exports/housing_lid_with_feedthroughs.stl": {
+      "quantity": 1,
+      "sha256": "ea1b17ca940a9870b1f5d2ddefd2afa9e0913bd11d6ee0389c78699563e87df1",
+      "bytes": 370484
+    },
+    "cad/bionic/exports/socket_dorsal.stl": {
+      "quantity": 1,
+      "sha256": "5670c6d5cd03ca0ce82ea5d5c2153a55bc9835f379a3ba8b5d6d4cdda2062cc2",
+      "bytes": 150084
+    },
+    "cad/bionic/exports/socket_ventral_door.stl": {
+      "quantity": 1,
+      "sha256": "45ccbab98163949892a9758caa8634d2da204cf7bed7dadd0488c780bf94db81",
+      "bytes": 233284
+    },
+    "cad/bionic/exports/fixed_palm_receiver.stl": {
+      "quantity": 1,
+      "sha256": "3f5f001554a156cb916c60e992e954d5209ba8c04a8eb03dc47e597a072ea9f3",
+      "bytes": 328384
+    },
+    "cad/bionic/exports/tendon_cassette_base.stl": {
+      "quantity": 1,
+      "sha256": "86ebfc63b285a045be4b8d3ed4f20792dda305cb916c9e2896eefd8b144f051b",
+      "bytes": 538284
+    },
+    "cad/bionic/exports/tendon_cassette_cover.stl": {
+      "quantity": 1,
+      "sha256": "0b8ed34d62e9af77208953d1ea4f4dd1c7884dd6f5c3c457d32af42520fcbfcf",
+      "bytes": 137684
+    },
+    "cad/bionic/exports/thumb_line_slider.stl": {
+      "quantity": 1,
+      "sha256": "f4db79b12e4a4bb464c225591bd0c1ce17e7794fec803037f48e9c0d8f566b84",
+      "bytes": 51484
+    },
+    "cad/bionic/exports/wrist_guide_comb.stl": {
+      "quantity": 1,
+      "sha256": "48a286a92c9860ddd1fa56d8443e5e82faefe0efdab1ae85de14595ec1385f45",
+      "bytes": 180084
+    },
+    "cad/bionic/exports/complete_right_bionic.step": {
       "quantity": null,
-      "sha256": "aabfa260dec71d0f83c493ef556f5196279344d77210ab4cd8ce953b5577fc22",
-      "bytes": 23807080
+      "sha256": "86d8d830f583220c6fa276641fecdd760a6aa6077e50c56753d6266587a3afe1",
+      "bytes": 25283912
     },
     "firmware/ProstheticHand/ProstheticHand.ino": {
       "quantity": null,
@@ -60,8 +80,8 @@
     },
     "firmware/ProstheticHand/HandControl.h": {
       "quantity": null,
-      "sha256": "4231ba96a5af74dc7be7ca8708b1e6987ef3b8e8b9b6ff70cb1d29a57245f079",
-      "bytes": 1889
+      "sha256": "80dd678a7ad8c194aad0a1bf50611fe871215ec7ef72d8db855f375d60a21c9d",
+      "bytes": 2204
     },
     "firmware/ProstheticHand/EMGFilters.h": {
       "quantity": null,
@@ -74,12 +94,11 @@
       "bytes": 8498
     }
   },
-  "fairlead_quantity": "Up to three; mounting/path unresolved",
   "open_gates": [
     "Measured servo/battery/switch/electrode fit",
-    "Thumb joint orientation",
-    "Wrist lock and axle retention",
-    "Restrained equalisers, tendon routing and manual release",
+    "Thumb shoulder-axle fit and full motion",
+    "Wrist axle, support/strap retention and load test",
+    "Flexible-line installation, measured bends/friction and manual release",
     "Physical force, electrical and thermal testing",
     "Individual socket and suspension fit"
   ]

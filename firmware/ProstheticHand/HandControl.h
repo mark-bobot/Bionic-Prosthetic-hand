@@ -9,15 +9,8 @@ class HandControl {
   bool calibrated = false, closed = false, fault = false;
 
   void sample(int filtered, int raw, bool armed) {
-    // 32-sample mean of squared, filtered EMG. Use 32-bit multiplication on AVR.
-    int32_t v = filtered;
-    if (v > 2047) v = 2047;
-    if (v < -2047) v = -2047;
-    sum -= history[index];
-    history[index] = uint32_t(v * v);
-    sum += history[index];
-    index = (index + 1) % 32;
-    level = sum / 32;
+    // Filter first, then average signal power so positive/negative EMG does not cancel.
+    level = averageActivity(filtered);
 
     // SEN0240 output is 0–3 V on the classic Nano's default 5 V ADC range.
     // A 1 Mohm A0-to-GND resistor makes an unplugged signal tend towards zero.
@@ -51,7 +44,20 @@ class HandControl {
   }
 
  private:
-  uint32_t history[32] = {}, sum = 0, restPeak = 0;
+  static const uint8_t AVERAGE_SAMPLES = 32; // 32 ms at 1 kHz sampling.
+
+  uint32_t averageActivity(int filtered) {
+    int32_t value = filtered;
+    if (value > 2047) value = 2047;
+    if (value < -2047) value = -2047;
+    sum -= history[index];              // Remove the oldest sample.
+    history[index] = uint32_t(value * value);
+    sum += history[index];              // Add the newest sample.
+    index = (index + 1) % AVERAGE_SAMPLES;
+    return sum / AVERAGE_SAMPLES;
+  }
+
+  uint32_t history[AVERAGE_SAMPLES] = {}, sum = 0, restPeak = 0;
   uint16_t samples = 0, bad = 0, activeCount = 0, holdCount = 0;
   uint8_t index = 0;
   bool waitingForRest = true;

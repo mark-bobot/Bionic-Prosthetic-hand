@@ -54,3 +54,18 @@
 - [ ] Select and verify wrist axle/retention, and complete a neutral-position wrist lock.
 - [ ] Complete servo-to-Phoenix tendon routing and restrained paired-finger equalisers.
 - [ ] Verify original joints, tendon forces/travel, motor limits, enclosure fit and loaded assembly on a bench.
+
+## Integrated bionic CAD — prototype 0.2
+- [x] Read current personal-statement v4 and retain its architecture.
+- [x] Add closed distal shell, removable ventral door and electrode access.
+- [x] Add a palm receiver and connected thumb fork; retain source palm/finger shapes.
+- [x] Add constrained equaliser cassette, thumb-line slider, real guide ports and wrist liner comb.
+- [x] Add dedicated housing liner entries and reinforced cassette-bearing seats.
+- [x] Expose the simple 32-sample averaging helper; compile Nano firmware and rerun host control/filter tests.
+- [ ] Choose actual thumb shoulder axle, wrist axle/retainers, clamp supports, inserts and fastener lengths; physically verify joint play and retention.
+- [ ] Install and measure flexible-line paths, slack, bends, equaliser differential travel and accessible manual release.
+- [ ] Test original finger articulation and the new thumb mount throughout the required motion on a bench.
+- [ ] Fit the socket/suspension/liner to measured right residual-limb anatomy and verify EMG contact and skin pressure.
+- [ ] Measure actual closure/contact forces, noise, heating, grip and repeated-cycle behaviour.
+
+The earlier exploded-thumb and open-saddle entries are historical design stages. The 0.2 CAD now supplies a connected mount and full shell; physical acceptance remains open.
