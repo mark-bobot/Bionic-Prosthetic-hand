@@ -1,7 +1,9 @@
-# Prototype 0.2 — integrated right bionic CAD
+# Prototype 0.2.1 — small exterior refinement
 
-Download the ZIP and start with `BUILD.md`. This revision adds a connected thumb fork, fixed palm receiver, two-part residual-forearm shell with EMG access, guided equaliser cassette, thumb slider, liner guide comb and a lid with dedicated liner entries. The original Phoenix palm and finger shapes are retained. STEP/STL exports, parametric sources, current print/hardware lists, wiring, force calculations and simple 32-sample EMG averaging firmware are included.
+Download the ZIP and start with `BUILD.md`. This revision rounds the tendon cassette walls and thumb-support plate, chamfers the cassette cover edge, and adds four shallow screw-head recesses. The source Phoenix palm/fingers, thumb joint placement, three-servo/component layout, tendon ports, mounting centres and 38 mm slider travel are retained. The housing remains 94 × 160 × 60 mm and the cassette adds 13 mm above its forward roof.
 
-New printable parts pass valid-solid and watertight STL checks. Static assembly collision checks, 18 sampled equaliser poses and sampled thumb-root positions pass. Nano firmware compiles (7,228 bytes flash, 653 bytes global RAM) with AVR core 1.8.8 and Servo 1.3.0. Host control and actual-filter integration tests pass using synthetic inputs.
+All eight printable parts pass solid/mesh checks, all static pairs (including the EMG carrier) pass, and 18 equaliser poses plus four thumb-root angles pass. Part envelopes and assembly heights match 0.2 within 0.001 mm.
 
-**Pre-release for bench development.** Socket dimensions and several bought-part outlines remain assumptions. Axle/fastener fit, flexible-line installation, full articulation, structural retention, actual force/EMG/noise/thermal testing and individual socket/suspension fitting remain acceptance gates. No powered-wear approval or historical-performance proof is claimed. The drive cassette increases height above the previous bare housing.
+STEP/STL exports, parametric sources, a refreshed assembly preview and updated hardware notes are included. Screw recesses are 6.2 mm diameter and 1 mm deep with 2 mm remaining seat thickness; measure the selected heads and screw engagement. Firmware and force calculations are unchanged from 0.2.
+
+**Bench-development prerelease.** Actual hardware fit, continuous articulation, tendon routing/friction, structural strength and individual socket/suspension fit still require physical assessment. Cosmetic refinements do not establish wearable readiness.

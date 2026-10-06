@@ -5,12 +5,6 @@ from pathlib import Path
 import json,math,hashlib
 import cadquery as cq
 import trimesh
-import numpy as np
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-from matplotlib.colors import to_rgb
-from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 R=Path(__file__).resolve().parent;O=R/'exports';O.mkdir(exist_ok=True)
 P=json.loads((R.parent/'arm_interface/parameters.json').read_text())
 def box(w,l,h,x=0,y=0,z=0):return cq.Workplane('XY').box(w,l,h,centered=(True,True,False)).translate((x,y,z))
@@ -86,14 +80,16 @@ for angle in [0,15,30,45]:
  .rotate((0,0,0),(1,0,0),angle))
  fork=fork.cut(moving)
 fork=fork.rotate((0,0,0),(0,0,1),50).translate(thumb_root)
-receiver=receiver.union(box(35,37,4,-49,22.5,-8)).union(fork)
+receiver=receiver.union(box(35,37,4,-49,22.5,-8).edges('|Z').fillet(5)).union(fork)
 # Recheck fork against the source thumb at sampled hinge angles.
 for angle in [0,15,30,45]:
  assert fork.intersect(thumb_pose(cq.Workplane('XY').newObject([source[24]]),angle)).val().Volume()<1e-4
 # Removable equaliser cassette above the forward housing. Keep winding radius unchanged.
 base=box(94,74,2,0,-52,65).edges('|Z').fillet(5)
-for x in [-45.5,45.5]:base=base.union(box(3,70,7,x,-52,67))
-for y in [-87.5,-16.5]:base=base.union(box(88,3,7,0,y,67))
+# Continuous rounded wall follows the existing floor; 3 mm wall and ports retained.
+cassette_wall=(box(94,74,7,0,-52,67).edges('|Z').fillet(5)
+ .cut(box(88,68,9,0,-52,66).edges('|Z').fillet(2)))
+base=base.union(cassette_wall)
 for x in [-32,0,32]:base=base.union(box(2,68,7,x,-52,67))
 # Integral feet over the existing front housing fastener stations (global y=-82).
 for x in [-41,41]:base=base.union(cyl(12,1,x,-82,64)).cut(cyl(3.4,10,x,-82,63))
@@ -104,8 +100,10 @@ for x,y in lid_bosses:base=base.union(cyl(6,7,x,y,67)).cut(cyl(3.4,14,x,y,64)).c
 for x in [-16,16,-37]:base=base.cut(bore_y(2.2,6,x,-87.5,70))
 for x in [-26,-6,6,26,-37]:base=base.cut(bore_y(2.2,6,x,-16.5,70))
 # Cover: screw seats and inspection windows keep knots/return motion accessible.
-cover=box(94,74,3,0,-52,74).edges('|Z').fillet(5)
-for x,y in lid_bosses:cover=cover.cut(cyl(3.4,5,x,y,73))
+cover=box(94,74,3,0,-52,74).edges('|Z').fillet(5).edges('>Z').chamfer(.8)
+# Shallow head seats keep 2 mm of cover under heads; actual screw heads must be measured.
+for x,y in lid_bosses:
+ cover=cover.cut(cyl(3.4,5,x,y,73)).cut(cyl(6.2,1.2,x,y,76))
 for x in [-16,16]:cover=cover.cut(slot(4,34,5,x,-50,73))
 cover=cover.cut(slot(3,30,5,-37,-50,73))
 # Existing equaliser: equal arms, 20 mm output pitch. Constrained under removable cover.
@@ -141,7 +139,8 @@ parts={'socket_dorsal':socket_dorsal,'socket_ventral_door':door,'fixed_palm_rece
        'tendon_cassette_base':base,'tendon_cassette_cover':cover,'thumb_line_slider':thumb_slider,'wrist_guide_comb':comb,'housing_lid_with_feedthroughs':housing_lid}
 report={'status':'Right transradial bionic CAD prototype; placeholder socket, no clinical fit or strength acceptance',
  'source_sha256':source_hash,'thumb_root_sampled_angles_deg':[0,15,30,45], 'thumb_fork_bore_mm':4.6, 'parts':{},'equaliser_sampled_poses':travel_checks,'slider_stroke_mm':38,
- 'socket_placeholder_parameters':P,'collisions':[],'notes':[
+ 'socket_placeholder_parameters':P,'collisions':[],
+ 'finish':{'cassette_outer_corner_radius_mm':5,'cassette_wall_mm':3,'cover_edge_chamfer_mm':.8,'cover_head_recess_diameter_mm':6.2,'cover_head_recess_depth_mm':1,'thumb_support_corner_radius_mm':5},'notes':[
  'Original palm/finger geometry retained; connected thumb fork offsets the source thumb by 18 mm outward and 6 mm upward.',
  'Receiver lower support and retention strap restrain the original pivot; clamp load and hardware fit unverified.',
  'Cassette adds height: installed maximum Z=77 mm; housing alone remains 60 mm high.',
@@ -166,7 +165,8 @@ for s in old_solids:
  if not is_cradle and not is_old_thumb and not is_old_lid:remaining.append(s)
 assert len(remaining)==len(old_solids)-4
 existing=cq.Workplane('XY').newObject([cq.Compound.makeCompound(remaining)])
-models={'existing_hand_and_housing':existing,'thumb_proximal':thumb_proximal,'thumb_distal':thumb_distal,**parts,'equaliser_index_middle':left,'equaliser_ring_little':right}
+carrier=cq.importers.importStep(str(R.parent/'arm_interface/exports/emg_band_carrier.step')).translate((0,-105,-78))
+models={'independent_emg_carrier':carrier,'existing_hand_and_housing':existing,'thumb_proximal':thumb_proximal,'thumb_distal':thumb_distal,**parts,'equaliser_index_middle':left,'equaliser_ring_little':right}
 # Sample thumb MCP positions against the fixed hand and receiver as well as its fork.
 for angle in [0,15,30,45]:
  for moving in [thumb_pose(cq.Workplane('XY').newObject([source[24]]),angle),
@@ -186,29 +186,8 @@ for i,(n,p) in enumerate(items):
 assert not report['collisions'],report['collisions']
 assembly=cq.Assembly(name='right_bionic_prototype')
 for n,p in models.items():assembly.add(p,name=n)
-# Electrode carrier/probe stay independent of structural shell retention.
-carrier=cq.importers.importStep(str(R.parent/'arm_interface/exports/emg_band_carrier.step')).translate((0,-105,-78))
-assembly.add(carrier,name='independent_emg_carrier')
 cq.exporters.export(assembly.toCompound(),str(O/'complete_right_bionic.step'))
-# Render outer parts + source hand. Omit electronic envelope boxes in exterior view.
-render=[(socket_dorsal,'#647c8b'),(door,'#78939c'),(receiver,'#d1a158'),(base,'#4b6472'),(cover,'#9dafb6'),(carrier,'#d2a453'),(comb,'#d1a158'),(housing_lid,'#9dafb6')]
-render.extend([(thumb_proximal,'#b9c7cb'),(thumb_distal,'#b9c7cb')])
-for s in remaining:
- b=s.BoundingBox()
- if b.ymax>0:render.append((cq.Workplane('XY').newObject([s]),'#b9c7cb'))
-for n in ['compact_base']:
- p=cq.importers.importStep(str(R.parent/f'compact/exports/{n}.step'))
- if n=='compact_lid':p=p.translate((0,0,52))
- p=p.rotate((0,0,0),(0,0,1),180).translate((0,-30,4));render.append((p,'#425965' if n.endswith('base') else '#9dafb6'))
-fig=plt.figure(figsize=(11,13));ax=fig.add_subplot(111,projection='3d');faces=[];colors=[]
-for p,col in render:
- for s in p.solids().vals():
-  v,f=s.tessellate(.6);v=[a.toTuple() for a in v];tri=np.array([[v[j] for j in t] for t in f])
-  norm=np.cross(tri[:,1]-tri[:,0],tri[:,2]-tri[:,0]);norm/=np.maximum(np.linalg.norm(norm,axis=1)[:,None],1e-12)
-  light=np.array([-.3,-.5,1]);light/=np.linalg.norm(light);shade=.4+.6*np.abs(norm@light)
-  faces.extend(tri);colors.extend(np.array(to_rgb(col))[None,:]*shade[:,None])
-ax.add_collection3d(Poly3DCollection(faces,facecolors=colors,edgecolors='none'))
-ax.set(xlim=(-115,55),ylim=(-180,155),zlim=(-80,85));ax.set_box_aspect((170,335,165));ax.view_init(32,-65);ax.set_axis_off()
-ax.set_title('Right bionic Phoenix integration\nSocket dimensions assumed; hardware and load tests pending',fontsize=13)
-fig.tight_layout();fig.savefig(O/'complete_preview.png',dpi=160);plt.close(fig)
+# Preview uses depth testing so hidden mesh triangles do not show through covers.
+from render import render as render_preview
+render_preview(O/'complete_right_bionic.step',O/'complete_preview.png')
 print(json.dumps({'parts':report['parts'],'collisions':report['collisions'],'equaliser_poses':len(travel_checks)},indent=2))

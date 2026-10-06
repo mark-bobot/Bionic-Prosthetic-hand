@@ -69,3 +69,10 @@
 - [ ] Measure actual closure/contact forces, noise, heating, grip and repeated-cycle behaviour.
 
 The earlier exploded-thumb and open-saddle entries are historical design stages. The 0.2 CAD now supplies a connected mount and full shell; physical acceptance remains open.
+
+## Small exterior refinement — 6 October 2026
+
+- [x] Round cassette walls and thumb-support corners without changing mounting centres or overall part envelopes.
+- [x] Soften the cassette cover edge and add shallow screw-head seats.
+- [x] Recheck meshes, static assembly clearances, equaliser travel and sampled thumb positions.
+- [ ] Measure selected cover screw heads and verify the 2 mm remaining seat and insert engagement on a printed sample.

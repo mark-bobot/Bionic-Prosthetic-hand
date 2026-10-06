@@ -1,4 +1,4 @@
-# Prototype 0.2 — definitive build entry point
+# Prototype 0.2.1 — definitive build entry point
 
 **Design package for bench development. Not a completed functional hand or a fitted prosthesis.**
 

@@ -1,4 +1,4 @@
-**Prototype 0.2 current mechanical list:** [shells, receiver, connected thumb mount, cassette, inserts, guides, straps and fasteners](cad/bionic/README.md#added-hardware). Use the 0.2 feed-through lid and print list in [BUILD.md](BUILD.md). The older priced electronic/reference list below remains useful for component selection; its total does not price the new integration or patient-specific fitting.
+**Prototype 0.2.1 current mechanical list:** [shells, receiver, connected thumb mount, cassette, inserts, guides, straps and fasteners](cad/bionic/README.md#added-hardware). Use the 0.2 feed-through lid and print list in [BUILD.md](BUILD.md). The older priced electronic/reference list below remains useful for component selection; its total does not price the new integration or patient-specific fitting.
 
 # Bill of materials — three-servo prototype
 

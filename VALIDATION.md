@@ -76,3 +76,9 @@ The source STEP SHA-256 remains verified and all original palm/finger shapes are
 Nano firmware compiles freshly with `arduino:avr:nano:cpu=atmega328`, AVR core 1.8.8, Servo 1.3.0: 7,228 bytes flash, 653 bytes global RAM. Host control and actual OYMotion filter/controller integration tests pass. The averaging helper was extracted for clarity; its 32-sample mean and control behaviour are retained. No board upload or real EMG capture was performed.
 
 The current statement v4 text was reread locally and its design requirements are traced in `cad/bionic/README.md`. Hardware clearances remain nominal, socket dimensions remain placeholder values, flexible lines/straps and fastener insertion are not fully modelled, and actual release, fit, load, noise and thermal tests remain required. Package integrity checks and selected-file SHA-256 hashes are recorded by `release/package.py`.
+
+## Small exterior refinement 0.2.1 — 6 October 2026
+
+The cassette now has continuous rounded 3 mm walls with 5/2 mm outer/inner corner radii, a 0.8 mm top-edge chamfer and 6.2 mm diameter × 1 mm-deep screw-head recesses. The added thumb-support plate has 5 mm corner radii. All eight printable parts remain valid single solids with watertight, positive-volume meshes. All eight exported bounding dimensions and assembly Z positions agree with 0.2 within 0.001 mm. Source hand hash, socket parameters, thumb bore, 38 mm slider travel and sampled angles are unchanged.
+
+The rebuilt assembly has no detected static volume collisions; the independent EMG carrier is now included in the routine pair checks. All 18 equaliser poses and four sampled thumb-root angles pass. Firmware, servo/spool geometry, component placement and force calculations are unchanged; no repeat firmware build or hardware test was needed for this geometry-only refinement. Recessed screw seating, joint motion under load, print strength and patient fit remain unverified.

@@ -6,7 +6,7 @@ The Phoenix v3 palm, fingers and joints are kept unchanged. The new parts form a
 
 ## Current build selection
 
-Use [Prototype 0.2 build guide](../BUILD.md) for the definitive print list and acceptance gates. It selects the compact 60 mm housing, single-groove spools, Phoenix v3 source hand and integrated two-part right-arm shell and tendon cassette. The complete reference STEP is `bionic/exports/complete_right_bionic.step`.
+Use [Prototype 0.2.1 build guide](../BUILD.md) for the definitive print list and acceptance gates. It selects the compact 60 mm housing, single-groove spools, Phoenix v3 source hand and integrated two-part right-arm shell and tendon cassette. The complete reference STEP is `bionic/exports/complete_right_bionic.step`.
 
 [Revision B](INTEGRATION.md) and the motor-only files below are historical designs. Their base, lid and double-groove spool must not be substituted into the current package.
 

@@ -37,7 +37,7 @@
         25.80069923400879
       ],
       "assembly_zmin_mm": -8.0,
-      "volume_mm3": 35633.14072786611
+      "volume_mm3": 35582.58940386257
     },
     "tendon_cassette_base": {
       "watertight": true,
@@ -47,7 +47,7 @@
         10.0
       ],
       "assembly_zmin_mm": 64.0,
-      "volume_mm3": 23598.7242542364
+      "volume_mm3": 23640.075513691612
     },
     "tendon_cassette_cover": {
       "watertight": true,
@@ -57,7 +57,7 @@
         3.0
       ],
       "assembly_zmin_mm": 74.0,
-      "volume_mm3": 19635.036996874594
+      "volume_mm3": 19446.38700263655
     },
     "thumb_line_slider": {
       "watertight": true,
@@ -200,6 +200,14 @@
     "electrode_thickness_assumed_mm": 6
   },
   "collisions": [],
+  "finish": {
+    "cassette_outer_corner_radius_mm": 5,
+    "cassette_wall_mm": 3,
+    "cover_edge_chamfer_mm": 0.8,
+    "cover_head_recess_diameter_mm": 6.2,
+    "cover_head_recess_depth_mm": 1,
+    "thumb_support_corner_radius_mm": 5
+  },
   "notes": [
     "Original palm/finger geometry retained; connected thumb fork offsets the source thumb by 18 mm outward and 6 mm upward.",
     "Receiver lower support and retention strap restrain the original pivot; clamp load and hardware fit unverified.",

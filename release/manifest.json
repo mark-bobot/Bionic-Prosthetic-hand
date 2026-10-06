@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0-prototype",
+  "version": "0.2.1-prototype",
   "status": "Bench-development package; unfinished mechanics and unfitted arm interface",
   "entrypoint": "BUILD.md",
   "selected_files": {
@@ -45,18 +45,18 @@
     },
     "cad/bionic/exports/fixed_palm_receiver.stl": {
       "quantity": 1,
-      "sha256": "3f5f001554a156cb916c60e992e954d5209ba8c04a8eb03dc47e597a072ea9f3",
-      "bytes": 328384
+      "sha256": "e41d98c0d65c24a0851877a7b008e6fbc1490445389840ab3c1117da6cd54161",
+      "bytes": 343784
     },
     "cad/bionic/exports/tendon_cassette_base.stl": {
       "quantity": 1,
-      "sha256": "86ebfc63b285a045be4b8d3ed4f20792dda305cb916c9e2896eefd8b144f051b",
-      "bytes": 538284
+      "sha256": "c523e9ed87f5b2c0eb68a055093fee714305e8456b97e53735e8109a56fb3819",
+      "bytes": 552284
     },
     "cad/bionic/exports/tendon_cassette_cover.stl": {
       "quantity": 1,
-      "sha256": "0b8ed34d62e9af77208953d1ea4f4dd1c7884dd6f5c3c457d32af42520fcbfcf",
-      "bytes": 137684
+      "sha256": "bcf6d3c2a376ef46c021012228d67d6008b21bd8f5fdcaf848cc7cfb1d507248",
+      "bytes": 217684
     },
     "cad/bionic/exports/thumb_line_slider.stl": {
       "quantity": 1,
@@ -70,8 +70,8 @@
     },
     "cad/bionic/exports/complete_right_bionic.step": {
       "quantity": null,
-      "sha256": "86d8d830f583220c6fa276641fecdd760a6aa6077e50c56753d6266587a3afe1",
-      "bytes": 25283912
+      "sha256": "92a5e2f403ae0f73cbdfe28f1c5cd7848c6ec47597cf12b09a519dcbe17a3f18",
+      "bytes": 25300953
     },
     "firmware/ProstheticHand/ProstheticHand.ino": {
       "quantity": null,

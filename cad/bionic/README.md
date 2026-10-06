@@ -1,8 +1,14 @@
-# Right bionic Phoenix integration — prototype 0.2
+# Right bionic Phoenix integration — prototype 0.2.1
 
 This is the current integrated CAD for a right residual forearm with no hand. It combines the Phoenix palm and fingers, a fixed palm receiver with a connected thumb fork, a two-part forearm shell, component housing, and a removable tendon-drive cassette. Limb dimensions are placeholders; a fitted socket, suspension and load acceptance require individual assessment.
 
 ![Complete CAD](exports/complete_preview.png)
+
+## Small exterior refinement — 0.2.1
+
+The cassette now has continuous rounded walls matching its floor and lid, with 5 mm outer and 2 mm inner corner radii. A 0.8 mm chamfer softens the top lid edge. Four 6.2 mm diameter, 1 mm-deep screw-head seats reduce head protrusion while leaving 2 mm of cover below each seat; these are shallow recesses, not flush-head guarantees. The thumb-support plate has 5 mm rounded corners.
+
+Housing size, cassette height, mounting centres, tendon ports, slider travel, source hand and component placements are retained. The new corners do not establish better strength or lower routing friction. No firmware changes are needed for this revision.
 
 ## Hand and attachment
 
@@ -74,7 +80,7 @@ The new exports have minimum Z at zero; that is not a verified print orientation
 | 20 mm palm-retention webbing with releasable closure | 1 | Around printed palm/receiver only; keep return bands, tendons and thumb clear |
 | M3 front housing/cassette screws | 2 sets | Longer replacement for two original front cover screws; measure stack and nut engagement |
 | M3 rear housing screws | 2 sets | Current rear cover stack; inspect head seats |
-| M3 cassette-cover screws | 4 | Choose after insert/cover stack; ends must not reach moving lines |
+| M3 cassette-cover screws | 4 | 6.2 mm diameter × 1 mm-deep head recess, 2 mm remaining seat; measure actual head and insert/cover stack; ends must not reach moving lines |
 | M3 heat-set inserts | 4 | CAD pockets 4.2 mm diameter × 4 mm; exact insert and boss fit verified first |
 | M3 wrist-comb screws/nuts/washers | 2 sets | Select for actual comb/receiver stack and nut access |
 | 20 mm shell-retention webbing with releasable closures | 2 | Trial shell stations; individual suspension still requires design |
@@ -107,4 +113,4 @@ python cad/arm_interface/build.py
 python cad/bionic/build.py
 ```
 
-Use CadQuery 2.8.0, trimesh, numpy and matplotlib. The full source STEP hash is verified by the Phoenix build; original source attribution and CC BY 4.0 terms remain in that folder and the root licence. New work is AI-assisted prototype CAD.
+Use CadQuery 2.8.0, trimesh, numpy, matplotlib and Pillow. `python cad/bionic/render.py` regenerates the depth-buffered preview directly from the complete STEP without rebuilding geometry. Preview colours are illustrative. The full source STEP hash is verified by the Phoenix build; original source attribution and CC BY 4.0 terms remain in that folder and the root licence. New work is AI-assisted prototype CAD.
