@@ -1,0 +1,46 @@
+{
+  "source": "https://www.feetechrc.com/Data/feetechrc/upload/file/20210810/6376418710101296552903409.pdf",
+  "assumptions": {
+    "working_fraction_cap": 0.4,
+    "separate_load_margin": 1.5,
+    "routing_efficiency": 0.6,
+    "effective_radius_mm": 12.3
+  },
+  "rows": [
+    {
+      "voltage_V": 6,
+      "stall_kgcm": 20.5,
+      "rated_kgcm": 6.8,
+      "screen_allowance_kgcm": 6.8,
+      "paired_tendon_N_each_at_60pct": 10.84312520325203,
+      "thumb_tendon_N_at_60pct": 21.68625040650406,
+      "three_servo_stall_A": 10.2
+    },
+    {
+      "voltage_V": 7.4,
+      "stall_kgcm": 25,
+      "rated_kgcm": 8.3,
+      "screen_allowance_kgcm": 8.3,
+      "paired_tendon_N_each_at_60pct": 13.23499105691057,
+      "thumb_tendon_N_at_60pct": 26.46998211382114,
+      "three_servo_stall_A": 13.200000000000001
+    },
+    {
+      "voltage_V": 8.4,
+      "stall_kgcm": 28.5,
+      "rated_kgcm": 9.5,
+      "screen_allowance_kgcm": 9.5,
+      "paired_tendon_N_each_at_60pct": 15.148483739837399,
+      "thumb_tendon_N_at_60pct": 30.296967479674798,
+      "three_servo_stall_A": 15
+    }
+  ],
+  "takeup_at_160deg_mm": 34.34807967924841,
+  "housing_height_reduction_pct": 16.666666666666668,
+  "housing_and_cassette_height_reduction_pct": 13.698630136986301,
+  "limitations": [
+    "Manufacturer rated torque is a cap, not a verified enclosed continuous-duty allowance.",
+    "Battery voltage and sag change available torque; use the lowest measured operating voltage.",
+    "No fingertip force, runtime, current limiting or structural acceptance is established."
+  ]
+}

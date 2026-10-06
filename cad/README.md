@@ -4,6 +4,10 @@
 
 The Phoenix v3 palm, fingers and joints are kept unchanged. The new parts form an external forearm actuator pack. Tendons are rerouted from the original wrist-powered actuation to the servos. This is the current reconstruction; it is not evidence that the original project used this exact arrangement.
 
+## Smaller-part option
+
+[Low-profile replacement-parts candidate](slim/README.md) reduces the housing to 50 mm high. Its complete assembly is `slim/exports/complete_slim_candidate.step`. It requires different servos and power wiring; do not mix the old electrical BOM with this candidate.
+
 ## Current build selection
 
 Use [Prototype 0.2.1 build guide](../BUILD.md) for the definitive print list and acceptance gates. It selects the compact 60 mm housing, single-groove spools, Phoenix v3 source hand and integrated two-part right-arm shell and tendon cassette. The complete reference STEP is `bionic/exports/complete_right_bionic.step`.

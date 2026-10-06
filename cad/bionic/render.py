@@ -5,7 +5,7 @@ from PIL import Image,ImageDraw,ImageFont
 import cadquery as cq
 from matplotlib import font_manager
 
-def render(path, output):
+def render(path, output, title='Right bionic Phoenix — prototype 0.2.1'):
     shape=cq.importers.importStep(str(path))
     meshes=[]
     for solid in shape.solids().vals():
@@ -47,7 +47,7 @@ def render(path, output):
     image=Image.fromarray(pixels);draw=ImageDraw.Draw(image)
     font_path=font_manager.findfont('DejaVu Sans')
     font=ImageFont.truetype(font_path,30);small=ImageFont.truetype(font_path,20)
-    draw.text((width/2,35),'Right bionic Phoenix — prototype 0.2.1',font=font,fill='#26363d',anchor='mt')
+    draw.text((width/2,35),title,font=font,fill='#26363d',anchor='mt')
     draw.text((width/2,80),'CAD preview • assumed socket dimensions • physical fit and load tests pending',font=small,fill='#53636b',anchor='mt')
     image.save(output)
 

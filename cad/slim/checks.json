@@ -1,0 +1,152 @@
+{
+  "component_envelopes": {
+    "battery": [
+      [
+        70,
+        32,
+        22
+      ],
+      0,
+      112,
+      7,
+      "#d5a451"
+    ],
+    "fuse_holder": [
+      [
+        14,
+        28,
+        12
+      ],
+      25,
+      66,
+      7,
+      "#af7963"
+    ],
+    "distribution": [
+      [
+        12,
+        20,
+        14
+      ],
+      -22,
+      83,
+      7,
+      "#af7963"
+    ],
+    "capacitor": [
+      [
+        10,
+        10,
+        20
+      ],
+      0,
+      80,
+      7,
+      "#af7963"
+    ],
+    "Nano": [
+      [
+        18,
+        45,
+        8
+      ],
+      -22,
+      109,
+      33,
+      "#32988e"
+    ],
+    "EMG": [
+      [
+        22,
+        35,
+        10
+      ],
+      7,
+      115,
+      33,
+      "#32988e"
+    ],
+    "logic_regulator": [
+      [
+        12.7,
+        10.2,
+        4
+      ],
+      20,
+      86,
+      33,
+      "#697ac3"
+    ],
+    "main_switch": [
+      [
+        16,
+        20,
+        20
+      ],
+      23,
+      58.1,
+      27,
+      "#aa5767"
+    ],
+    "arm_switch": [
+      [
+        10,
+        10,
+        12
+      ],
+      23,
+      74,
+      35,
+      "#aa5767"
+    ]
+  },
+  "checks": {
+    "compact_base": {
+      "size_mm": [
+        94.0,
+        160.0,
+        47.0
+      ],
+      "watertight": true,
+      "volume_mm3": 141781.7951585152
+    },
+    "compact_tray": {
+      "size_mm": [
+        74.0,
+        68.0,
+        2.0
+      ],
+      "watertight": true,
+      "volume_mm3": 9595.43403042364
+    },
+    "compact_lid": {
+      "size_mm": [
+        94.0,
+        160.0,
+        3.0
+      ],
+      "watertight": true,
+      "volume_mm3": 43096.90640115261
+    },
+    "single_groove_spool": {
+      "size_mm": [
+        28.0,
+        28.0,
+        6.75
+      ],
+      "watertight": true,
+      "volume_mm3": 3183.037185461515
+    }
+  },
+  "collisions": [],
+  "socket_status": "Retained placeholder socket; no patient fit",
+  "variant": "FT5425BL + headerless Nano; direct protected 2S servo rail, pending power verification",
+  "profile": {
+    "outer_corner_radius_mm": 12,
+    "front_height_mm": 50,
+    "rear_height_mm": 50,
+    "switch_recess_mm": 0,
+    "cover_vertical_thickness_mm": 3,
+    "lid_export_z_offset_mm": 47
+  }
+}

@@ -76,3 +76,11 @@ The earlier exploded-thumb and open-saddle entries are historical design stages.
 - [x] Soften the cassette cover edge and add shallow screw-head seats.
 - [x] Recheck meshes, static assembly clearances, equaliser travel and sampled thumb positions.
 - [ ] Measure selected cover screw heads and verify the 2 mm remaining seat and insert engagement on a printed sample.
+
+## Smaller-part candidate — 6 October 2026
+
+- [x] Compare low-profile servo size, travel and voltage-dependent torque using manufacturer specifications.
+- [x] Model a 50 mm-high pack with FT5425BL reference bodies and low Nano connections.
+- [ ] Confirm servo ears, shaft/horn dimensions, screw engagement and actual Nano/USB clearance.
+- [ ] Select a measured protected 2S pack and coordinated disconnect/fuse/wire/connector system for the new current demand.
+- [ ] Measure tendon force and voltage sag at the lowest intended battery voltage; verify thermal duty.

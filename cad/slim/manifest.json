@@ -1,0 +1,63 @@
+{
+  "version": "0.3.0-layout",
+  "entrypoint": "cad/slim/README.md",
+  "status": "Optional smaller-part candidate; actual servo fit and power system unverified",
+  "selected_files": {
+    "cad/slim/exports/compact_base.stl": {
+      "quantity": 1,
+      "sha256": "f03b240e757d84af2e00b7807eeaa694eaaae499d009e871d70291b57a9391a8"
+    },
+    "cad/slim/exports/compact_tray.stl": {
+      "quantity": 1,
+      "sha256": "89302799d9d1b4b621b8042a2bfc123ce7ac0eaf0421dd1b184e42e4dd3c1128"
+    },
+    "cad/slim/exports/feedthrough_lid.stl": {
+      "quantity": 1,
+      "sha256": "ffe2845c46946845ff7d5bdd4109f9887a7ad26ff060c5cefddd6e940ef9fc1e"
+    },
+    "cad/slim/exports/complete_slim_candidate.step": {
+      "quantity": null,
+      "sha256": "4d66085b29bfb395357cbd2fcadd2cde3edd922e43a16405cef5e1f18223f574"
+    },
+    "cad/compact/exports/single_groove_spool.stl": {
+      "quantity": 3,
+      "sha256": "ad4ef80ad9aed4a60d7c3b086ec5ec83d06dda9cd9ca4804c6b96f29c6599652"
+    },
+    "cad/exports/pair_equaliser.stl": {
+      "quantity": 2,
+      "sha256": "04e66dd97da42fd31786ed773efb06ac55d40bad54cfb8925136129418f07015"
+    },
+    "cad/arm_interface/exports/emg_band_carrier.stl": {
+      "quantity": 1,
+      "sha256": "02e1f71066334caca755a4198971975505977560084abe3ab9e2974c90fbe671"
+    },
+    "cad/bionic/exports/socket_dorsal.stl": {
+      "quantity": 1,
+      "sha256": "5670c6d5cd03ca0ce82ea5d5c2153a55bc9835f379a3ba8b5d6d4cdda2062cc2"
+    },
+    "cad/bionic/exports/socket_ventral_door.stl": {
+      "quantity": 1,
+      "sha256": "45ccbab98163949892a9758caa8634d2da204cf7bed7dadd0488c780bf94db81"
+    },
+    "cad/bionic/exports/fixed_palm_receiver.stl": {
+      "quantity": 1,
+      "sha256": "e41d98c0d65c24a0851877a7b008e6fbc1490445389840ab3c1117da6cd54161"
+    },
+    "cad/bionic/exports/tendon_cassette_base.stl": {
+      "quantity": 1,
+      "sha256": "c523e9ed87f5b2c0eb68a055093fee714305e8456b97e53735e8109a56fb3819"
+    },
+    "cad/bionic/exports/tendon_cassette_cover.stl": {
+      "quantity": 1,
+      "sha256": "bcf6d3c2a376ef46c021012228d67d6008b21bd8f5fdcaf848cc7cfb1d507248"
+    },
+    "cad/bionic/exports/thumb_line_slider.stl": {
+      "quantity": 1,
+      "sha256": "f4db79b12e4a4bb464c225591bd0c1ce17e7794fec803037f48e9c0d8f566b84"
+    },
+    "cad/bionic/exports/wrist_guide_comb.stl": {
+      "quantity": 1,
+      "sha256": "48a286a92c9860ddd1fa56d8443e5e82faefe0efdab1ae85de14595ec1385f45"
+    }
+  }
+}

@@ -4,6 +4,12 @@ A three-servo adaptation of the e-NABLE Phoenix Hand v3, using a DFRobot SEN0240
 
 One servo drives the thumb, one drives the index and middle fingers, and one drives the ring and little fingers. A muscle contraction closes the groups together; relaxing opens them. The design uses a separate forearm carrier so the original palm and fingers can stay unchanged.
 
+## Smaller-part candidate
+
+[New low-profile servo layout](cad/slim/README.md): the actuator housing is **94 × 160 × 50 mm**, down from 60 mm high. The pack including its tendon cassette is 63 mm high instead of 73 mm. It retains the Phoenix hand and forearm interface, uses FT5425BL replacement servos and a Nano with low soldered connections, and requires a revised high-current 2S power system. This is a component-layout candidate; its bought-part fit and power protection are not accepted.
+
+![Slim candidate](cad/slim/exports/complete_preview.png)
+
 ## Prototype 0.2.1
 
 [Start with the definitive build guide](BUILD.md). The package includes a connected thumb fork, palm receiver, two-part forearm shell and guided tendon cassette. Revision 0.2.1 rounds the cassette walls and thumb-support plate, softens the cover edge and adds shallow screw-head recesses; its overall size and mechanism layout are retained. Joint/hardware fit, routing friction, structural testing and individual socket fit remain open. It is not a completed functional or wearable hand.

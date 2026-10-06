@@ -4,6 +4,10 @@
 
 Use this document to select parts. Revision B and the custom-hand revision C remain historical references. Do not combine their housings, spools or hand parts with this selection.
 
+## Smaller-part alternative
+
+For the requested slimmer housing, use [the candidate guide](cad/slim/README.md). It requires FT5425BL servos, lower Nano connections and revised power wiring. The following 0.2.1 selection remains the generic-servo baseline.
+
 ## Selected design
 
 The current integrated geometry and hardware notes are in [cad/bionic](cad/bionic/README.md). Its `complete_right_bionic.step` replaces the earlier exploded-thumb reference.

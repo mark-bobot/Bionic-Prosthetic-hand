@@ -1,0 +1,31 @@
+{
+  "status": "Replacement-parts layout candidate; power system and hardware fit unverified",
+  "collisions": [],
+  "housing_mm": [
+    94,
+    160,
+    50
+  ],
+  "previous_housing_mm": [
+    94,
+    160,
+    60
+  ],
+  "housing_plus_cassette_height_mm": 63,
+  "previous_housing_plus_cassette_height_mm": 73,
+  "cassette_translation_mm": [
+    0,
+    0,
+    -10
+  ],
+  "source_hand_sha256": "3d7086af7fd8a3b8f33ca87d8af6b10bdc7fc9038eb923bf920633acd7227620",
+  "retained_solids": 16,
+  "feedthrough_lid_watertight": true,
+  "feedthrough_lid_assembly_zmin_mm": 51.0,
+  "open_checks": [
+    "Actual servo ear/shaft/horn geometry and connector clearance",
+    "Protected 2S pack and high-current path selection",
+    "Full swept articulation and flexible tendon routing",
+    "Enclosure thermal test and fitted socket"
+  ]
+}
