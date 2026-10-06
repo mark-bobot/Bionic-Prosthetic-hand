@@ -1,5 +1,17 @@
 # Validation record — 26 September 2026
 
+## Current forearm integration — 6 October 2026
+
+The current selection is [cad/forearm](cad/forearm/README.md). Seven new parts are valid single solids with watertight, positive-volume STL exports. The complete static assembly has no reported part/envelope overlaps above 0.001 mm³. Equipment and both shell halves clear the reserved socket lumen. The lower shell includes a battery cradle and two under-floor strap passages; controls are recessed in the upper shell. Results: `cad/forearm/checks.json`.
+
+The corrected four-finger placement uses short/long/long/short distal parts, checked against the Phoenix v2 guide referenced by the v3 lineage. The added thumb fork now spreads the open thumb at a 130° local CAD yaw. Original palm and finger surfaces remain unchanged. Four local thumb-root relief samples are checked by `thumb_mount.py`; this is not full thumb opposition validation.
+
+`cad/forearm/motion_checks.json` records 18 equaliser poses, three thumb-slider poses and a 45° MCP / 15° PIP four-finger pose. The discrete mechanism samples span 38 mm and include 6 × 2 mm tendon-base screw-head allowances. No continuous sweep, moving-cord clearance or installed-fastener acceptance is claimed.
+
+**Known failure retained:** the source-joint diagnostic reports PIP overlaps beginning at the sampled 30° bend, reaching approximately 4.82 mm³ at a sampled 60° pose. `cad/forearm/exports/finger_motion_diagnostic.json` preserves these results. Full finger closure is not accepted; the successful modest pose must not be read as a full-motion pass.
+
+The assembly assumes 160 mm from residual-limb end to wrist. Bought-part lead/connector geometry, high-current component selection, straps, print strength, patient-specific fit and all hardware tests remain open. Firmware is unchanged; previous compile/control-test records remain historical. Rebuild commands are in the current guide.
+
 ## Completed
 
 - Arduino CLI build: `arduino:avr:nano:cpu=atmega328`, AVR core 1.8.8, Servo 1.2.2. Result: 7,228 bytes flash (23% of 30,720), 653 bytes global RAM (31% of 2,048).

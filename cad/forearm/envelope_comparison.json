@@ -1,0 +1,28 @@
+{
+  "previous": {
+    "file": "cad/slim/exports/complete_slim_candidate.step",
+    "whole_assembly_bounds_mm": [
+      -105.13430435965061,
+      47.0000001,
+      -178.0,
+      138.57289178836447,
+      -78.0,
+      67.0
+    ],
+    "maximum_depth_mm": 145.0
+  },
+  "current": {
+    "file": "cad/forearm/exports/complete_forearm.step",
+    "whole_assembly_bounds_mm": [
+      -105.07918621082518,
+      51.0000001,
+      -295.00000011421434,
+      138.57289178836447,
+      -43.0000001,
+      59.0000001
+    ],
+    "maximum_depth_mm": 102.0000002
+  },
+  "depth_reduction_percent": 29.655172275862064,
+  "scope": "CAD bounding depth in common assembly axes; different assumed socket length; not a volume or patient-fit comparison."
+}

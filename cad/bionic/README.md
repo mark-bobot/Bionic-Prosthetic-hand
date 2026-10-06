@@ -1,5 +1,8 @@
 # Right bionic Phoenix integration — prototype 0.2.1
 
+**Historical layout:** [0.4.0 forearm integration](../forearm/README.md) is the current candidate. It corrects the index/ring distal-part assignment and open thumb placement shown in older assembly previews. Only reuse files explicitly selected by that guide.
+
+
 This is the current integrated CAD for a right residual forearm with no hand. It combines the Phoenix palm and fingers, a fixed palm receiver with a connected thumb fork, a two-part forearm shell, component housing, and a removable tendon-drive cassette. Limb dimensions are placeholders; a fitted socket, suspension and load acceptance require individual assessment.
 
 ![Complete CAD](exports/complete_preview.png)

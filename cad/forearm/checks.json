@@ -1,0 +1,259 @@
+{
+  "status": "Unfitted forearm-integrated prototype; residual-to-wrist length assumed",
+  "stations_y_rx_rz_mm": [
+    [
+      -295,
+      40,
+      36
+    ],
+    [
+      -175,
+      38,
+      34
+    ],
+    [
+      -158,
+      47,
+      47
+    ],
+    [
+      -153,
+      49,
+      51
+    ],
+    [
+      -80,
+      49,
+      51
+    ],
+    [
+      -70,
+      44,
+      43
+    ],
+    [
+      -30,
+      42,
+      43
+    ],
+    [
+      -16,
+      37,
+      30
+    ]
+  ],
+  "socket_lumen_y_mm": [
+    -295,
+    -160
+  ],
+  "reserved_residual_end_to_wrist_mm": 160,
+  "components": {
+    "servo_0": {
+      "bounds_mm": [
+        -37.0,
+        -13.0,
+        -155.5,
+        -100.5,
+        -11.0,
+        19.0
+      ]
+    },
+    "spool_0": {
+      "bounds_mm": [
+        -39.0,
+        -11.0,
+        -152.0,
+        -124.0,
+        23.9999999,
+        30.7500001
+      ]
+    },
+    "servo_1": {
+      "bounds_mm": [
+        -12.0,
+        12.0,
+        -145.5,
+        -90.5,
+        -11.0,
+        19.0
+      ]
+    },
+    "spool_1": {
+      "bounds_mm": [
+        -14.0,
+        14.0,
+        -122.0,
+        -94.0,
+        23.9999999,
+        30.7500001
+      ]
+    },
+    "servo_2": {
+      "bounds_mm": [
+        13.0,
+        37.0,
+        -155.5,
+        -100.5,
+        -11.0,
+        19.0
+      ]
+    },
+    "spool_2": {
+      "bounds_mm": [
+        11.0,
+        39.0,
+        -152.0,
+        -124.0,
+        23.9999999,
+        30.7500001
+      ]
+    },
+    "battery": {
+      "bounds_mm": [
+        -16.0,
+        16.0,
+        -150.0,
+        -80.0,
+        -36.0,
+        -14.0
+      ]
+    },
+    "Nano": {
+      "bounds_mm": [
+        -23.0,
+        -5.0,
+        -74.5,
+        -29.5,
+        -23.0,
+        -15.0
+      ]
+    },
+    "EMG_conditioner": {
+      "bounds_mm": [
+        1.0,
+        23.0,
+        -64.5,
+        -29.5,
+        -23.0,
+        -13.0
+      ]
+    },
+    "logic_regulator": {
+      "bounds_mm": [
+        19.65,
+        32.35,
+        -78.1,
+        -67.89999999999999,
+        -15.0,
+        -11.0
+      ]
+    },
+    "fuse_allowance": {
+      "bounds_mm": [
+        -28.0,
+        -16.0,
+        -104.0,
+        -80.0,
+        -26.0,
+        -14.0
+      ]
+    },
+    "distribution_allowance": {
+      "bounds_mm": [
+        16.0,
+        28.0,
+        -99.0,
+        -81.0,
+        -24.0,
+        -14.0
+      ]
+    },
+    "main_switch_allowance": {
+      "bounds_mm": [
+        -21.0,
+        -5.0,
+        -74.0,
+        -54.0,
+        24.0,
+        44.0
+      ]
+    },
+    "arm_switch_allowance": {
+      "bounds_mm": [
+        8.0,
+        18.0,
+        -69.0,
+        -59.0,
+        32.0,
+        44.0
+      ]
+    }
+  },
+  "parts": {
+    "forearm_lower": {
+      "watertight": true,
+      "size_mm": [
+        101.99596405029297,
+        279.0,
+        50.799999137060546
+      ],
+      "assembly_zmin_mm": -43.00000009999999
+    },
+    "forearm_upper": {
+      "watertight": true,
+      "size_mm": [
+        101.99596405029297,
+        279.0,
+        50.79970099067384
+      ],
+      "assembly_zmin_mm": 8.199999299999986
+    },
+    "electronics_tray": {
+      "watertight": true,
+      "size_mm": [
+        48.0,
+        53.0,
+        1.9999998999999917
+      ],
+      "assembly_zmin_mm": -26.000000100000015
+    },
+    "internal_tendon_base": {
+      "watertight": true,
+      "size_mm": [
+        68.0,
+        73.0,
+        21.0
+      ],
+      "assembly_zmin_mm": -5.0
+    },
+    "internal_tendon_cover": {
+      "watertight": true,
+      "size_mm": [
+        68.0,
+        70.0,
+        2.0
+      ],
+      "assembly_zmin_mm": 16.0
+    },
+    "thumb_slider": {
+      "watertight": true,
+      "size_mm": [
+        6.0,
+        12.0,
+        4.0
+      ],
+      "assembly_zmin_mm": -2.0
+    },
+    "palm_receiver": {
+      "watertight": true,
+      "size_mm": [
+        103.5,
+        78.28728866577148,
+        25.80069923400879
+      ],
+      "assembly_zmin_mm": -8.0
+    }
+  },
+  "collisions": [],
+  "lumen_intrusions": []
+}

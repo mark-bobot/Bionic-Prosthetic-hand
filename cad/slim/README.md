@@ -1,5 +1,8 @@
 # Smaller-part housing candidate
 
+**Historical layout:** [0.4.0 forearm integration](../forearm/README.md) is the current candidate. It corrects the index/ring distal-part assignment and open thumb placement shown in older assembly previews. Only reuse files explicitly selected by that guide.
+
+
 This is an optional replacement-parts design, developed after prototype 0.2.1. It keeps the Phoenix hand, thumb placement, right forearm shell, EMG holder, spool radius and three-servo arrangement. **It requires different servos and power wiring; do not fit the existing unidentified servos or use the old servo power diagram unchanged.**
 
 ![Smaller-part CAD](exports/complete_preview.png)

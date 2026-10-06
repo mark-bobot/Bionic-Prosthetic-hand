@@ -1,0 +1,56 @@
+{
+  "version": "0.4.0-forearm",
+  "entrypoint": "cad/forearm/README.md",
+  "status": "Unfitted design candidate; deeper source PIP flexion and power parts unresolved",
+  "selected_files": {
+    "cad/forearm/exports/forearm_lower.stl": {
+      "quantity": 1,
+      "sha256": "625c26d69804d60c67c6983a050957000b75fc1a7a274ba27af1f69f48feafea"
+    },
+    "cad/forearm/exports/forearm_upper.stl": {
+      "quantity": 1,
+      "sha256": "7ca84941a0bb2f76245408627b0d9230f7692fad3f9e104824da5b1c041cddc8"
+    },
+    "cad/forearm/exports/electronics_tray.stl": {
+      "quantity": 1,
+      "sha256": "2261e15562246fdb345c646386a453a96d6ec41a6ca8a2331e2f90b2678f658f"
+    },
+    "cad/forearm/exports/internal_tendon_base.stl": {
+      "quantity": 1,
+      "sha256": "0716381447692835712d1f56a62048aeaadf372b8845b004154278d985e863df"
+    },
+    "cad/forearm/exports/internal_tendon_cover.stl": {
+      "quantity": 1,
+      "sha256": "e7ae4cde320e7f1e8c04e22d9abafa83eca563dc3c86546091ef40567f902cf6"
+    },
+    "cad/forearm/exports/thumb_slider.stl": {
+      "quantity": 1,
+      "sha256": "5b4f8924a85ef9e7988a8cf393499a0653a1b42da6c3674c277e1889bcb5b8bc"
+    },
+    "cad/forearm/exports/palm_receiver.stl": {
+      "quantity": 1,
+      "sha256": "1e5eaaf17f729b61d5038a9ee28407280670a14dab9919df439aab40f8bb13d7"
+    },
+    "cad/forearm/exports/complete_forearm.step": {
+      "quantity": null,
+      "sha256": "1d2849e96f17026e6b229327a836c0a2715b04e7e82accdc13ed1d669e6b431d"
+    },
+    "cad/compact/exports/single_groove_spool.stl": {
+      "quantity": 3,
+      "sha256": "ad4ef80ad9aed4a60d7c3b086ec5ec83d06dda9cd9ca4804c6b96f29c6599652"
+    },
+    "cad/exports/pair_equaliser.stl": {
+      "quantity": 2,
+      "sha256": "04e66dd97da42fd31786ed773efb06ac55d40bad54cfb8925136129418f07015"
+    },
+    "cad/arm_interface/exports/emg_band_carrier.stl": {
+      "quantity": 1,
+      "sha256": "02e1f71066334caca755a4198971975505977560084abe3ab9e2974c90fbe671"
+    }
+  },
+  "validation_files": {
+    "cad/forearm/checks.json": "98055c3e938df237f7d3cf95f0c2d48442dac3bb0c27a4501098840470d77d4c",
+    "cad/forearm/motion_checks.json": "8fb8607ab5903caf3a4069267ca8ff33a2eaf366819a612109bcf64bb90c9c67",
+    "cad/forearm/exports/finger_motion_diagnostic.json": "2a92b30a19fe14f444345e39a9b9125efec958264648b3611e1f10c50b6cc980"
+  }
+}

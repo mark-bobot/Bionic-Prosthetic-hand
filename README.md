@@ -2,17 +2,17 @@
 
 A three-servo adaptation of the e-NABLE Phoenix Hand v3, using a DFRobot SEN0240 dry-electrode EMG sensor and an Arduino Nano.
 
-One servo drives the thumb, one drives the index and middle fingers, and one drives the ring and little fingers. A muscle contraction closes the groups together; relaxing opens them. The design uses a separate forearm carrier so the original palm and fingers can stay unchanged.
+One servo drives the thumb, one drives the index and middle fingers, and one drives the ring and little fingers. The controller commands closure on contraction and opening on relaxation; mechanical operation remains untested. The original palm and finger shapes are retained.
 
-## Smaller-part candidate
+## Current design — components inside the forearm
 
-[New low-profile servo layout](cad/slim/README.md): the actuator housing is **94 × 160 × 50 mm**, down from 60 mm high. The pack including its tendon cassette is 63 mm high instead of 73 mm. It retains the Phoenix hand and forearm interface, uses FT5425BL replacement servos and a Nano with low soldered connections, and requires a revised high-current 2S power system. This is a component-layout candidate; its bought-part fit and power protection are not accepted.
+[Start with the 0.4.0 forearm guide](cad/forearm/README.md). A split, curved arm shell houses the motors, battery, electronics and tendon mechanism; the separate top box is removed. The index/ring distal-part assignment and open thumb orientation are corrected. The maximum forearm section is about **102 × 102 mm**. This version retains the low-profile replacement-servo candidate and revised power requirements.
 
-![Slim candidate](cad/slim/exports/complete_preview.png)
+![Forearm-integrated design](cad/forearm/exports/complete_preview.png)
 
-## Prototype 0.2.1
+[See the internal arrangement](cad/forearm/exports/open_preview.png) · [Electronics underneath](cad/forearm/exports/electronics_preview.png) · [Complete STEP](cad/forearm/exports/complete_forearm.step)
 
-[Start with the definitive build guide](BUILD.md). The package includes a connected thumb fork, palm receiver, two-part forearm shell and guided tendon cassette. Revision 0.2.1 rounds the cassette walls and thumb-support plate, softens the cover edge and adds shallow screw-head recesses; its overall size and mechanism layout are retained. Joint/hardware fit, routing friction, structural testing and individual socket fit remain open. It is not a completed functional or wearable hand.
+**Two unresolved limits:** the model assumes 160 mm from residual-limb end to wrist, and deeper PIP flexion still produces small source-part overlaps. Recipient dimensions, joint clearance, tendon load and real hardware fit must be resolved before this becomes a functional or fitted hand. The assembly reserves empty limb space rather than filling it with components.
 
 ## Build files
 
@@ -21,20 +21,16 @@ One servo drives the thumb, one drives the index and middle fingers, and one dri
 - [Editable CAD, STEP and printable STL files](cad/README.md)
 - [Right forearm attachment and movable EMG holder](cad/arm_interface/README.md) — unfitted concept
 - [Bill of materials and cost allowances](BOM.md)
-- [Current force and travel calculation](calculations/README.md) · [Earlier sizing analysis](SERVO-SIZING.md)
+- [Candidate force and travel calculation](cad/slim/README.md#force-screen) · [Earlier generic-servo calculation](calculations/README.md)
 - [Measuring tendon force](TENDON-TEST.md)
 - [Checks performed](VALIDATION.md)
 - [What remains](TODO.md)
 
-[Earlier revision B carrier and assembly details](cad/INTEGRATION.md): three motors, Nano, EMG signal board, two regulators, a reference battery pocket and a removable switch-bearing cover. Nominal pack size is 196 × 110 × 59.5 mm; battery and switch dimensions remain assumptions.
+## Earlier layouts
 
-## Current CAD: integrated right bionic Phoenix
+[The 0.3 smaller top-box candidate](cad/slim/README.md) and [0.2.1 external housing](cad/bionic/README.md) remain as history and sources for reused parts. Their assembly previews predate the finger assignment and thumb placement corrections. Use the 0.4.0 guide for current part selection; do not combine old shells or receivers with it.
 
-[Use the integrated bionic design](cad/bionic/README.md). The original palm and finger shapes are retained. Added parts provide a receiver with connected thumb fork, two-part forearm shell with electrode access, electronics housing and a removable equaliser cassette. The housing is 94 × 160 × 60 mm; the cassette adds 13 mm above its forward roof. The thumb root moves outward/upward on its added mounting fork. Recipient fit and physical operation remain unverified.
-
-![Integrated CAD](cad/bionic/exports/complete_preview.png)
-
-[Internal component layout](cad/compact/exports/compact_preview.png) · [Simple averaging code](firmware/README.md) · [Current hardware list](cad/bionic/README.md#added-hardware)
+[Simple averaging code](firmware/README.md) · [Current mechanical hardware](cad/forearm/README.md#selected-parts-and-hardware)
 
 ## Status
 

@@ -5,7 +5,7 @@ from PIL import Image,ImageDraw,ImageFont
 import cadquery as cq
 from matplotlib import font_manager
 
-def render(path, output, title='Right bionic Phoenix — prototype 0.2.1'):
+def render(path, output, title='Right bionic Phoenix — prototype 0.2.1', solid_colors=None, view=(-35,28)):
     shape=cq.importers.importStep(str(path))
     meshes=[]
     for solid in shape.solids().vals():
@@ -13,8 +13,12 @@ def render(path, output, title='Right bionic Phoenix — prototype 0.2.1'):
         v=np.array([p.toTuple() for p in vertices]); f=np.asarray(triangles)
         b=solid.BoundingBox()
         color=np.array([172,188,193] if b.ymax>0 and b.zmax>0 else [105,133,147],float)
+        bounds=np.array([b.xmin,b.xmax,b.ymin,b.ymax,b.zmin,b.zmax])
+        for entry in solid_colors or []:
+            if np.allclose(bounds,entry['bounds'],atol=.001,rtol=0):
+                color=np.array(entry['color'],float);break
         meshes.append((v[f],color))
-    az,el=np.radians([-35,28])
+    az,el=np.radians(view)
     toward=np.array([np.cos(el)*np.cos(az),np.cos(el)*np.sin(az),np.sin(el)])
     right=np.array([-np.sin(az),np.cos(az),0]);up=np.cross(toward,right)
     basis=np.stack([right,up,toward],axis=1)

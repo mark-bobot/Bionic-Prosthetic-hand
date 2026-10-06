@@ -1,8 +1,14 @@
-# Prototype 0.2.1 — definitive build entry point
+# Build entry point
+
+**Current selection: [0.4.0 forearm-integrated design](cad/forearm/README.md).** Use its print list, hardware notes, component positions, electrical candidate and acceptance limits. It replaces the external box with an internal equipment bay and corrects the finger assignment and open thumb placement. Do not use the historical selection below as the current kit.
+
+The new forearm requires a measured residual-end-to-wrist space compatible with the 160 mm placeholder. Full finger closure is unresolved because the source PIP geometry overlaps at deeper bends in the placement diagnostic. The unchanged Nano firmware is supplied for bench development, with conservative initial motion.
+
+## Historical 0.2.1 baseline
 
 **Design package for bench development. Not a completed functional hand or a fitted prosthesis.**
 
-Use this document to select parts. Revision B and the custom-hand revision C remain historical references. Do not combine their housings, spools or hand parts with this selection.
+The following records the former 0.2.1 selection. Revision B and the custom-hand revision C remain historical references. Do not combine their housings, spools or hand parts with this selection.
 
 ## Smaller-part alternative
 

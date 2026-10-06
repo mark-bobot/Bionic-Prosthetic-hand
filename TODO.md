@@ -1,5 +1,21 @@
 # Remaining work
 
+## Current forearm design — 6 October 2026
+
+- [x] Correct index/ring distal-part assignment against the Phoenix assembly guide; revise open thumb spread and palmward flexion placement.
+- [x] Replace the external box with split curved forearm shells, an internal servo shelf, battery cradle and removable electronics tray.
+- [x] Put the two equaliser lanes and separate thumb lane inside the arm; recess the controls.
+- [x] Preserve empty placeholder limb space and provide an electrode window and side cable passage.
+- [x] Export seven checked new STEP/STL parts and exterior/internal CAD previews.
+- [ ] Measure available residual-end-to-wrist distance; replace the 160 mm equipment-space assumption and fit socket/liner/suspension to the recipient.
+- [ ] Resolve the original PIP surface overlaps at 30° and deeper flexion before full closure; check actual pins, stops and assembly orientation. The 45° MCP / 15° PIP pose is a limited illustration.
+- [ ] Select and measure the FT5425BL variant, protected 2S battery, high-current disconnect/protection, connectors and low Nano connections; replace reference envelopes.
+- [ ] Fit and verify all bolts/nuts/axles, battery/servo/palm restraints, seam-boss strength and service access. Do not assume CAD bores are usable threads.
+- [ ] Install flexible tendons/liners around the motors; check crossing, bend radii and manual release, then measure complete-path tension and required travel.
+- [ ] Perform current, noise, thermal, wear, reopening, repeated-cycle and mechanical load tests before any fitted use.
+
+The sections below preserve earlier work and outstanding baseline tests. [The forearm guide](cad/forearm/README.md) controls current file selection; old box previews and part lists are historical.
+
 ## Files completed
 - [x] Select classic Nano and SEN0240; set three groups: thumb, index/middle, ring/little.
 - [x] Write simple EMG control firmware and retain OYMotion notices.

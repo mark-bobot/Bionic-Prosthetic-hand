@@ -1,16 +1,16 @@
 # Mechanical build
 
-**Current direction:** [integrated right bionic Phoenix](bionic/README.md). The custom hand study is superseded.
+**Current direction:** [0.4.0 forearm-integrated Phoenix](forearm/README.md). Electronics and motors are inside the split arm shell. The former top-box and custom-hand studies are superseded.
 
-The Phoenix v3 palm, fingers and joints are kept unchanged. The new parts form an external forearm actuator pack. Tendons are rerouted from the original wrist-powered actuation to the servos. This is the current reconstruction; it is not evidence that the original project used this exact arrangement.
+The Phoenix v3 palm, fingers and joints are kept unchanged. The new parts form an internal forearm equipment bay, with a corrected finger assignment and revised spread-thumb mount. Full source-joint flexion remains unaccepted. Tendons are rerouted from the original wrist-powered actuation to the servos. This is the current reconstruction; it is not evidence that the original project used this exact arrangement.
 
-## Smaller-part option
+## Earlier smaller-part option
 
 [Low-profile replacement-parts candidate](slim/README.md) reduces the housing to 50 mm high. Its complete assembly is `slim/exports/complete_slim_candidate.step`. It requires different servos and power wiring; do not mix the old electrical BOM with this candidate.
 
-## Current build selection
+## Historical build selection
 
-Use [Prototype 0.2.1 build guide](../BUILD.md) for the definitive print list and acceptance gates. It selects the compact 60 mm housing, single-groove spools, Phoenix v3 source hand and integrated two-part right-arm shell and tendon cassette. The complete reference STEP is `bionic/exports/complete_right_bionic.step`.
+The historical 0.2.1 selection is recorded in [BUILD.md](../BUILD.md). It used the compact 60 mm housing, single-groove spools, Phoenix v3 source hand and external tendon cassette; its STEP is `bionic/exports/complete_right_bionic.step`. Use [the forearm guide](forearm/README.md) for current files and acceptance gates.
 
 [Revision B](INTEGRATION.md) and the motor-only files below are historical designs. Their base, lid and double-groove spool must not be substituted into the current package.
 

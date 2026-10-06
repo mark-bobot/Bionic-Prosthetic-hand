@@ -1,5 +1,8 @@
 # Current design: motorised e-NABLE Phoenix Hand v3
 
+**Historical layout:** [0.4.0 forearm integration](../forearm/README.md) is the current candidate. It corrects the index/ring distal-part assignment and open thumb placement shown in older assembly previews. Only reuse files explicitly selected by that guide.
+
+
 This is the requested Phoenix-based version. The palm, finger sections, tendon passages and original joint geometry come from the **official e-NABLE Phoenix Hand v3 STEP file**. The custom hand introduced in the previous study is superseded. The compact three-servo housing remains as the electronics/actuator module.
 
 ![Phoenix reference assembly](exports/phoenix_preview.png)

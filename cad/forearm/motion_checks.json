@@ -1,0 +1,367 @@
+{
+  "scope": "21 discrete mechanism poses; 38 mm end-to-end travel; not a continuous sweep",
+  "mechanism_poses": [
+    {
+      "part": "equaliser",
+      "x_mm": -16,
+      "y_mm": -74,
+      "angle_deg": -30,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": -16,
+      "y_mm": -74,
+      "angle_deg": 0,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": -16,
+      "y_mm": -74,
+      "angle_deg": 30,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": -16,
+      "y_mm": -55,
+      "angle_deg": -30,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": -16,
+      "y_mm": -55,
+      "angle_deg": 0,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": -16,
+      "y_mm": -55,
+      "angle_deg": 30,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": -16,
+      "y_mm": -36,
+      "angle_deg": -30,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": -16,
+      "y_mm": -36,
+      "angle_deg": 0,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": -16,
+      "y_mm": -36,
+      "angle_deg": 30,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": 16,
+      "y_mm": -74,
+      "angle_deg": -30,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": 16,
+      "y_mm": -74,
+      "angle_deg": 0,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": 16,
+      "y_mm": -74,
+      "angle_deg": 30,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": 16,
+      "y_mm": -55,
+      "angle_deg": -30,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": 16,
+      "y_mm": -55,
+      "angle_deg": 0,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": 16,
+      "y_mm": -55,
+      "angle_deg": 30,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": 16,
+      "y_mm": -36,
+      "angle_deg": -30,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": 16,
+      "y_mm": -36,
+      "angle_deg": 0,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "equaliser",
+      "x_mm": 16,
+      "y_mm": -36,
+      "angle_deg": 30,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "thumb_slider",
+      "y_mm": -74,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "thumb_slider",
+      "y_mm": -55,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    },
+    {
+      "part": "thumb_slider",
+      "y_mm": -36,
+      "overlap_mm3": {
+        "forearm_lower": 0.0,
+        "forearm_upper": 0.0,
+        "internal_tendon_base": 0.0,
+        "internal_tendon_cover": 0.0,
+        "palm_receiver": 0.0,
+        "cassette_screw_head_-30_-82": 0.0,
+        "cassette_screw_head_-30_-26": 0.0,
+        "cassette_screw_head_30_-82": 0.0,
+        "cassette_screw_head_30_-26": 0.0
+      }
+    }
+  ],
+  "shell_lumen_overlap_mm3": {
+    "forearm_lower": 0.0,
+    "forearm_upper": 0.0
+  },
+  "partial_finger_pose_degrees": {
+    "MCP": 45,
+    "PIP": 15
+  },
+  "partial_finger_collisions": [],
+  "full_flexion_accepted": false,
+  "full_flexion_note": "Unchanged source PIP surfaces overlap at 30 degrees and above in the placement diagnostic; resolve physically/CAD before full closure."
+}
