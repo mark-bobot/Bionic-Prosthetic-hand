@@ -17,7 +17,7 @@ The main housing changes from **94 × 160 × 60 mm to 94 × 160 × 50 mm**: 10 m
 - The old large servo regulator is omitted in this candidate. Servos use a protected 2S battery rail; the separate 5 V logic regulator remains. This saves a component but requires a revised high-current supply assessment.
 - The complete tendon cassette moves down 10 mm. Equaliser stroke remains 38 mm; the wrist guide stays in place, so flexible liner lengths and bends must be re-established.
 
-Servo case reference: 40.6 × 20 × 30 mm; positional travel 180° ±5° with 500–2500 µs commands and a 20 ms period. The manufacturer's drawing/actual sample must establish the final ear, shaft and horn fit. CAD presently reserves 24 × 55 × 4 mm ears and 5 mm above the case before the printed spool. These are allowances, not manufacturer drawing dimensions. [FEETECH specification, pp. 3–7](https://www.feetechrc.com/Data/feetechrc/upload/file/20210810/6376418710101296552903409.pdf).
+Servo case reference: 40.6 × 20 × 30 mm; positional travel 180° ±5° with 500–2500 µs commands and a 20 ms period. The manufacturer's drawing/actual sample must establish the final ear, shaft and horn fit. The historical slim CAD reserves 24 × 55 × 4 mm ears and 5 mm above the case before the printed spool. Current forearm 0.4.3 uses the drawing-based reference in `../forearm/servo_reference.py`, including the 11.5 mm shaft offset. These are allowances, not manufacturer drawing dimensions. [FEETECH specification, pp. 3–7](https://www.feetechrc.com/Data/feetechrc/upload/file/20210810/6376418710101296552903409.pdf).
 
 ## Force screen
 

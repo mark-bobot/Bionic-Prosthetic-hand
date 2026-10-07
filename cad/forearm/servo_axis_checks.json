@@ -1,0 +1,45 @@
+{
+  "assembly_sha256": "8504297fece6299eccb2bbad398afe1e2ca04662986f17a56a7106cd4259e5b2",
+  "scope": "Exported axes only; the metal horn, fixing hardware, cable bends and actual servo fit remain unvalidated.",
+  "rows": [
+    {
+      "servo": 0,
+      "shaft_axis_xy_mm": [
+        -25.0,
+        -139.5
+      ],
+      "spool_axis_xy_mm": [
+        -25.0,
+        -139.5
+      ],
+      "axis_error_mm": 0.0,
+      "shaft_top_to_spool_base_mm": 0.09999990000000025
+    },
+    {
+      "servo": 1,
+      "shaft_axis_xy_mm": [
+        0.0,
+        -106.5
+      ],
+      "spool_axis_xy_mm": [
+        0.0,
+        -106.5
+      ],
+      "axis_error_mm": 0.0,
+      "shaft_top_to_spool_base_mm": 0.09999990000000025
+    },
+    {
+      "servo": 2,
+      "shaft_axis_xy_mm": [
+        25.0,
+        -139.5
+      ],
+      "spool_axis_xy_mm": [
+        25.0,
+        -139.5
+      ],
+      "axis_error_mm": 0.0,
+      "shaft_top_to_spool_base_mm": 0.09999990000000025
+    }
+  ]
+}

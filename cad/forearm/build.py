@@ -56,12 +56,13 @@ for x in [-21,21]:
   post=cyl(7,22,x,y,-48).intersect(outer)
   lower=lower.union(post).cut(cyl(3.4,28,x,y,-49))
   tray=tray.cut(cyl(3.4,4,x,y,-27))
-# Reference bought-part envelopes; body/ear/shaft and cable allowances require measurement.
+# Bought-part reference geometry; cables, plugs and actual horn fit still require measurement.
+from servo_reference import geometry as servo_geometry, SERVO_STATIONS, SHAFT_OFFSET
 components={}
 spool=cq.importers.importStep(str(R.parent/'compact/exports/single_groove_spool.step'))
-for i,(x,y) in enumerate([(-25,-128),(0,-118),(25,-128)]):
- components[f'servo_{i}']=box(20,40.6,30,x,y,-11).union(box(24,55,4,x,y,11))
- components[f'spool_{i}']=spool.translate((x,y+(-10 if i!=1 else 10),24))
+for i,(x,y,direction) in enumerate(SERVO_STATIONS):
+ components[f'servo_{i}']=servo_geometry(x,y,direction)
+ components[f'spool_{i}']=spool.translate((x,y+direction*SHAFT_OFFSET,24))
 components['battery']=box(32,70,22,0,-115,-36)
 components['Nano']=box(18,45,8,-14,-52,-23)
 components['EMG_conditioner']=box(22,35,10,12,-47,-23)
@@ -150,7 +151,9 @@ for n,p in parts.items():
  m=trimesh.load_mesh(O/f'{n}.stl');assert m.is_watertight and m.volume>0,n
  report['parts'][n]={'watertight':True,'size_mm':m.extents.tolist(),'assembly_zmin_mm':b.zmin}
 # Read corrected open hand (thumb and added receiver supplied above).
-hand=cq.importers.importStep(str(O/'corrected_fingers.step'))
+from hand import models as hand_models
+hand=cq.Workplane('XY').newObject([cq.Compound.makeCompound([p.val() for p in hand_models.values()])])
+cq.exporters.export(hand,str(O/'corrected_fingers.step'))
 models={**parts,**components,**bars,'EMG_carrier':carrier,'electrode_envelope':probe,'hand':hand,'thumb_proximal':thumb_proximal,'thumb_distal':thumb_distal}
 for n,p in components.items():
  b=p.val().BoundingBox();report['components'][n]={'bounds_mm':[b.xmin,b.xmax,b.ymin,b.ymax,b.zmin,b.zmax]}

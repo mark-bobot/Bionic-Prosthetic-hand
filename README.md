@@ -6,7 +6,7 @@ One servo drives the thumb, one drives the index and middle fingers, and one dri
 
 ## Current design — components inside the forearm
 
-[Start with the 0.4.2 forearm guide](cad/forearm/README.md). A split, curved arm shell houses the motors, battery, electronics and tendon mechanism; the separate top box is removed. The original v3 placemat confirms the finger order; the previously inverted fingertips are now rolled correctly, with their pads toward the palm. The thumb now uses the original palm hinge, and the added side bracket is removed. The maximum forearm section is about **102 × 102 mm**. This version retains the low-profile replacement-servo candidate and revised power requirements.
+[Start with the 0.4.3 forearm guide](cad/forearm/README.md). A split, curved arm shell houses the motors, battery, electronics and tendon mechanism; the separate top box is removed. The original v3 placemat confirms the finger order; the previously inverted fingertips are now rolled correctly, with their pads toward the palm. The thumb now uses the original palm hinge, and the added side bracket is removed. The maximum forearm section is about **102 × 102 mm**. This version retains the low-profile replacement-servo candidate and revised power requirements.
 
 ![Forearm-integrated design](cad/forearm/exports/complete_preview.png)
 
@@ -28,7 +28,7 @@ One servo drives the thumb, one drives the index and middle fingers, and one dri
 
 ## Earlier layouts
 
-[The 0.3 smaller top-box candidate](cad/slim/README.md) and [0.2.1 external housing](cad/bionic/README.md) remain as history and sources for reused parts. Their assembly previews predate the finger assignment and thumb placement corrections. Use the 0.4.2 guide for current part selection; do not combine old shells or receivers with it.
+[The 0.3 smaller top-box candidate](cad/slim/README.md) and [0.2.1 external housing](cad/bionic/README.md) remain as history and sources for reused parts. Their assembly previews predate the finger assignment and thumb placement corrections. Use the 0.4.3 guide for current part selection; do not combine old shells or receivers with it.
 
 [Simple averaging code](firmware/README.md) · [Current mechanical hardware](cad/forearm/README.md#selected-parts-and-hardware)
 

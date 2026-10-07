@@ -1,0 +1,20 @@
+{
+  "status": "MEASUREMENTS_REQUIRED",
+  "channels": {
+    "thumb": {
+      "status": "MEASUREMENTS_REQUIRED"
+    },
+    "index_middle": {
+      "status": "MEASUREMENTS_REQUIRED"
+    },
+    "ring_little": {
+      "status": "MEASUREMENTS_REQUIRED"
+    }
+  },
+  "limits": [
+    "Torque/travel screening only; no runtime, thermal, structural or fitted-use acceptance.",
+    "For an equaliser, measure the assembled pair at its input, with the actual return bands and full route.",
+    "Use the lowest measured loaded supply voltage; the owned generic servos are unidentified."
+  ],
+  "servo_and_sweep_confirmed": false
+}

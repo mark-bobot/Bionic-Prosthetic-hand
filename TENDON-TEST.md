@@ -77,3 +77,7 @@ A 10 mm drum would just meet that illustrative travel requirement. If the real r
 - Servo label or old order details if they turn up.
 
 These readings will let us replace assumptions in [SERVO-SIZING.md](SERVO-SIZING.md) with measurements.
+
+## Calculate from your measurements
+
+Use the [measured-pull worksheet and checker](calculations/MEASURED-PULL.md). It checks both force and travel, rejects invalid inputs, and keeps missing measurements unresolved. Measure at the actuator end to include routing losses once.

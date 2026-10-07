@@ -1,6 +1,6 @@
 # Mechanical build
 
-**Current direction:** [0.4.2 forearm-integrated Phoenix](forearm/README.md). Electronics and motors are inside the split arm shell. The former top-box and custom-hand studies are superseded.
+**Current direction:** [0.4.3 forearm-integrated Phoenix](forearm/README.md). Electronics and motors are inside the split arm shell. The former top-box and custom-hand studies are superseded.
 
 The Phoenix v3 palm, fingers and joints are kept unchanged. The new parts form an internal forearm equipment bay, with a corrected finger assignment and thumb restored to the native palm hinge. Full source-joint flexion remains unaccepted. Tendons are rerouted from the original wrist-powered actuation to the servos. This is the current reconstruction; it is not evidence that the original project used this exact arrangement.
 

@@ -8,6 +8,8 @@
 - [x] Preserve empty placeholder limb space and provide an electrode window and side cable passage.
 - [x] Export seven checked new STEP/STL parts and exterior/internal CAD previews.
 - [ ] Measure available residual-end-to-wrist distance; replace the 160 mm equipment-space assumption and fit socket/liner/suspension to the recipient.
+- [x] Match complete/open/detail exports and check thirteen simultaneous closure poses.
+- [x] Align spool centres with the candidate servo drawing and add a measured-pull checker.
 - [x] Roll all five inverted distal parts into the correct orientation; verify sampled finger bends through 60°.
 - [ ] Verify actual pins, physical extension stops, return bands and continuous full closure. The 10° resting PIP bend is a CAD setting; the 45° MCP / 15° PIP pose remains a limited illustration.
 - [ ] Select and measure the FT5425BL variant, protected 2S battery, high-current disconnect/protection, connectors and low Nano connections; replace reference envelopes.

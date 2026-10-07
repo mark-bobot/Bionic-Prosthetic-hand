@@ -1,5 +1,5 @@
 {
-  "version": "0.4.2-forearm",
+  "version": "0.4.3-forearm",
   "entrypoint": "cad/forearm/README.md",
   "status": "Unfitted design candidate; continuous loaded closure and power parts unresolved",
   "selected_files": {
@@ -33,7 +33,7 @@
     },
     "cad/forearm/exports/complete_forearm.step": {
       "quantity": null,
-      "sha256": "8ed239cb792a0bb4239ea0cd1c942d21c703cee4bac1dbed8f835776d1b71e3b"
+      "sha256": "8504297fece6299eccb2bbad398afe1e2ca04662986f17a56a7106cd4259e5b2"
     },
     "cad/compact/exports/single_groove_spool.stl": {
       "quantity": 3,
@@ -49,10 +49,13 @@
     }
   },
   "validation_files": {
-    "cad/forearm/checks.json": "154d08004551428f645d83440b485ac7e81d8768e164620f98380749fd4079e4",
+    "cad/forearm/checks.json": "5aaaad31d08e5bebce61c415a23103bd943286a6341e2784bbf366a3c7d81c30",
     "cad/forearm/motion_checks.json": "1d2a307e3995d155e7edfd99c6ada43c3bcb3ba13c59a050e4c36f04a596dd60",
     "cad/forearm/exports/finger_motion_diagnostic.json": "d013550d0a16ec9e1d36d3aeed478df7f8ebb86849f5ea0b60700005aba31dbc",
     "cad/forearm/layout_checks.json": "c15c87edbde5fdf37edbda7b016b343166ba0418b5e4143788e383e4884f927d",
-    "cad/forearm/source_review.json": "7f56e369697657a37ce67e09ad3b1561642b350f2fc9b5c9a5fda721da5068d4"
+    "cad/forearm/source_review.json": "5790874f2c4fc4360da3826066b61dcad013ac85af5c77d007ace3ea354cb7bc",
+    "cad/forearm/assembly_checks.json": "cf53e69e38de2b436980b4e077cd49d488d65b3bb9136ebb4f59a9f1316bccb5",
+    "cad/forearm/closure_checks.json": "1e95849353933a48d104ff33f3a84c1354644da731878f03645541bc611343fb",
+    "cad/forearm/servo_axis_checks.json": "ebdef304a80484022bcda26c493e01417e39fd6268b44af58af33176f7329227"
   }
 }

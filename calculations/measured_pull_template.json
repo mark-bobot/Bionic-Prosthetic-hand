@@ -1,0 +1,24 @@
+{
+  "notes": "REFERENCE SETTINGS ONLY. Replace torque with a justified allowance for the identified servo at the lowest measured loaded supply. Measure force and travel at the actuator end of the complete route, with servo disconnected. Nulls mean not measured.",
+  "reference_servo": "FT5425BL candidate, 6.0 V manufacturer rated torque cap; not identification of owned servos",
+  "effective_spool_radius_mm": 12.3,
+  "calibrated_sweep_deg": 160,
+  "load_margin": 1.5,
+  "slack_allowance_mm": 3,
+  "screen_torque_Nm": 0.6668522,
+  "channels": {
+    "thumb": {
+      "peak_input_force_N": null,
+      "required_input_travel_mm": null
+    },
+    "index_middle": {
+      "peak_input_force_N": null,
+      "required_input_travel_mm": null
+    },
+    "ring_little": {
+      "peak_input_force_N": null,
+      "required_input_travel_mm": null
+    }
+  },
+  "servo_and_sweep_confirmed": false
+}

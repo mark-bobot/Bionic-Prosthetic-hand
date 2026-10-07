@@ -1,0 +1,137 @@
+{
+  "scope": "13 simultaneous five-digit samples; MCP 0..60, PIP 10..70, thumb root -60..-90, tip 10..40 degrees. No continuous sweep, tendon, pin, elastic, load or recipient-fit validation.",
+  "samples": [
+    {
+      "step": 0,
+      "fraction": 0.0,
+      "MCP": 0.0,
+      "PIP": 10.0,
+      "thumb_root": -60.0,
+      "thumb_tip": 10.0,
+      "max_overlap_mm3": 0.0008950277940657198,
+      "collisions": []
+    },
+    {
+      "step": 1,
+      "fraction": 0.08333333333333333,
+      "MCP": 5.0,
+      "PIP": 15.0,
+      "thumb_root": -62.5,
+      "thumb_tip": 12.5,
+      "max_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 2,
+      "fraction": 0.16666666666666666,
+      "MCP": 10.0,
+      "PIP": 20.0,
+      "thumb_root": -65.0,
+      "thumb_tip": 15.0,
+      "max_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 3,
+      "fraction": 0.25,
+      "MCP": 15.0,
+      "PIP": 25.0,
+      "thumb_root": -67.5,
+      "thumb_tip": 17.5,
+      "max_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 4,
+      "fraction": 0.3333333333333333,
+      "MCP": 20.0,
+      "PIP": 30.0,
+      "thumb_root": -70.0,
+      "thumb_tip": 20.0,
+      "max_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 5,
+      "fraction": 0.4166666666666667,
+      "MCP": 25.0,
+      "PIP": 35.0,
+      "thumb_root": -72.5,
+      "thumb_tip": 22.5,
+      "max_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 6,
+      "fraction": 0.5,
+      "MCP": 30.0,
+      "PIP": 40.0,
+      "thumb_root": -75.0,
+      "thumb_tip": 25.0,
+      "max_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 7,
+      "fraction": 0.5833333333333334,
+      "MCP": 35.0,
+      "PIP": 45.0,
+      "thumb_root": -77.5,
+      "thumb_tip": 27.5,
+      "max_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 8,
+      "fraction": 0.6666666666666666,
+      "MCP": 40.0,
+      "PIP": 50.0,
+      "thumb_root": -80.0,
+      "thumb_tip": 30.0,
+      "max_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 9,
+      "fraction": 0.75,
+      "MCP": 45.0,
+      "PIP": 55.0,
+      "thumb_root": -82.5,
+      "thumb_tip": 32.5,
+      "max_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 10,
+      "fraction": 0.8333333333333334,
+      "MCP": 50.0,
+      "PIP": 60.0,
+      "thumb_root": -85.0,
+      "thumb_tip": 35.0,
+      "max_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 11,
+      "fraction": 0.9166666666666666,
+      "MCP": 55.0,
+      "PIP": 65.0,
+      "thumb_root": -87.5,
+      "thumb_tip": 37.5,
+      "max_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 12,
+      "fraction": 1.0,
+      "MCP": 60.0,
+      "PIP": 70.0,
+      "thumb_root": -90.0,
+      "thumb_tip": 40.0,
+      "max_overlap_mm3": 0,
+      "collisions": []
+    }
+  ],
+  "first_collision_step": null,
+  "all_samples_clear": true
+}

@@ -1,5 +1,12 @@
 # Validation record — 26 September 2026
 
+## 0.4.3 follow-up — 7 October 2026
+
+- `closure_checks.json`: thirteen simultaneous five-digit poses clear the palm, each other, wrist support and both arm halves at the 0.001 mm³ reporting threshold. The trajectory reaches 60° MCP / 70° PIP, with thumb root −90° / tip 40°. These are samples, not continuous or loaded-motion acceptance.
+- `assembly_checks.json`: matches all eleven hand solids in the complete, open and close-up STEP exports by bounds, centre and volume, with documented numerical integration tolerances. Source, STEP and preview hashes prevent stale packaging.
+- `servo_reference.py`: manufacturer drawing-based case, ears and shaft; spools moved from a 10 mm to the specified 11.5 mm offset. Rebuilt static assembly and seven printable parts pass existing checks. Horns, wiring and actual bought-part fit are not validated.
+- `tests/pull_sizing_test.py`: checks torque units, force/travel trade-offs, invalid inputs and missing measurements/calibration. The supplied measurement template remains unresolved; no physical readings were invented.
+
 ## Current forearm integration — 6 October 2026
 
 The current selection is [cad/forearm](cad/forearm/README.md). Seven new parts are valid single solids with watertight, positive-volume STL exports. The complete static assembly has no reported part/envelope overlaps above 0.001 mm³. Equipment and both shell halves clear the reserved socket lumen. The lower shell includes a battery cradle and two under-floor strap passages; controls are recessed in the upper shell. Results: `cad/forearm/checks.json`.

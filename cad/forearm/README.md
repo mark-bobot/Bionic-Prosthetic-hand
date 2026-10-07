@@ -1,8 +1,14 @@
-# Forearm-integrated Phoenix — 0.4.2 design candidate
+# Forearm-integrated Phoenix — 0.4.3 design candidate
 
 This replaces the separate box mounted above the arm. Three servos, battery, Nano, EMG conditioner and tendon mechanism sit inside a split forearm shell. The original Phoenix v3 palm and finger shapes are retained. This is an unfitted bench-development design, not a working or wearable prosthesis.
 
 ![Exterior](exports/complete_preview.png)
+
+## Update in 0.4.3
+
+The complete and close-up exports are now checked against the same eleven original hand solids, so stale fingertip placement cannot silently return. Preview and assembly hashes are checked during packaging. Thirteen simultaneous five-digit closure samples pass the documented collision threshold; [view a sampled flexion pose](exports/flexion_preview.png). These samples include the palm, other fingers, thumb, wrist support and both forearm halves. They do not simulate tendon forces or establish a continuous swept clearance.
+
+The motor reference now follows the FT5425BL drawing: the shaft is offset 11.5 mm along the case, and each spool is centred on that axis. The shaft and slotted mounting ears are represented in CAD. No printed forearm dimensions changed. The actual motor, horn, screws and cables still require fitting. `servo_axis_checks.json` independently recovers the shaft and drum axes from the exported STEP and confirms that all three coincide. The nominal 0.1 mm shaft-top-to-spool-base gap does not establish a usable metal-horn connection.
 
 ## Hand correction
 
@@ -34,7 +40,7 @@ The displayed PIP/thumb-tip rest bend is 10°. With the corrected roll, a perfec
 
 ![Electronics from underneath; both shells and tray removed](exports/electronics_preview.png)
 
-Green blocks are the Nano and EMG conditioner; gold is the battery; dark blocks are motors and electrical allowances. These envelopes do not include complete wiring, plugs, straps or every fastener. The electrode has an assumed 6 mm thickness; contact protrusion, liner clearance and muscle location still need measurement.
+Green blocks are the Nano and EMG conditioner; gold is the battery; dark blocks are motors and electrical allowances. These envelopes do not include complete wiring, plugs, horns, straps or every fastener. Servo body and mounting-ear dimensions now follow the manufacturer drawing rather than the former ear allowance; rounded body details remain simplified. The electrode has an assumed 6 mm thickness; contact protrusion, liner clearance and muscle location still need measurement.
 
 The shell is approximately **102 mm wide × 102 mm deep at its largest section**, including seam bosses. Its curved body is 279 mm long; the proximal opening to the hand's wrist datum is 295 mm. These dimensions describe the forearm, not the total spread hand. The three motors occupy different longitudinal positions so their spools do not overlap. The shell wraps this equipment instead of carrying a separate roof box.
 
@@ -74,6 +80,8 @@ The replacement-parts [electrical BOM and force model](../slim/README.md#replace
 
 At the retained 12.3 mm effective spool radius, the screening model gives about **10.8 / 13.2 / 15.1 N per paired tendon at 6.0 / 7.4 / 8.4 V**, using the lower of manufacturer rated torque and 40% stall torque, 60% assumed routing efficiency and a separate 1.5 margin. This is tendon pull, not fingertip force or continuous-duty approval. [Manufacturer data](https://www.feetechrc.com/Data/feetechrc/upload/file/20210810/6376418710101296552903409.pdf); generated values: `../slim/forces.json`.
 
+The [measured-pull checker](../../calculations/MEASURED-PULL.md) accepts real actuator-end forces and travels without counting routing friction twice. Empty readings cannot produce a pass.
+
 The new routing has not been measured. Longer bends and liners can reduce efficiency; repeat the [full-path tendon test](../../TENDON-TEST.md) before accepting these figures. Ideal take-up at 160° is 34.35 mm, within the 38 mm sampled slider range, but required hand closure travel remains unmeasured. The potential combined stall demand reaches 15 A at 8.4 V. Select the actual protected pack, disconnect, fuse, wire and connectors together; the earlier 10 A parts and 7.5 A fuse are not an accepted substitute. The CAD still contains reference volumes for those unselected components.
 
 The existing [Nano firmware](../../firmware/README.md) is unchanged: smoothing, one EMG input and three linked servo commands. Calibrate each new servo with tendons disconnected. There is no active force/current feedback. The old generic-servo 5 V power diagram is historical; use the candidate topology in the linked electrical guide.
@@ -89,6 +97,8 @@ python cad/forearm/hand.py --check-motion
 python cad/forearm/verify_layout.py
 python cad/forearm/build.py
 python cad/forearm/verify_motion.py
+python cad/forearm/verify_closure.py
+python cad/forearm/verify_servo_axes.py
 python cad/forearm/previews.py
 python cad/forearm/package.py
 ```

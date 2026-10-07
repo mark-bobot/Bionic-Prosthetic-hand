@@ -20,5 +20,31 @@
       "inspection": "Archive retrieved; embedded preview and reference canvas inspected. Native Fusion timeline not opened."
     }
   ],
-  "placement_correction": "0.4.2: distal solids in the source printing layout are dorsal-side down. Roll all five 180 degrees longitudinally before assembly; prior 0.4.1 inspection misidentified the visible proximal tabs as distal tabs."
+  "placement_correction": "0.4.2: distal solids in the source printing layout are dorsal-side down. Roll all five 180 degrees longitudinally before assembly; prior 0.4.1 inspection misidentified the visible proximal tabs as distal tabs.",
+  "servo_drawing_review": {
+    "url": "https://www.feetechrc.com/Data/feetechrc/upload/file/20210810/6376418710101296552903409.pdf",
+    "sha256": "be2dd44ed74b5efa56986e8090c97a13ad4e94b709c63c924d1cda7afd6deba4",
+    "page": 5,
+    "edition": "A/0, 2021-08-09",
+    "read_dimensions_mm": {
+      "body": [
+        40.6,
+        20,
+        30
+      ],
+      "shaft_offset_from_body_centre": 11.5,
+      "shaft_total_height": 34.9,
+      "ear_length": 54.4,
+      "ear_lower_upper_from_base": [
+        20.55,
+        23.05
+      ],
+      "mount_hole_pitch": [
+        49.5,
+        10
+      ],
+      "mount_hole_diameter": 4.5
+    },
+    "limits": "Simplified reference geometry, not inspected physical hardware; horn and cable allowance still unresolved."
+  }
 }

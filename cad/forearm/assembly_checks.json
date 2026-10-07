@@ -1,0 +1,74 @@
+{
+  "scope": "11 original hand solids matched by bounds, centre of mass and volume to current source placements; detects stale/inverted digit exports",
+  "tolerances": {
+    "bounds_mm": 0.0001,
+    "centre_mm": 0.005,
+    "volume_relative": 0.0005,
+    "reason": "STEP reimport changes numerical mass integration slightly; bounding placements must still agree tightly."
+  },
+  "assemblies": {
+    "complete_forearm": {
+      "sha256": "8504297fece6299eccb2bbad398afe1e2ca04662986f17a56a7106cd4259e5b2",
+      "matched_solids": {
+        "phoenix_palm_right": 25,
+        "index_proximal": 26,
+        "index_distal": 27,
+        "middle_proximal": 28,
+        "middle_distal": 29,
+        "ring_proximal": 30,
+        "ring_distal": 31,
+        "little_proximal": 32,
+        "little_distal": 33,
+        "thumb_proximal": 34,
+        "thumb_distal": 35
+      }
+    },
+    "open_forearm": {
+      "sha256": "2aa1e2ab34b176353aa4d869e89af97b409282031c04da643cc4e6c683b23df3",
+      "matched_solids": {
+        "phoenix_palm_right": 23,
+        "index_proximal": 24,
+        "index_distal": 25,
+        "middle_proximal": 26,
+        "middle_distal": 27,
+        "ring_proximal": 28,
+        "ring_distal": 29,
+        "little_proximal": 30,
+        "little_distal": 31,
+        "thumb_proximal": 32,
+        "thumb_distal": 33
+      }
+    },
+    "hand_layout": {
+      "sha256": "24cbf49344e5c13ebce7938e066e1c22ecdda803a3feb48bdbf2298bae365da2",
+      "matched_solids": {
+        "phoenix_palm_right": 0,
+        "index_proximal": 1,
+        "index_distal": 2,
+        "middle_proximal": 3,
+        "middle_distal": 4,
+        "ring_proximal": 5,
+        "ring_distal": 6,
+        "little_proximal": 7,
+        "little_distal": 8,
+        "thumb_proximal": 9,
+        "thumb_distal": 10
+      }
+    }
+  },
+  "source_sha256": {
+    "hand.py": "2b8898da09c38cb80a638cc924e9b2e3f5cc1e740c762bc3e70f44380acf23ed",
+    "thumb_mount.py": "69bc3adb1f66f2bf80c5d0341649a222e1c7593320f3fd0e1d000c189d0cf00b",
+    "servo_reference.py": "5d695ff6099a6bdb33d476e94ebe0af459be64a088dac5556165f1210f2d27ef",
+    "build.py": "7c46525baa08f1587a04195bf0ed7caed81f393f272eb67aa004e9d551d992ab",
+    "previews.py": "fd5566e99206c848c6a037035fbd39bf171fd4fadc412994c99fb3fee83d65bb",
+    "verify_assembly.py": "2cd1fee61f0e2d488645410ad987c8caa163056d4f0377ad4854b21a3b679c7e"
+  },
+  "preview_sha256": {
+    "complete_preview.png": "833da15fcd05bb60427eadda06f89de1076418b7079de8b6ea2f85ff53272bdf",
+    "open_preview.png": "a72b32aa3cf5d2a35f185bd1b22229104cc46bca9216fb130678a17ea4b5e9ba",
+    "electronics_preview.png": "37d5ae7edb6c3be3e7d8c6e1a2ab200b3d15b17210906e2950ad607db8dfd8ea",
+    "hand_layout_preview.png": "e39b03c2aad8ad051f32dfb9ab363b62d050f0ea3df6b3299b947dba70fda73b",
+    "flexion_preview.png": "c0a198f57034187402be5226430ceb9caaaeb0b66fbdeeb832f3f3c28e6c6628"
+  }
+}
