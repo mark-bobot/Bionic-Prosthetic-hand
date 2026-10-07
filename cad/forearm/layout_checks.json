@@ -1,0 +1,118 @@
+{
+  "source_step_sha256": "3d7086af7fd8a3b8f33ca87d8af6b10bdc7fc9038eb923bf920633acd7227620",
+  "thumb_root_mm": [
+    -39.45352035173154,
+    32.07163456988161,
+    5.800680706121527
+  ],
+  "thumb_axis": [
+    -0.6427876096865394,
+    0.766044443118978,
+    0.0
+  ],
+  "thumb_fork_clear_gap_mm": 6.5,
+  "thumb_display_pose_degrees": {
+    "root": -60,
+    "tip": 0,
+    "yaw": 130
+  },
+  "finger_order": [
+    "short index",
+    "long middle",
+    "long ring",
+    "short little"
+  ],
+  "original_palm_and_digit_shapes_modified": false,
+  "additional_thumb_fork_removed": true,
+  "sampled_thumb_poses": [
+    {
+      "root_degrees": -60,
+      "tip_degrees": 0,
+      "overlap_mm3": {
+        "proximal_to_palm": 0.0,
+        "distal_to_palm": 0.0,
+        "proximal_to_distal": 0.0,
+        "proximal_to_support": 0.0,
+        "distal_to_support": 0.0
+      }
+    },
+    {
+      "root_degrees": -60,
+      "tip_degrees": 15,
+      "overlap_mm3": {
+        "proximal_to_palm": 0.0,
+        "distal_to_palm": 0.0,
+        "proximal_to_distal": 0.0,
+        "proximal_to_support": 0.0,
+        "distal_to_support": 0.0
+      }
+    },
+    {
+      "root_degrees": -70,
+      "tip_degrees": 0,
+      "overlap_mm3": {
+        "proximal_to_palm": 0.0,
+        "distal_to_palm": 0.0,
+        "proximal_to_distal": 0.0,
+        "proximal_to_support": 0.0,
+        "distal_to_support": 0.0
+      }
+    },
+    {
+      "root_degrees": -70,
+      "tip_degrees": 15,
+      "overlap_mm3": {
+        "proximal_to_palm": 0.0,
+        "distal_to_palm": 0.0,
+        "proximal_to_distal": 0.0,
+        "proximal_to_support": 0.0,
+        "distal_to_support": 0.0
+      }
+    },
+    {
+      "root_degrees": -80,
+      "tip_degrees": 0,
+      "overlap_mm3": {
+        "proximal_to_palm": 0.0,
+        "distal_to_palm": 0.0,
+        "proximal_to_distal": 0.0,
+        "proximal_to_support": 0.0,
+        "distal_to_support": 0.0
+      }
+    },
+    {
+      "root_degrees": -80,
+      "tip_degrees": 15,
+      "overlap_mm3": {
+        "proximal_to_palm": 0.0,
+        "distal_to_palm": 0.0,
+        "proximal_to_distal": 0.0,
+        "proximal_to_support": 0.0,
+        "distal_to_support": 0.0
+      }
+    },
+    {
+      "root_degrees": -90,
+      "tip_degrees": 0,
+      "overlap_mm3": {
+        "proximal_to_palm": 0.0,
+        "distal_to_palm": 0.0,
+        "proximal_to_distal": 0.0,
+        "proximal_to_support": 0.0,
+        "distal_to_support": 0.0
+      }
+    },
+    {
+      "root_degrees": -90,
+      "tip_degrees": 15,
+      "overlap_mm3": {
+        "proximal_to_palm": 0.0,
+        "distal_to_palm": 0.0,
+        "proximal_to_distal": 0.0,
+        "proximal_to_support": 0.0,
+        "distal_to_support": 0.0
+      }
+    }
+  ],
+  "scope": "Discrete samples only; no pins, tendons, return bands, loads, or fitted anatomy; not full opposition acceptance"
+}

@@ -1,4 +1,4 @@
-**Current 0.4.0 selection:** [forearm parts and hardware](cad/forearm/README.md#selected-parts-and-hardware), with the [replacement servo/power BOM](cad/slim/README.md#replacement-bom-and-power-changes). The shell includes internal motor, battery and board provisions; it replaces the separate box. Prices and the high-current supply components remain unselected.
+**Current 0.4.1 selection:** [forearm parts and hardware](cad/forearm/README.md#selected-parts-and-hardware), with the [replacement servo/power BOM](cad/slim/README.md#replacement-bom-and-power-changes). The shell includes internal motor, battery and board provisions; it replaces the separate box. Prices and the high-current supply components remain unselected.
 
 **Prototype 0.2.1 historical mechanical list:** [shells, receiver, connected thumb mount, cassette, inserts, guides, straps and fasteners](cad/bionic/README.md#added-hardware). Use the 0.2 feed-through lid and print list in [BUILD.md](BUILD.md). The older priced electronic/reference list below remains useful for component selection; its total does not price the new integration or patient-specific fitting.
 

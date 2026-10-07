@@ -4,7 +4,7 @@
 
 The current selection is [cad/forearm](cad/forearm/README.md). Seven new parts are valid single solids with watertight, positive-volume STL exports. The complete static assembly has no reported part/envelope overlaps above 0.001 mm³. Equipment and both shell halves clear the reserved socket lumen. The lower shell includes a battery cradle and two under-floor strap passages; controls are recessed in the upper shell. Results: `cad/forearm/checks.json`.
 
-The corrected four-finger placement uses short/long/long/short distal parts, checked against the Phoenix v2 guide referenced by the v3 lineage. The added thumb fork now spreads the open thumb at a 130° local CAD yaw. Original palm and finger surfaces remain unchanged. Four local thumb-root relief samples are checked by `thumb_mount.py`; this is not full thumb opposition validation.
+On 7 October 2026 the original v3 right-hand placemat was retrieved and visually inspected alongside the original STEP. The short/long/long/short finger order is confirmed. The thumb now uses the native palm pin axis and the centre of its 6.5 mm inner fork gap. The displaced fork is removed; only the added support is relieved. `cad/forearm/layout_checks.json` records eight clear thumb poses between −60° and −90° root rotation, with 0°/15° tip bend. These are discrete CAD samples, not full thumb opposition, pin-fit or physical validation. Source geometry remains unchanged.
 
 `cad/forearm/motion_checks.json` records 18 equaliser poses, three thumb-slider poses and a 45° MCP / 15° PIP four-finger pose. The discrete mechanism samples span 38 mm and include 6 × 2 mm tendon-base screw-head allowances. No continuous sweep, moving-cord clearance or installed-fastener acceptance is claimed.
 

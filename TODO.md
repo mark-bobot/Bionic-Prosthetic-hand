@@ -1,8 +1,8 @@
 # Remaining work
 
-## Current forearm design — 6 October 2026
+## Current forearm design — 7 October 2026
 
-- [x] Correct index/ring distal-part assignment against the Phoenix assembly guide; revise open thumb spread and palmward flexion placement.
+- [x] Confirm finger order against the original v3 placemat; restore the native thumb hinge, remove the extra fork, and clear eight sampled thumb poses.
 - [x] Replace the external box with split curved forearm shells, an internal servo shelf, battery cradle and removable electronics tray.
 - [x] Put the two equaliser lanes and separate thumb lane inside the arm; recess the controls.
 - [x] Preserve empty placeholder limb space and provide an electrode window and side cable passage.

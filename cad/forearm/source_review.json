@@ -1,0 +1,23 @@
+{
+  "review_date": "2026-10-07",
+  "sources": [
+    {
+      "name": "Original STEP",
+      "url": "https://drive.google.com/file/d/1qt4fIh77aN9F0LTXMMZCiVgzgbxBcUQ3/view",
+      "sha256": "3d7086af7fd8a3b8f33ca87d8af6b10bdc7fc9038eb923bf920633acd7227620",
+      "inspection": "Imported all 32 solids; inspected cylinder axes and transformed the original palm and digit solids without cutting them."
+    },
+    {
+      "name": "Right v3 placemat",
+      "url": "https://drive.google.com/file/d/1caT-qSH-01H-uLoA75pY2E4LHxce84tP/view",
+      "sha256": "b15d2c68db6eec82f01e269c5a75eb3570116164cfc6a09295cbc3f4ef838fd4",
+      "inspection": "Rendered and visually inspected both pages for part order, dorsal features and assembly sequence."
+    },
+    {
+      "name": "Original Fusion archive",
+      "url": "https://drive.google.com/file/d/1qx0fiyRWsWuBEkarxo6ouOUqkIWclckO/view",
+      "sha256": "0dc689a436a69dca09409369bb7672429b8dfdde55b3e91e0e06dd26cb440459",
+      "inspection": "Archive retrieved; embedded preview and reference canvas inspected. Native Fusion timeline not opened."
+    }
+  ]
+}

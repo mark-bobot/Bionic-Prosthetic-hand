@@ -117,7 +117,7 @@ for y in [-82,-26]:
   lower=lower.cut(cyl(3.4,8,x,y,1));mechanism=mechanism.cut(cyl(3.4,5,x,y,5))
   # Clear screw insertion from above and keep heads outside equaliser sweep samples.
   mechanism=mechanism.cut(cyl(6.4,10,x,y,8))
-# Retain source palm/fingers and assemble the new spread thumb mount.
+# Retain source palm/fingers and assemble the thumb at its original palm joint.
 from thumb_mount import receiver,thumb_proximal,thumb_distal
 receiver=receiver.cut(box(12,24,10,0,-26,-5))
 # Relieve the forearm front around the existing receiver; mount with original M4 centres.

@@ -1,4 +1,4 @@
-# Forearm-integrated Phoenix — 0.4.0 design candidate
+# Forearm-integrated Phoenix — 0.4.1 design candidate
 
 This replaces the separate box mounted above the arm. Three servos, battery, Nano, EMG conditioner and tendon mechanism sit inside a split forearm shell. The original Phoenix v3 palm and finger shapes are retained. This is an unfitted bench-development design, not a working or wearable prosthesis.
 
@@ -6,9 +6,13 @@ This replaces the separate box mounted above the arm. Three servos, battery, Nan
 
 ## Hand correction
 
-The earlier placement assigned a long distal part to the index finger and a short one to the ring finger. The corrected order is **short index, long middle, long ring, short little**. The dorsal return-band features face upward; positive flexion in the new placement script curls the fingers toward the palm. The added thumb fork spreads the thumb outward/backward in the open pose instead of pointing it along the fingers. Its local yaw changes from 50° to 130°; that number is a CAD placement angle, not an anatomical prescription.
+The layout is now checked against the **original Phoenix v3 right-hand placemat and STEP**, rather than inferred from the older v2 guide. The four distal parts remain **short index, long middle, long ring, short little**, with dorsal return-band features on the same side as the palm's return-band tabs.
 
-These choices were checked against John Diamond's [Phoenix v2 assembly guide, especially pages 8, 18 and 19](https://e-nable.fr/files/Phoenix_v2_assembly_guide.pdf). [e-NABLE's v3 catalogue](https://hub.e-nable.org/s/e-nable-devices/wiki/208/e-nable-phoenix-hand-v3) identifies the v2 lineage. The v3 placemat itself was not accessible. The guide is linked, not redistributed; its licence is separate from the CAD licence.
+The thumb now attaches at the **original palm hinge**. The extra side fork and its outrigger plate are removed. The hinge centre is recovered from the actual inner bearing faces, including the asymmetric shoulder: the clear gap is 6.5 mm. The displayed thumb is rotated 60° toward the palmar side about that original axis; this is a checked CAD pose, not a measured anatomical angle or a manufacturer-prescribed stop. Placing it flat in the palm plane caused interference. A small scallop in the added wrist support clears the sampled thumb motion, and its left strap slot moves inboard. No original palm or finger surfaces are cut.
+
+![Original-joint hand layout](exports/hand_layout_preview.png)
+
+Sources: [official v3 catalogue](https://hub.e-nable.org/s/e-nable-devices/wiki/208/e-nable-phoenix-hand-v3), [right-hand placemat, both pages](https://drive.google.com/file/d/1caT-qSH-01H-uLoA75pY2E4LHxce84tP/view), and [original STEP](https://drive.google.com/file/d/1qt4fIh77aN9F0LTXMMZCiVgzgbxBcUQ3/view). The original Fusion archive was also retrieved and its embedded preview inspected; it was not opened as a native parametric assembly. See `source_review.json` for hashes and scope. The placemat is linked rather than redistributed.
 
 `hand.py` recovers joint centres from source cylindrical faces and preserves all original source surfaces. The upstream STEP is hash-checked. **Full finger closure is not accepted:** the placement diagnostic detects small proximal/distal surface overlaps at PIP bends of 30° and above (up to about 4.82 mm³ at the sampled 60° pose). The 45° MCP / 15° PIP illustration clears the other modelled fingers, palm and fixed arm parts. Verify original pins, stops, assembly orientation and joint clearances before commanding deeper closure. Source shapes have not been silently cut to remove this result.
 
@@ -32,7 +36,7 @@ Green blocks are the Nano and EMG conditioner; gold is the battery; dark blocks 
 
 The shell is approximately **102 mm wide × 102 mm deep at its largest section**, including seam bosses. Its curved body is 279 mm long; the proximal opening to the hand's wrist datum is 295 mm. These dimensions describe the forearm, not the total spread hand. The three motors occupy different longitudinal positions so their spools do not overlap. The shell wraps this equipment instead of carrying a separate roof box.
 
-Compared in the same CAD axes, maximum assembly depth falls from **145 to 102 mm**, about **30% less**. This uses more length: the full assembly's longitudinal bounds increase from about 317 to 434 mm because the equipment is beyond the limb end rather than stacked above it. It is a packaging trade-off, not a 30% volume reduction or proof of anatomical fit. `envelope_comparison.json` records both exported assemblies; regenerate with `python cad/forearm/compare.py`.
+Compared in the same CAD axes, maximum assembly depth falls from **145 to 103.5 mm**, about **29% less**. This uses more length: the full assembly's longitudinal bounds increase from about 317 to 434 mm because the equipment is beyond the limb end rather than stacked above it. It is a packaging trade-off, not a 29% volume reduction or proof of anatomical fit. `envelope_comparison.json` records both exported assemblies; regenerate with `python cad/forearm/compare.py`.
 
 ## The space requirement that must be checked
 
@@ -51,7 +55,7 @@ Print-coordinate STEP/STL pairs are in `exports/`. Their minimum Z is zero; asse
 | `electronics_tray` | 1 |
 | `internal_tendon_base`, `internal_tendon_cover` | 1 each |
 | `thumb_slider` | 1 |
-| `palm_receiver`, with revised thumb fork | 1 |
+| `palm_receiver`, with native-thumb clearance | 1 |
 | `../compact/exports/single_groove_spool.stl` | 3 |
 | `../exports/pair_equaliser.stl` | 2 |
 | `../arm_interface/exports/emg_band_carrier.stl` | 1 |
@@ -60,7 +64,7 @@ Use the original right Phoenix hand/pins at the selected scale from the [officia
 
 Additional hardware allowance: ten M3 through-fastener sets for the shell seam; four for the electronics tray; four for the tendon base; two for its cover; two M4 sets at the forearm/receiver interface; and two M4 palm-support positions. Access and engagement lengths need to be selected against a print. The tendon cover captures two top-loaded M3 nuts in 6.6 mm corner-to-corner hex pockets, 2.4 mm deep. M3 × 6 mm cover screws are the starting allowance: check nut fit and engagement, and keep their tips above Z = 11 mm so they do not obstruct the lower thumb lane. These pockets provide metal threads; the printed clearance bores are not threads. The tendon-base motion check includes 6 mm diameter × 2 mm high screw-head allowances at X = ±30 mm, in 6.4 mm access pockets. Shell seam bosses have only about 1.3 mm radial wall around the bore and require a strength/print check.
 
-Retain the original wrist axle/retainers, a fitted thumb axle, three matching metal servo horns and their retaining screws, six M2 horn/spool fasteners, servo ties, two socket straps, a separate electrode band, palm-retention strap, battery straps, insulating board pads, tendon, return bands and liner stock. Battery straps must fit the nominal 1 mm gap below the servo shelf (maximum 0.8 mm strap allowance). These counts specify CAD provisions; they do not establish load-rated attachment or a complete priced shopping kit.
+Retain the original wrist axle/retainers, the original E thumb-knuckle pin, checked for fit, three matching metal servo horns and their retaining screws, six M2 horn/spool fasteners, servo ties, two socket straps, a separate electrode band, palm-retention strap, battery straps, insulating board pads, tendon, return bands and liner stock. Battery straps must fit the nominal 1 mm gap below the servo shelf (maximum 0.8 mm strap allowance). These counts specify CAD provisions; they do not establish load-rated attachment or a complete priced shopping kit.
 
 ## Electronics, pull and travel
 
@@ -74,12 +78,13 @@ The existing [Nano firmware](../../firmware/README.md) is unchanged: smoothing, 
 
 ## Checks and rebuild
 
-`checks.json`: seven valid single-solid added parts; watertight positive-volume STLs; no modelled static component/part overlaps above 0.001 mm³; no equipment intrusion into the reserved socket. `motion_checks.json`: both shell halves also clear that socket; 18 equaliser poses (three positions × three angles × two bars) and three thumb-slider positions clear the fixed geometry and sampled fastener heads. This is a set of discrete tests, not a continuous sweep. Fork relief is checked at four thumb-root angles; full thumb opposition and tendon paths remain unaccepted.
+`checks.json`: seven valid single-solid added parts; watertight positive-volume STLs; no modelled static component/part overlaps above 0.001 mm³; no equipment intrusion into the reserved socket. `motion_checks.json`: both shell halves also clear that socket; 18 equaliser poses (three positions × three angles × two bars) and three thumb-slider positions clear the fixed geometry and sampled fastener heads. This is a set of discrete tests, not a continuous sweep. `layout_checks.json` records eight thumb samples: root angles −60°, −70°, −80°, −90°, each with 0° and 15° tip flexion. These clear the palm, thumb parts and revised support. Full opposition, pin fits, moving tendons and return bands remain unaccepted.
 
 With CadQuery 2.8.0, trimesh, numpy, matplotlib and Pillow:
 
 ```sh
 python cad/forearm/hand.py --check-motion
+python cad/forearm/verify_layout.py
 python cad/forearm/build.py
 python cad/forearm/verify_motion.py
 python cad/forearm/previews.py

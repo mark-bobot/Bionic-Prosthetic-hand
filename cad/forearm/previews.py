@@ -23,7 +23,7 @@ for name, info in report['components'].items():
     palette.append({'bounds': info['bounds_mm'], 'color': color})
 for label in ['complete', 'open']:
     render(O / f'{label}_forearm.step', O / f'{label}_preview.png',
-           title=f'Forearm-integrated Phoenix — {label} CAD', solid_colors=palette)
+           title=f'Forearm-integrated Phoenix — {label} CAD', solid_colors=palette, view=(-145,28))
 
 omit = []
 for name in ['forearm_lower', 'forearm_upper', 'electronics_tray']:
@@ -37,3 +37,11 @@ cq.exporters.export(cq.Compound.makeCompound(keep), str(O / 'lower_service_view.
 render(O / 'lower_service_view.step', O / 'electronics_preview.png',
        title='Lower service view — shells and electronics tray removed',
        solid_colors=palette, view=(-35,-28))
+
+# Close-up keeps the native thumb attachment visible from the thumb side.
+from hand import models
+from thumb_mount import posed_thumb
+hand_parts={**models,**posed_thumb()}
+cq.exporters.export(cq.Compound.makeCompound([p.val() for p in hand_parts.values()]),str(O/'hand_layout.step'))
+render(O/'hand_layout.step', O/'hand_layout_preview.png',
+       title='Phoenix v3 — original palm and digit joints', view=(-145,28))
