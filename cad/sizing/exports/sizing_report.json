@@ -1,0 +1,198 @@
+{
+  "status": "DESIGN_STUDY_NOT_FITTED",
+  "hand_scale_percent": 120.0,
+  "projected_cad_wrist_to_middle_tip_mm": 164.52541931380753,
+  "palm_section_width_mm": 73.2443060778782,
+  "palm_section_y_mm": 72.0,
+  "socket_engagement_design_mm": 135,
+  "design_residual_tip_to_cad_wrist_mm": 160,
+  "required_existing_package_residual_tip_to_cad_wrist_mm": 160,
+  "existing_receiver_matches_hand_scale": false,
+  "patient_fit_verified": false,
+  "unknown_measurements": [
+    "elbow_to_opposite_wrist_mm",
+    "elbow_to_residual_tip_mm",
+    "cad_wrist_distal_to_anatomical_wrist_mm",
+    "elbow_to_socket_opening_mm",
+    "opposite_hand_length_mm",
+    "cad_palm_width_target_mm",
+    "baseline_hand_only_closure_travel_mm"
+  ],
+  "length_check": {
+    "status": "MEASUREMENTS_REQUIRED"
+  },
+  "socket_engagement_check": {
+    "status": "MEASUREMENTS_REQUIRED"
+  },
+  "hand_proportion_check": {},
+  "servo_mass_only_g": 202.79999999999998,
+  "servo_mass_only_tolerance_g": 3.0,
+  "servo_gravity_moment_about_elbow_Nm": null,
+  "travel_screen": {
+    "scope": "Hand-only similarity estimate. Fixed routing, return bands and friction must be measured again.",
+    "assumed_spool_radius_mm": 12.3,
+    "assumed_sweep_degrees": 160,
+    "ideal_takeup_mm": 34.34807967924841,
+    "assumed_slack_allowance_mm": 3,
+    "max_baseline_hand_only_stroke_mm_at_selected_scale": 26.123399732707007,
+    "status": "MEASUREMENT_REQUIRED"
+  },
+  "baseline_geometry_mm": {
+    "wrist_to_middle_tip_mm": 137.10451609483962,
+    "palm_section_width_mm": 61.03692173156518,
+    "palm_section_y_mm": 60
+  },
+  "envelope_intersections_with_existing_assembly_mm3": [],
+  "hand_intersections_with_fixed_assembly_mm3": [],
+  "interface_status": "RESIZED_RECEIVER_REQUIRED",
+  "hardware_scale_percent": 100,
+  "export_checks": {
+    "phoenix_palm_right": {
+      "valid": true,
+      "bounds_mm": [
+        -59.01152241855327,
+        40.61682756943486,
+        -9.600000100000242,
+        100.80000009999992,
+        1.9999999992348454e-08,
+        36.77281694116476
+      ],
+      "volume_ratio": 1.7280554445564837
+    },
+    "index_proximal": {
+      "valid": true,
+      "bounds_mm": [
+        -32.65642438579808,
+        -17.776306802581253,
+        86.3999999,
+        129.02727325449746,
+        0.0006498103999301916,
+        19.387142122384002
+      ],
+      "volume_ratio": 1.7279995536654502
+    },
+    "index_distal": {
+      "valid": true,
+      "bounds_mm": [
+        -31.932668258097433,
+        -18.479627545312162,
+        113.98221597822855,
+        160.3934824976393,
+        -7.744903451306288,
+        15.926780413008728
+      ],
+      "volume_ratio": 1.728028569945693
+    },
+    "middle_proximal": {
+      "valid": true,
+      "bounds_mm": [
+        -15.856424385798089,
+        -0.9763068025843108,
+        86.3999999,
+        129.02727325449746,
+        0.000649810399822611,
+        19.387142122384002
+      ],
+      "volume_ratio": 1.7279979138464372
+    },
+    "middle_distal": {
+      "valid": true,
+      "bounds_mm": [
+        -15.140677408661928,
+        -1.6551822825367024,
+        113.98221646250343,
+        164.52541929380368,
+        -9.683953469893265,
+        16.25633573633636
+      ],
+      "volume_ratio": 1.7280369342114725
+    },
+    "ring_proximal": {
+      "valid": true,
+      "bounds_mm": [
+        0.9435756141985372,
+        15.82369319741569,
+        81.5999999,
+        124.22727325449746,
+        0.0006498103999398747,
+        19.387142122384002
+      ],
+      "volume_ratio": 1.7279974612896605
+    },
+    "ring_distal": {
+      "valid": true,
+      "bounds_mm": [
+        1.6593225913322638,
+        15.144817717463315,
+        109.18221646250343,
+        159.72541929380372,
+        -9.683953469893604,
+        16.25633573633636
+      ],
+      "volume_ratio": 1.7280369342112203
+    },
+    "little_proximal": {
+      "valid": true,
+      "bounds_mm": [
+        17.743575614198537,
+        32.6236931974157,
+        74.3999999,
+        117.02727325449746,
+        0.0006498103998342684,
+        19.387142122384002
+      ],
+      "volume_ratio": 1.7279995536653006
+    },
+    "little_distal": {
+      "valid": true,
+      "bounds_mm": [
+        18.46733174189836,
+        31.920372454682667,
+        101.98221597822855,
+        148.3934824976393,
+        -7.744903451306298,
+        15.926780413008728
+      ],
+      "volume_ratio": 1.7280285699185614
+    },
+    "thumb_proximal": {
+      "valid": true,
+      "bounds_mm": [
+        -66.77646593456089,
+        -39.823206989394926,
+        21.73992240693219,
+        45.50409103613396,
+        -24.1414843971,
+        14.160816947346
+      ],
+      "volume_ratio": 1.7280000047937905
+    },
+    "thumb_distal": {
+      "valid": true,
+      "bounds_mm": [
+        -73.78314838950803,
+        -48.12880349232751,
+        14.55286636859562,
+        39.551575455838545,
+        -61.639280570871726,
+        -8.473955571626798
+      ],
+      "volume_ratio": 1.7280581674950088
+    }
+  },
+  "scope": "Independent hand and keep-out STEP studies. No regenerated socket, receiver, pins, complete fitted assembly, or force/fit acceptance.",
+  "sha256": {
+    "cad/sizing/profile.json": "5179964c934744aa0e02808d03d8d3ceef921b1d6d531056d765980da57abb37",
+    "cad/sizing/build.py": "89dd4ea2e88723cc2a9f1aeb63262876d276c488b9c9ccd9241bb88d87379958",
+    "cad/sizing/sizing.py": "93d8cef85cfa87e001f0471a50261a4497d2540c33c031c24d13e3bc88313ee4",
+    "cad/forearm/hand.py": "2b8898da09c38cb80a638cc924e9b2e3f5cc1e740c762bc3e70f44380acf23ed",
+    "cad/forearm/thumb_mount.py": "69bc3adb1f66f2bf80c5d0341649a222e1c7593320f3fd0e1d000c189d0cf00b",
+    "cad/forearm/exports/complete_forearm.step": "8504297fece6299eccb2bbad398afe1e2ca04662986f17a56a7106cd4259e5b2",
+    "cad/upstream/phoenix_v3.step": "3d7086af7fd8a3b8f33ca87d8af6b10bdc7fc9038eb923bf920633acd7227620"
+  },
+  "output_sha256": {
+    "scaled_hand.step": "75a7d2f2b0e4cbf3f39e3e06cb9ed5a5f83d2c56e5e1b44d3330de3ac31b0904",
+    "limb_clearance_envelope.step": "cf430345e5457ed7d323c11bb6d990fecd53d0ebf03461263760a17c2e8ba6bf",
+    "sizing_preview.png": "6746075433dfc6905ce950d33932f40cf8258a8114c86b71269e3f2bdd9fe5ec"
+  }
+}

@@ -2,6 +2,10 @@
 
 ## Current forearm design — 7 October 2026
 
+- [x] Add original-proportion hand scaling, independent arm clearance controls and explicit anthropometric landmark checks in `cad/sizing`.
+- [ ] Select a hand scale through virtual fitting, regenerate its receiver and matching printed pins, and rerun interface/motion/travel checks.
+- [ ] Assess socket trim lines, elbow movement, suspension, electrode site, one-handed release and measured device balance with the intended wearer.
+
 - [x] Confirm finger order against the original v3 placemat; restore the native thumb hinge, remove the extra fork, and clear eight sampled thumb poses.
 - [x] Replace the external box with split curved forearm shells, an internal servo shelf, battery cradle and removable electronics tray.
 - [x] Put the two equaliser lanes and separate thumb lane inside the arm; recess the controls.

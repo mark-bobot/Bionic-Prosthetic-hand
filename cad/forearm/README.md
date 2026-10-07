@@ -46,6 +46,10 @@ The shell is approximately **102 mm wide × 102 mm deep at its largest section**
 
 Compared in the same CAD axes, maximum assembly depth falls from **145 to 110.4 mm**, about **24% less**. This uses more length: the full assembly's longitudinal bounds increase from about 317 to 432 mm because the equipment is beyond the limb end rather than stacked above it. It is a packaging trade-off, not a 24% volume reduction or proof of anatomical fit. `envelope_comparison.json` records both exported assemblies; regenerate with `python cad/forearm/compare.py`.
 
+## Adjustable sizing
+
+Use the [sizing study](../sizing/README.md) to change the original hand scale and inspect an independent limb/liner clearance envelope. It keeps hardware dimensions fixed, checks available arm length and makes anatomical/CAD landmark differences explicit. This study does not rebuild the current shell or accept its receiver at a different hand scale.
+
 ## The space requirement that must be checked
 
 The model reserves an empty socket from Y = −295 to −160 mm: **135 mm of socket length**, with nominal inner elliptical diameters of about 70 × 64 mm proximally and 54 × 50 mm distally. These are geometric placeholders, not measured anatomy or a liner specification.

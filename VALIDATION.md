@@ -1,5 +1,9 @@
 # Validation record — 26 September 2026
 
+## Anthropometric sizing study — 7 October 2026
+
+`cad/sizing` exports a uniformly scaled original hand and a separate adjustable limb/liner clearance envelope. It checks STEP bounds and volume scaling for all eleven corrected hand solids, and tests the envelope/resized hand against the existing hardware geometry. The seven arithmetic tests cover missing measurements, signed anatomical registration, length/width mismatch and stroke limits. The report never labels these geometric checks as patient fit. The illustrated 120% hand needs a new receiver; the existing forearm and its motion acceptance remain at 100%. See `cad/sizing/README.md` for exact scope.
+
 ## 0.4.3 follow-up — 7 October 2026
 
 - `closure_checks.json`: thirteen simultaneous five-digit poses clear the palm, each other, wrist support and both arm halves at the 0.001 mm³ reporting threshold. The trajectory reaches 60° MCP / 70° PIP, with thumb root −90° / tip 40°. These are samples, not continuous or loaded-motion acceptance.

@@ -1,0 +1,27 @@
+{
+  "description": "Illustrative sizing study, not wearer measurements. 120% is an example only. Envelope opening dimensions follow the existing CAD taper at Y=-295.",
+  "hand_scale_percent": 120,
+  "comparison_scales_percent": [
+    100,
+    120,
+    140
+  ],
+  "limb_clearance_envelope": {
+    "opening_y_mm": -295,
+    "distal_end_y_mm": -160,
+    "axis_z_mm": 8,
+    "proximal_width_mm": 69.76642335766424,
+    "proximal_depth_mm": 63.7956204379562,
+    "distal_width_mm": 54,
+    "distal_depth_mm": 50
+  },
+  "measurements": {
+    "elbow_to_opposite_wrist_mm": null,
+    "elbow_to_residual_tip_mm": null,
+    "cad_wrist_distal_to_anatomical_wrist_mm": null,
+    "elbow_to_socket_opening_mm": null,
+    "opposite_hand_length_mm": null,
+    "cad_palm_width_target_mm": null,
+    "baseline_hand_only_closure_travel_mm": null
+  }
+}

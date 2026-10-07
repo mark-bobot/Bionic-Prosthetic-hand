@@ -14,6 +14,10 @@ One servo drives the thumb, one drives the index and middle fingers, and one dri
 
 **Remaining limits:** the model assumes 160 mm from residual-limb end to wrist. Corrected fingertip poses pass the sampled collision checks, but recipient dimensions, continuous joint motion, tendon load and real hardware fit still need validation before this becomes a functional or fitted hand. The assembly reserves empty limb space rather than filling it with components.
 
+## Adjustable hand sizing
+
+The [sizing study](cad/sizing/README.md) adds an editable Phoenix scale percentage and independent arm-clearance dimensions. It preserves the original hand proportions and corrected fingertip orientation while keeping hardware full size. The illustrated 120% hand is a comparison, not a selected wearer size; a resized wrist receiver and fitted socket are still required.
+
 ## Build files
 
 - [Arduino code and setup](firmware/README.md)
