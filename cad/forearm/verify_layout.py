@@ -18,7 +18,7 @@ root=cq.Vector(*thumb_root)+cq.Vector(hand.X,hand.Y,hand.ZMIN)
 assert inner_faces[0]<root.dot(axis)<inner_faces[1]
 records=[]
 for angle in [-60,-70,-80,-90]:
- for tip in [0,15]:
+ for tip in [10,30]:
   moving=posed_thumb(angle,tip);p,d=moving.values()
   checks={'proximal_to_palm':overlap(p,hand.palm),'distal_to_palm':overlap(d,hand.palm),
           'proximal_to_distal':overlap(p,d),'proximal_to_support':overlap(p,receiver),
@@ -27,8 +27,9 @@ for angle in [-60,-70,-80,-90]:
   print(records[-1],flush=True)
 report={'source_step_sha256':hashlib.sha256(hand.source.read_bytes()).hexdigest(),
  'thumb_root_mm':thumb_root,'thumb_axis':axis.toTuple(),'thumb_fork_clear_gap_mm':inner_faces[1]-inner_faces[0],
- 'thumb_display_pose_degrees':{'root':-60,'tip':0,'yaw':130},
+ 'thumb_display_pose_degrees':{'root':-60,'tip':10,'yaw':130},
  'finger_order':['short index','long middle','long ring','short little'],
+ 'distal_roll_degrees':180,'finger_rest_PIP_degrees':10,
  'original_palm_and_digit_shapes_modified':False,'additional_thumb_fork_removed':True,
  'sampled_thumb_poses':records,'scope':'Discrete samples only; no pins, tendons, return bands, loads, or fitted anatomy; not full opposition acceptance'}
 (R/'layout_checks.json').write_text(json.dumps(report,indent=2)+'\n')

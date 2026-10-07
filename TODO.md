@@ -8,7 +8,8 @@
 - [x] Preserve empty placeholder limb space and provide an electrode window and side cable passage.
 - [x] Export seven checked new STEP/STL parts and exterior/internal CAD previews.
 - [ ] Measure available residual-end-to-wrist distance; replace the 160 mm equipment-space assumption and fit socket/liner/suspension to the recipient.
-- [ ] Resolve the original PIP surface overlaps at 30° and deeper flexion before full closure; check actual pins, stops and assembly orientation. The 45° MCP / 15° PIP pose is a limited illustration.
+- [x] Roll all five inverted distal parts into the correct orientation; verify sampled finger bends through 60°.
+- [ ] Verify actual pins, physical extension stops, return bands and continuous full closure. The 10° resting PIP bend is a CAD setting; the 45° MCP / 15° PIP pose remains a limited illustration.
 - [ ] Select and measure the FT5425BL variant, protected 2S battery, high-current disconnect/protection, connectors and low Nano connections; replace reference envelopes.
 - [ ] Fit and verify all bolts/nuts/axles, battery/servo/palm restraints, seam-boss strength and service access. Do not assume CAD bores are usable threads.
 - [ ] Install flexible tendons/liners around the motors; check crossing, bend radii and manual release, then measure complete-path tension and required travel.

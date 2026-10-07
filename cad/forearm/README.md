@@ -1,4 +1,4 @@
-# Forearm-integrated Phoenix — 0.4.1 design candidate
+# Forearm-integrated Phoenix — 0.4.2 design candidate
 
 This replaces the separate box mounted above the arm. Three servos, battery, Nano, EMG conditioner and tendon mechanism sit inside a split forearm shell. The original Phoenix v3 palm and finger shapes are retained. This is an unfitted bench-development design, not a working or wearable prosthesis.
 
@@ -14,7 +14,9 @@ The thumb now attaches at the **original palm hinge**. The extra side fork and i
 
 Sources: [official v3 catalogue](https://hub.e-nable.org/s/e-nable-devices/wiki/208/e-nable-phoenix-hand-v3), [right-hand placemat, both pages](https://drive.google.com/file/d/1caT-qSH-01H-uLoA75pY2E4LHxce84tP/view), and [original STEP](https://drive.google.com/file/d/1qt4fIh77aN9F0LTXMMZCiVgzgbxBcUQ3/view). The original Fusion archive was also retrieved and its embedded preview inspected; it was not opened as a native parametric assembly. See `source_review.json` for hashes and scope. The placemat is linked rather than redistributed.
 
-`hand.py` recovers joint centres from source cylindrical faces and preserves all original source surfaces. The upstream STEP is hash-checked. **Full finger closure is not accepted:** the placement diagnostic detects small proximal/distal surface overlaps at PIP bends of 30° and above (up to about 4.82 mm³ at the sampled 60° pose). The 45° MCP / 15° PIP illustration clears the other modelled fingers, palm and fixed arm parts. Verify original pins, stops, assembly orientation and joint clearances before commanding deeper closure. Source shapes have not been silently cut to remove this result.
+**Fingertip correction in 0.4.2:** the upstream STEP is a printing layout, and all five distal parts are dorsal-side down relative to the proximal parts. They must roll 180° about their length before assembly. Earlier previews left them inverted; the visible tab at each PIP belonged to the proximal part, which concealed the error. The corrected fingertips put their own return-band tabs dorsally and their pads toward the palm. Original surfaces remain unchanged.
+
+The displayed PIP/thumb-tip rest bend is 10°. With the corrected roll, a perfectly straight 0° pose overlaps the original extension-stop surfaces (about 2.66–3.41 mm³ for the four fingers); 10° clears them. This is a CAD rest setting, not a measured physical stop angle. `hand.py` records 40 adjacent-part checks through 60° MCP/PIP bends, all below the 0.001 mm³ reporting threshold (maximum approximately 0.000895 mm³). The previous larger 30–60° overlaps arose from the inverted fingertips; they are not evidence of a defect in the source design. The 45° MCP / 15° PIP assembly illustration also passes its checks. Pins, tendons, return bands, continuous motion and loaded closure still require validation.
 
 ## Inside the arm
 
@@ -36,7 +38,7 @@ Green blocks are the Nano and EMG conditioner; gold is the battery; dark blocks 
 
 The shell is approximately **102 mm wide × 102 mm deep at its largest section**, including seam bosses. Its curved body is 279 mm long; the proximal opening to the hand's wrist datum is 295 mm. These dimensions describe the forearm, not the total spread hand. The three motors occupy different longitudinal positions so their spools do not overlap. The shell wraps this equipment instead of carrying a separate roof box.
 
-Compared in the same CAD axes, maximum assembly depth falls from **145 to 103.5 mm**, about **29% less**. This uses more length: the full assembly's longitudinal bounds increase from about 317 to 434 mm because the equipment is beyond the limb end rather than stacked above it. It is a packaging trade-off, not a 29% volume reduction or proof of anatomical fit. `envelope_comparison.json` records both exported assemblies; regenerate with `python cad/forearm/compare.py`.
+Compared in the same CAD axes, maximum assembly depth falls from **145 to 110.4 mm**, about **24% less**. This uses more length: the full assembly's longitudinal bounds increase from about 317 to 432 mm because the equipment is beyond the limb end rather than stacked above it. It is a packaging trade-off, not a 24% volume reduction or proof of anatomical fit. `envelope_comparison.json` records both exported assemblies; regenerate with `python cad/forearm/compare.py`.
 
 ## The space requirement that must be checked
 
@@ -78,7 +80,7 @@ The existing [Nano firmware](../../firmware/README.md) is unchanged: smoothing, 
 
 ## Checks and rebuild
 
-`checks.json`: seven valid single-solid added parts; watertight positive-volume STLs; no modelled static component/part overlaps above 0.001 mm³; no equipment intrusion into the reserved socket. `motion_checks.json`: both shell halves also clear that socket; 18 equaliser poses (three positions × three angles × two bars) and three thumb-slider positions clear the fixed geometry and sampled fastener heads. This is a set of discrete tests, not a continuous sweep. `layout_checks.json` records eight thumb samples: root angles −60°, −70°, −80°, −90°, each with 0° and 15° tip flexion. These clear the palm, thumb parts and revised support. Full opposition, pin fits, moving tendons and return bands remain unaccepted.
+`checks.json`: seven valid single-solid added parts; watertight positive-volume STLs; no modelled static component/part overlaps above 0.001 mm³; no equipment intrusion into the reserved socket. `motion_checks.json`: both shell halves also clear that socket; 18 equaliser poses (three positions × three angles × two bars) and three thumb-slider positions clear the fixed geometry and sampled fastener heads. This is a set of discrete tests, not a continuous sweep. `layout_checks.json` records eight thumb samples: root angles −60°, −70°, −80°, −90°, each with 10° and 30° tip flexion. These clear the palm, thumb parts and revised support. Full opposition, pin fits, moving tendons and return bands remain unaccepted.
 
 With CadQuery 2.8.0, trimesh, numpy, matplotlib and Pillow:
 
@@ -91,4 +93,4 @@ python cad/forearm/previews.py
 python cad/forearm/package.py
 ```
 
-The hand diagnostic intentionally records deeper PIP interference. It must not be interpreted as a passing full-motion test. Mechanical fit, cable bends, manual release, palm restraint, structural strength, EMG/motor-noise performance, battery protection and heat under load remain bench acceptance work. No hardware was assembled, powered or fitted for this revision.
+The hand diagnostic checks discrete poses with the corrected fingertip roll. It is not a continuous or loaded-motion test. Mechanical fit, cable bends, manual release, palm restraint, structural strength, EMG/motor-noise performance, battery protection and heat under load remain bench acceptance work. No hardware was assembled, powered or fitted for this revision.

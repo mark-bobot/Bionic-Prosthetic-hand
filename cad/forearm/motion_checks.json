@@ -363,5 +363,5 @@
   },
   "partial_finger_collisions": [],
   "full_flexion_accepted": false,
-  "full_flexion_note": "Unchanged source PIP surfaces overlap at 30 degrees and above in the placement diagnostic; resolve physically/CAD before full closure."
+  "full_flexion_note": "Correctly rolled tips checked at discrete bends; full closure still requires tendon, pin, return-band, stop and load validation."
 }

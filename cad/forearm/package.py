@@ -13,6 +13,8 @@ assert not motion['partial_finger_collisions']
 assert max(motion['shell_lumen_overlap_mm3'].values()) < .001
 assert all(max(p['overlap_mm3'].values()) < .001 for p in motion['mechanism_poses'])
 assert motion['full_flexion_accepted'] is False
+finger_checks = json.loads((cad / 'exports/finger_motion_diagnostic.json').read_text())
+assert max(max(p['overlap_mm3']) for p in finger_checks) < .001
 selected = {f'cad/forearm/exports/{n}.stl': 1 for n in check['parts']}
 selected.update({
     'cad/forearm/exports/complete_forearm.step': None,
@@ -21,8 +23,8 @@ selected.update({
     'cad/arm_interface/exports/emg_band_carrier.stl': 1,
 })
 manifest = {
-    'version': '0.4.1-forearm', 'entrypoint': 'cad/forearm/README.md',
-    'status': 'Unfitted design candidate; deeper source PIP flexion and power parts unresolved',
+    'version': '0.4.2-forearm', 'entrypoint': 'cad/forearm/README.md',
+    'status': 'Unfitted design candidate; continuous loaded closure and power parts unresolved',
     'selected_files': {p: {'quantity': q, 'sha256': hashlib.sha256((R / p).read_bytes()).hexdigest()}
                        for p, q in selected.items()},
     'validation_files': {str(p.relative_to(R)): hashlib.sha256(p.read_bytes()).hexdigest()
@@ -33,7 +35,7 @@ manifest = {
 paths = set(filter(None, subprocess.check_output(['git', 'ls-files', '-z'], cwd=R).decode().split('\0')))
 paths.add('cad/forearm/manifest.json')
 assert set(selected).issubset(paths), 'Stage new files before packaging.'
-target = Path('/tmp/Bionic-Prosthetic-hand-0.4.1-forearm.zip')
+target = Path('/tmp/Bionic-Prosthetic-hand-0.4.2-forearm.zip')
 with zipfile.ZipFile(target, 'w', zipfile.ZIP_DEFLATED) as z:
     for p in sorted(paths):
         if (R / p).is_file(): z.write(R / p, 'Bionic-Prosthetic-hand/' + p)

@@ -59,7 +59,7 @@ out = {'scope': '21 discrete mechanism poses; 38 mm end-to-end travel; not a con
        'partial_finger_pose_degrees': {'MCP': 45, 'PIP': 15},
        'partial_finger_collisions': partial,
        'full_flexion_accepted': False,
-       'full_flexion_note': 'Unchanged source PIP surfaces overlap at 30 degrees and above in the placement diagnostic; resolve physically/CAD before full closure.'}
+       'full_flexion_note': 'Correctly rolled tips checked at discrete bends; full closure still requires tendon, pin, return-band, stop and load validation.'}
 (R / 'motion_checks.json').write_text(json.dumps(out, indent=2) + '\n')
 failed = [r for r in records if max(r['overlap_mm3'].values()) > .001]
 print(json.dumps({'failed_mechanism_poses': failed, 'shell_lumen_overlap_mm3': lumen_checks,

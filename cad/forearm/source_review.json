@@ -19,5 +19,6 @@
       "sha256": "0dc689a436a69dca09409369bb7672429b8dfdde55b3e91e0e06dd26cb440459",
       "inspection": "Archive retrieved; embedded preview and reference canvas inspected. Native Fusion timeline not opened."
     }
-  ]
+  ],
+  "placement_correction": "0.4.2: distal solids in the source printing layout are dorsal-side down. Roll all five 180 degrees longitudinally before assembly; prior 0.4.1 inspection misidentified the visible proximal tabs as distal tabs."
 }

@@ -1,8 +1,8 @@
 # Build entry point
 
-**Current selection: [0.4.1 forearm-integrated design](cad/forearm/README.md).** Use its print list, hardware notes, component positions, electrical candidate and acceptance limits. It replaces the external box with an internal equipment bay and corrects the finger assignment and open thumb placement. Do not use the historical selection below as the current kit.
+**Current selection: [0.4.2 forearm-integrated design](cad/forearm/README.md).** Use its print list, hardware notes, component positions, electrical candidate and acceptance limits. It replaces the external box with an internal equipment bay and corrects the finger assignment and open thumb placement. Do not use the historical selection below as the current kit.
 
-The new forearm requires a measured residual-end-to-wrist space compatible with the 160 mm placeholder. Full finger closure is unresolved because the source PIP geometry overlaps at deeper bends in the placement diagnostic. The unchanged Nano firmware is supplied for bench development, with conservative initial motion.
+The new forearm requires a measured residual-end-to-wrist space compatible with the 160 mm placeholder. The fingertip roll is corrected and sampled bends clear the adjacent parts; continuous and loaded closure remain unvalidated. The unchanged Nano firmware is supplied for bench development, with conservative initial motion.
 
 ## Historical 0.2.1 baseline
 

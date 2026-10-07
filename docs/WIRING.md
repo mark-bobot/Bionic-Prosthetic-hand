@@ -1,6 +1,6 @@
 # Wiring
 
-**Current 0.4.1 forearm candidate:** use the [replacement-servo power topology](../cad/slim/README.md#replacement-bom-and-power-changes). FT5425BL candidates take the protected 2S servo rail directly, with a separate 5 V logic supply. Their high-current protection and actual components remain unselected. Signal pins below are retained. The diagram and power-component values below are the historical generic-servo 5 V baseline; do not apply them unchanged to the replacement-servo candidate.
+**Current 0.4.2 forearm candidate:** use the [replacement-servo power topology](../cad/slim/README.md#replacement-bom-and-power-changes). FT5425BL candidates take the protected 2S servo rail directly, with a separate 5 V logic supply. Their high-current protection and actual components remain unselected. Signal pins below are retained. The diagram and power-component values below are the historical generic-servo 5 V baseline; do not apply them unchanged to the replacement-servo candidate.
 
 ![Wiring diagram](wiring.svg)
 

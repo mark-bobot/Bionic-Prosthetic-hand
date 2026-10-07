@@ -44,4 +44,4 @@ from thumb_mount import posed_thumb
 hand_parts={**models,**posed_thumb()}
 cq.exporters.export(cq.Compound.makeCompound([p.val() for p in hand_parts.values()]),str(O/'hand_layout.step'))
 render(O/'hand_layout.step', O/'hand_layout_preview.png',
-       title='Phoenix v3 — original palm and digit joints', view=(-145,28))
+       title='Phoenix v3 — corrected fingertip orientation', view=(-145,28))

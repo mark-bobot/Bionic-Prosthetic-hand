@@ -53,9 +53,11 @@ dr=((min(v[0] for v in entries)+max(v[0] for v in entries))/2,entries[0][1],entr
 def thumb_pose(shape,tilt=-60):
  return (shape.translate(tuple(-v for v in pr)).rotate((0,0,0),(1,0,0),tilt)
  .rotate((0,0,0),(0,0,1),130).translate(thumb_root))
-def posed_thumb(root_angle=-60,tip_angle=0):
+def posed_thumb(root_angle=-60,tip_angle=10):
  p=cq.Workplane('XY').newObject([source[24]])
- d=cq.Workplane('XY').newObject([source[27]]).translate(tuple(pt[i]-dr[i] for i in range(3)))
+ d=(cq.Workplane('XY').newObject([source[27]])
+ .rotate(dr,(dr[0],dr[1]+1,dr[2]),180)
+ .translate(tuple(pt[i]-dr[i] for i in range(3))))
  d=d.rotate(pt,(pt[0]+1,pt[1],pt[2]),-tip_angle)
  return {'thumb_proximal':thumb_pose(p,root_angle),'thumb_distal':thumb_pose(d,root_angle)}
 thumb_proximal,thumb_distal=posed_thumb().values()
