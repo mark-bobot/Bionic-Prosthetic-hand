@@ -1,0 +1,93 @@
+{
+  "scope": "Assumed equal tensions on five hand tendons; not fingertip forces or measured capability.",
+  "model": "Quasistatic, one cord layer, constant routing efficiency, simultaneous pull. Pitch example: all cords parallel to forearm at exit; reference is nominal cuff crown.",
+  "limitations": "Excludes acceleration, return-band variation, tissue compliance, local pressure, friction changing with angle, servo heating, knots and actual attachment geometry. The 33 mm couple is not strap tension or a rating.",
+  "effective_radius_mm": 12.3,
+  "assumed_stall_label_kgcm": 25,
+  "assumed_stall_label_Nm": 2.4516625,
+  "stall_label_verified": false,
+  "operating_voltage_V": null,
+  "rows": [
+    {
+      "hand_tendon_force_each_N": 5,
+      "routing_efficiency": 0.4,
+      "paired_motor_torque_Nm": 0.3075,
+      "thumb_motor_torque_Nm": 0.15375,
+      "total_box_exit_pull_N": 62.5,
+      "idealised_pitch_moment_Nm": 4.1937500000000005,
+      "equivalent_33mm_support_couple_N": 127.08333333333334
+    },
+    {
+      "hand_tendon_force_each_N": 5,
+      "routing_efficiency": 0.6,
+      "paired_motor_torque_Nm": 0.20500000000000002,
+      "thumb_motor_torque_Nm": 0.10250000000000001,
+      "total_box_exit_pull_N": 41.66666666666667,
+      "idealised_pitch_moment_Nm": 2.795833333333334,
+      "equivalent_33mm_support_couple_N": 84.72222222222223
+    },
+    {
+      "hand_tendon_force_each_N": 5,
+      "routing_efficiency": 0.8,
+      "paired_motor_torque_Nm": 0.15375,
+      "thumb_motor_torque_Nm": 0.076875,
+      "total_box_exit_pull_N": 31.25,
+      "idealised_pitch_moment_Nm": 2.0968750000000003,
+      "equivalent_33mm_support_couple_N": 63.54166666666667
+    },
+    {
+      "hand_tendon_force_each_N": 10,
+      "routing_efficiency": 0.4,
+      "paired_motor_torque_Nm": 0.615,
+      "thumb_motor_torque_Nm": 0.3075,
+      "total_box_exit_pull_N": 125.0,
+      "idealised_pitch_moment_Nm": 8.387500000000001,
+      "equivalent_33mm_support_couple_N": 254.16666666666669
+    },
+    {
+      "hand_tendon_force_each_N": 10,
+      "routing_efficiency": 0.6,
+      "paired_motor_torque_Nm": 0.41000000000000003,
+      "thumb_motor_torque_Nm": 0.20500000000000002,
+      "total_box_exit_pull_N": 83.33333333333334,
+      "idealised_pitch_moment_Nm": 5.591666666666668,
+      "equivalent_33mm_support_couple_N": 169.44444444444446
+    },
+    {
+      "hand_tendon_force_each_N": 10,
+      "routing_efficiency": 0.8,
+      "paired_motor_torque_Nm": 0.3075,
+      "thumb_motor_torque_Nm": 0.15375,
+      "total_box_exit_pull_N": 62.5,
+      "idealised_pitch_moment_Nm": 4.1937500000000005,
+      "equivalent_33mm_support_couple_N": 127.08333333333334
+    },
+    {
+      "hand_tendon_force_each_N": 15,
+      "routing_efficiency": 0.4,
+      "paired_motor_torque_Nm": 0.9225,
+      "thumb_motor_torque_Nm": 0.46125,
+      "total_box_exit_pull_N": 187.5,
+      "idealised_pitch_moment_Nm": 12.58125,
+      "equivalent_33mm_support_couple_N": 381.25
+    },
+    {
+      "hand_tendon_force_each_N": 15,
+      "routing_efficiency": 0.6,
+      "paired_motor_torque_Nm": 0.615,
+      "thumb_motor_torque_Nm": 0.3075,
+      "total_box_exit_pull_N": 125.0,
+      "idealised_pitch_moment_Nm": 8.387500000000001,
+      "equivalent_33mm_support_couple_N": 254.16666666666669
+    },
+    {
+      "hand_tendon_force_each_N": 15,
+      "routing_efficiency": 0.8,
+      "paired_motor_torque_Nm": 0.46125,
+      "thumb_motor_torque_Nm": 0.230625,
+      "total_box_exit_pull_N": 93.75,
+      "idealised_pitch_moment_Nm": 6.290625,
+      "equivalent_33mm_support_couple_N": 190.625
+    }
+  ]
+}

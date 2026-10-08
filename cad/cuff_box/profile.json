@@ -1,0 +1,17 @@
+{
+  "description": "Separate strap-on box for the original Phoenix v3 gauntlet. Generic servo dimensions are assumptions, not identification of the owned motors.",
+  "servo_body_width_mm": 20,
+  "servo_body_length_mm": 40.6,
+  "servo_body_height_mm": 40.5,
+  "servo_ear_width_allowance_mm": 24,
+  "servo_ear_length_allowance_mm": 56,
+  "shaft_offset_mm": 10,
+  "shaft_projection_allowance_mm": 5,
+  "shaft_diameter_allowance_mm": 6,
+  "horn_height_allowance_mm": 3,
+  "formed_cuff_outer_radius_mm": 32,
+  "cuff_axis_z_mm": 8,
+  "padding_allowance_mm": 3,
+  "clearance_above_cuff_crown_mm": 10,
+  "hand_scale_percent": 100
+}

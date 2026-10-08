@@ -1,0 +1,319 @@
+{
+  "status": "UNFITTED_STRAP_ON_BOX_PROTOTYPE",
+  "profile": {
+    "description": "Separate strap-on box for the original Phoenix v3 gauntlet. Generic servo dimensions are assumptions, not identification of the owned motors.",
+    "servo_body_width_mm": 20,
+    "servo_body_length_mm": 40.6,
+    "servo_body_height_mm": 40.5,
+    "servo_ear_width_allowance_mm": 24,
+    "servo_ear_length_allowance_mm": 56,
+    "shaft_offset_mm": 10,
+    "shaft_projection_allowance_mm": 5,
+    "shaft_diameter_allowance_mm": 6,
+    "horn_height_allowance_mm": 3,
+    "formed_cuff_outer_radius_mm": 32,
+    "cuff_axis_z_mm": 8,
+    "padding_allowance_mm": 3,
+    "clearance_above_cuff_crown_mm": 10,
+    "hand_scale_percent": 100
+  },
+  "box_body_size_mm": [
+    94,
+    96,
+    71.5
+  ],
+  "box_deck_global_z_mm": 50,
+  "lid_underside_local_z_mm": 68.5,
+  "spool_base_local_z_mm": 52.5,
+  "ports_local_mm": [
+    {
+      "group": "index_middle",
+      "groove": 0,
+      "x_mm": -15.7,
+      "y_mm": -8,
+      "z_mm": 53.5
+    },
+    {
+      "group": "index_middle",
+      "groove": 1,
+      "x_mm": -15.7,
+      "y_mm": -8,
+      "z_mm": 62.5
+    },
+    {
+      "group": "thumb",
+      "groove": 0,
+      "x_mm": 12.3,
+      "y_mm": -8,
+      "z_mm": 53.5
+    },
+    {
+      "group": "ring_little",
+      "groove": 0,
+      "x_mm": 40.3,
+      "y_mm": -8,
+      "z_mm": 53.5
+    },
+    {
+      "group": "ring_little",
+      "groove": 1,
+      "x_mm": 40.3,
+      "y_mm": -8,
+      "z_mm": 62.5
+    }
+  ],
+  "collisions_mm3": [],
+  "ear_keepout_intersections_mm3": [],
+  "parts": {
+    "box_base": {
+      "one_valid_solid": true,
+      "watertight": true,
+      "assembly_local_zmin_mm": -16.524521594286014,
+      "size_mm": [
+        110.0,
+        96.0,
+        85.02452087402344
+      ],
+      "quantity": 1
+    },
+    "box_lid": {
+      "one_valid_solid": true,
+      "watertight": true,
+      "assembly_local_zmin_mm": 66.5,
+      "size_mm": [
+        94.0,
+        96.0,
+        5.0
+      ],
+      "quantity": 1
+    },
+    "rear_board_carrier": {
+      "one_valid_solid": true,
+      "watertight": true,
+      "assembly_local_zmin_mm": 4.0,
+      "size_mm": [
+        80.0,
+        12.0,
+        51.0
+      ],
+      "quantity": 1
+    },
+    "two_groove_drum": {
+      "one_valid_solid": true,
+      "watertight": true,
+      "assembly_local_zmin_mm": -1e-07,
+      "size_mm": [
+        28.0,
+        28.0,
+        11.999999899999999
+      ],
+      "quantity": 2
+    },
+    "thumb_drum": {
+      "one_valid_solid": true,
+      "watertight": true,
+      "assembly_local_zmin_mm": -1e-07,
+      "size_mm": [
+        28.0,
+        28.0,
+        6.749999899999999
+      ],
+      "quantity": 1
+    }
+  },
+  "components": {
+    "index_middle_servo_reference": [
+      -40.0,
+      -16.0,
+      -74.0,
+      -18.0,
+      4.0,
+      49.5
+    ],
+    "index_middle_spool": [
+      -42.0,
+      -14.0,
+      -50.0,
+      -22.0,
+      52.4999999,
+      64.5000001
+    ],
+    "thumb_servo_reference": [
+      -12.0,
+      12.0,
+      -84.0,
+      -28.0,
+      4.0,
+      49.5
+    ],
+    "thumb_spool": [
+      -14.0,
+      14.0,
+      -80.0,
+      -52.0,
+      52.4999999,
+      59.2500001
+    ],
+    "ring_little_servo_reference": [
+      16.0,
+      40.0,
+      -74.0,
+      -18.0,
+      4.0,
+      49.5
+    ],
+    "ring_little_spool": [
+      14.0,
+      42.0,
+      -50.0,
+      -22.0,
+      52.4999999,
+      64.5000001
+    ],
+    "Nano_reference": [
+      -32.0,
+      -14.0,
+      -98.0,
+      -90.0,
+      8.0,
+      53.0
+    ],
+    "EMG_conditioner_reference": [
+      -7.0,
+      15.0,
+      -98.0,
+      -88.0,
+      8.0,
+      43.0
+    ],
+    "logic_regulator_reference": [
+      22.65,
+      35.35,
+      -97.0,
+      -93.0,
+      8.0,
+      18.2
+    ],
+    "power_distribution_allowance": [
+      -7.0,
+      7.0,
+      -26.0,
+      -16.0,
+      5.0,
+      13.0
+    ],
+    "main_switch_allowance": [
+      18.0,
+      38.0,
+      -100.0,
+      -84.0,
+      48.5,
+      68.5
+    ],
+    "arm_switch_allowance": [
+      -5.0,
+      5.0,
+      -100.0,
+      -90.0,
+      56.5,
+      68.5
+    ]
+  },
+  "scope": "Original hand/gauntlet unchanged. Cuff in assembled view is an envelope only. No physical motor identification, horn fit, strap retention, wrist stabilisation, tendon force or wearer fit accepted.",
+  "cuff_clearance_intersections_mm3": {},
+  "hand_pose_checks": [
+    {
+      "MCP": 0,
+      "PIP": 10,
+      "thumb_root": -60,
+      "thumb_tip": 10,
+      "box_intersections_mm3": []
+    },
+    {
+      "MCP": 30,
+      "PIP": 40,
+      "thumb_root": -75,
+      "thumb_tip": 25,
+      "box_intersections_mm3": []
+    },
+    {
+      "MCP": 60,
+      "PIP": 70,
+      "thumb_root": -90,
+      "thumb_tip": 40,
+      "box_intersections_mm3": []
+    }
+  ],
+  "shaft_axis_checks": [
+    {
+      "group": "index_middle",
+      "axis_error_mm": 0.0,
+      "reference_servo_axis_xy": [
+        -28.0,
+        -36.0
+      ],
+      "drum_axis_xy": [
+        -28.0,
+        -36.0
+      ]
+    },
+    {
+      "group": "thumb",
+      "axis_error_mm": 0.0,
+      "reference_servo_axis_xy": [
+        0.0,
+        -66.0
+      ],
+      "drum_axis_xy": [
+        0.0,
+        -66.0
+      ]
+    },
+    {
+      "group": "ring_little",
+      "axis_error_mm": 0.0,
+      "reference_servo_axis_xy": [
+        28.0,
+        -36.0
+      ],
+      "drum_axis_xy": [
+        28.0,
+        -36.0
+      ]
+    }
+  ],
+  "transmission": {
+    "paired_drive": "Two separate grooves per paired servo; fixed coupled take-up, no floating equaliser",
+    "effective_radius_mm": 12.3,
+    "ideal_travel_at_assumed_160deg_mm": 34.34807967924841,
+    "operating_voltage_V": null,
+    "actual_motor_model": null,
+    "owned_motor_fit_verified": false
+  },
+  "source_sha256": {
+    "cad/cuff_box/build_box.py": "ae5985d4b2349bfce16356790532b45d2e0acb11eb668ac2c7597214a2ba0ce9",
+    "cad/cuff_box/profile.json": "3d70fa07a45077353d1d94312e3ac6f6f84bcd1daa0110531705ee4e96188ae3",
+    "cad/upstream/phoenix_v3.step": "3d7086af7fd8a3b8f33ca87d8af6b10bdc7fc9038eb923bf920633acd7227620",
+    "cad/forearm/hand.py": "2b8898da09c38cb80a638cc924e9b2e3f5cc1e740c762bc3e70f44380acf23ed",
+    "cad/forearm/thumb_mount.py": "69bc3adb1f66f2bf80c5d0341649a222e1c7593320f3fd0e1d000c189d0cf00b"
+  },
+  "output_sha256": {
+    "box_lid.stl": "898613df979257bcd41588ef23e046a3a6a3f48537336bfed603b3641a288309",
+    "complete_preview.png": "ccc887ce82da261870d8a867d051fa71490e5fe888035615f5356ab18f68ef8a",
+    "rear_board_carrier.stl": "d5aef81c379bfefb78c874c98424c78b08f776a9c1027c8f954371fd9b193095",
+    "open_preview.png": "268f52e3bf4b2b64c008341be26542edb993aa7e5e9c6fda77b5561f6396c60a",
+    "box_only.step": "e1f519b5b9ca7de9b994f0a9cae471d070841031d64bbb6fd1c13481ef029e48",
+    "two_groove_drum.step": "b1c0736ab986e5c4ba3974a91998e4f44a9ff9cb90e0d54e6b4e06c4cd3b476f",
+    "thumb_drum.step": "efb220ed0833561f692534c3942ea653fef48757fb2c9b70175ead79c7a02f15",
+    "box_only_preview.png": "7a9ee46910a6ccb513c7701f87bee2e0ed717612829371fec110f9bcc405b8c2",
+    "box_lid.step": "0cbd4121f300f7cc568266e16217bb15322bb905bd0fad4e1cc84f5416da6d50",
+    "complete.step": "48c3053796a3a0a14462deb0d4cb452728a18bd6891b6a992c72c0e3eb778001",
+    "two_groove_drum.stl": "e4f63e49806dedd8ac7b7eb7b6a23905037f0a090ead45f5695a5267f0ed188b",
+    "thumb_drum.stl": "ea945fab8e9448c860457420e47d6f0403746dd6e91aeae6339312ec768c4510",
+    "box_base.stl": "97d592ad162d0b667ab71c75f268067c104cf0a81a73948b201c30fd0cf55a03",
+    "original_flat_gauntlet_reference.step": "0a2ced712d97152e26cd51113964eac0798195af9b06d5bdaea9ff6972e939d9",
+    "box_base.step": "32853835fe9b5eec2f4b73384cc3cb15b64e9833bdc58bb0892daa7e3ce1ad99",
+    "open.step": "baac0958926b6e873cf3134d9c152f9b32ae8d8209e0fb7563bccc871d6414e7",
+    "rear_board_carrier.step": "597ac3eb35e799fb12d746e79427d827afa2e29a0ff352542264878a82344a18"
+  }
+}

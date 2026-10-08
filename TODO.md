@@ -1,5 +1,13 @@
 # Remaining work
 
+## Separate cuff-box option
+
+- [x] Design a new strap-on enclosure with servo seats, upright electronics carrier, two paired drums and one thumb drum, preserving source hand/cuff geometry.
+- [ ] Measure the owned motors, metal horns, connectors and switch bodies; regenerate this option for those measurements.
+- [ ] Fit the saddle padding and straps to the actual formed cuff; resolve wrist stabilisation before loading direct tendons.
+- [ ] Measure each paired cord's force/travel, check unequal-contact behaviour and accessible release, and validate the external power system.
+
+
 ## Current forearm design — 8 October 2026
 
 - [x] Add original-proportion hand scaling, independent arm clearance controls and explicit anthropometric landmark checks in `cad/sizing`.
