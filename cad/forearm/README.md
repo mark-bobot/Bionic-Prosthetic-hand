@@ -48,7 +48,7 @@ Compared in the same CAD axes, maximum assembly depth falls from **145 to 110.4 
 
 ## Adjustable sizing
 
-Use the [sizing study](../sizing/README.md) to change the original hand scale and inspect an independent limb/liner clearance envelope. It keeps hardware dimensions fixed, checks available arm length and makes anatomical/CAD landmark differences explicit. This study does not rebuild the current shell or accept its receiver at a different hand scale.
+Use the [sizing study](../sizing/README.md) to change the original hand scale and inspect an independent limb/liner clearance envelope. It keeps hardware dimensions fixed, checks available arm length and makes anatomical/CAD landmark differences explicit. The sizing study itself does not rebuild the current shell or accept its receiver at a different hand scale. The [separate adapter candidate](../sizing/ADAPTER.md) supplies a new 120% receiver and a lower shell with two local screw-head clearance pockets. Use those replacement parts together.
 
 ## The space requirement that must be checked
 

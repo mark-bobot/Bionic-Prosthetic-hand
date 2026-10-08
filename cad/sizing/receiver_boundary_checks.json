@@ -1,0 +1,67 @@
+{
+  "scope": "Solid and bore geometry only; full assemblies at boundary scales are not validated.",
+  "sizes": [
+    {
+      "scale_percent": 90.0,
+      "one_valid_solid": true,
+      "interface": {
+        "forearm_bolt_centres_xy_mm": [
+          [
+            -18,
+            -24
+          ],
+          [
+            18,
+            -24
+          ]
+        ],
+        "through_bore_mm": 4.4,
+        "head_recess_diameter_mm": 8.4,
+        "head_recess_depth_mm": 1,
+        "bearing_material_under_recess_mm": 3,
+        "wrist_bore_mm": 5.800000000000001,
+        "wrist_axis_yz_mm": [
+          0,
+          7.200612635509385
+        ],
+        "ear_thickness_mm": 4,
+        "outer_ear_span_mm": 67.0,
+        "scope": "Geometry only. Axle retention, chosen bolts, load capacity and tool access require physical verification."
+      }
+    },
+    {
+      "scale_percent": 140.0,
+      "one_valid_solid": true,
+      "interface": {
+        "forearm_bolt_centres_xy_mm": [
+          [
+            -18,
+            -24
+          ],
+          [
+            18,
+            -24
+          ]
+        ],
+        "through_bore_mm": 4.4,
+        "head_recess_diameter_mm": 8.4,
+        "head_recess_depth_mm": 1,
+        "bearing_material_under_recess_mm": 3,
+        "wrist_bore_mm": 8.799999999999999,
+        "wrist_axis_yz_mm": [
+          0,
+          11.200952988570155
+        ],
+        "ear_thickness_mm": 4,
+        "outer_ear_span_mm": 102.0,
+        "scope": "Geometry only. Axle retention, chosen bolts, load capacity and tool access require physical verification."
+      }
+    }
+  ],
+  "source_sha256": {
+    "cad/sizing/adapter.py": "9f43e489e72f65ff9de24887b178af6aae1f505c082805486d76f9bede71855d",
+    "cad/sizing/build_adapter.py": "e2beaa9d4f0bd454c8be654a3c6d617ad9304c9c27229d92561faffbbaf9b0f3",
+    "tests/receiver_geometry_test.py": "f4e6326542998d54c9992ae5c750dc3f55ca5becf78f9b881c2e463cdf098c64",
+    "cad/upstream/phoenix_v3.step": "3d7086af7fd8a3b8f33ca87d8af6b10bdc7fc9038eb923bf920633acd7227620"
+  }
+}

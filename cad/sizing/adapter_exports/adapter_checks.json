@@ -1,0 +1,203 @@
+{
+  "hand_scale_percent": 120.0,
+  "status": "UNFITTED_ADAPTER_CANDIDATE",
+  "patient_fit_verified": false,
+  "baseline_forearm_version": "0.4.3",
+  "lower_shell_change": {
+    "head_pocket_diameter_mm": 8.6,
+    "pocket_z_mm": [
+      3,
+      8
+    ],
+    "removed_volume_mm3": 188.81225996973808
+  },
+  "interface": {
+    "forearm_bolt_centres_xy_mm": [
+      [
+        -18,
+        -24
+      ],
+      [
+        18,
+        -24
+      ]
+    ],
+    "through_bore_mm": 4.4,
+    "head_recess_diameter_mm": 8.4,
+    "head_recess_depth_mm": 1,
+    "bearing_material_under_recess_mm": 3,
+    "wrist_bore_mm": 7.6,
+    "wrist_axis_yz_mm": [
+      0,
+      9.600816847345847
+    ],
+    "ear_thickness_mm": 4,
+    "outer_ear_span_mm": 88.0,
+    "scope": "Geometry only. Axle retention, chosen bolts, load capacity and tool access require physical verification."
+  },
+  "static_collisions_mm3": [],
+  "closure_samples": [
+    {
+      "step": 0,
+      "MCP": 0.0,
+      "PIP": 10.0,
+      "thumb_root": -60.0,
+      "thumb_tip": 10.0,
+      "maximum_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 1,
+      "MCP": 5.0,
+      "PIP": 15.0,
+      "thumb_root": -62.5,
+      "thumb_tip": 12.5,
+      "maximum_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 2,
+      "MCP": 10.0,
+      "PIP": 20.0,
+      "thumb_root": -65.0,
+      "thumb_tip": 15.0,
+      "maximum_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 3,
+      "MCP": 15.0,
+      "PIP": 25.0,
+      "thumb_root": -67.5,
+      "thumb_tip": 17.5,
+      "maximum_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 4,
+      "MCP": 20.0,
+      "PIP": 30.0,
+      "thumb_root": -70.0,
+      "thumb_tip": 20.0,
+      "maximum_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 5,
+      "MCP": 25.0,
+      "PIP": 35.0,
+      "thumb_root": -72.5,
+      "thumb_tip": 22.5,
+      "maximum_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 6,
+      "MCP": 30.0,
+      "PIP": 40.0,
+      "thumb_root": -75.0,
+      "thumb_tip": 25.0,
+      "maximum_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 7,
+      "MCP": 35.0,
+      "PIP": 45.0,
+      "thumb_root": -77.5,
+      "thumb_tip": 27.5,
+      "maximum_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 8,
+      "MCP": 40.0,
+      "PIP": 50.0,
+      "thumb_root": -80.0,
+      "thumb_tip": 30.0,
+      "maximum_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 9,
+      "MCP": 45.0,
+      "PIP": 55.0,
+      "thumb_root": -82.5,
+      "thumb_tip": 32.5,
+      "maximum_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 10,
+      "MCP": 50.0,
+      "PIP": 60.0,
+      "thumb_root": -85.0,
+      "thumb_tip": 35.0,
+      "maximum_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 11,
+      "MCP": 55.0,
+      "PIP": 65.0,
+      "thumb_root": -87.5,
+      "thumb_tip": 37.5,
+      "maximum_overlap_mm3": 0,
+      "collisions": []
+    },
+    {
+      "step": 12,
+      "MCP": 60.0,
+      "PIP": 70.0,
+      "thumb_root": -90.0,
+      "thumb_tip": 40.0,
+      "maximum_overlap_mm3": 0,
+      "collisions": []
+    }
+  ],
+  "scope": "Fixed hardware at 100%; scaled original hand, new receiver and two local lower-shell head pockets. No tendon, axle, nut, full fastener, load or fitted socket validation.",
+  "all_samples_clear": true,
+  "hand_self_motion_scope": "Original hand geometry and 13 pose angles are uniformly scaled. Hand-v-hand booleans are not repeated; see baseline closure_checks.json.",
+  "print_parts": {
+    "resized_receiver": {
+      "assembly_zmin_mm": -8.0,
+      "watertight": true,
+      "dimensions_mm": [
+        88.0,
+        86.5999984741211,
+        27.19997787475586
+      ]
+    },
+    "forearm_lower_head_clearance": {
+      "assembly_zmin_mm": -43.0000001,
+      "watertight": true,
+      "dimensions_mm": [
+        101.99596405029297,
+        279.0,
+        50.799999137060546
+      ]
+    }
+  },
+  "sha256": {
+    "cad/sizing/profile.json": "5179964c934744aa0e02808d03d8d3ceef921b1d6d531056d765980da57abb37",
+    "cad/sizing/build_adapter.py": "e2beaa9d4f0bd454c8be654a3c6d617ad9304c9c27229d92561faffbbaf9b0f3",
+    "cad/sizing/adapter.py": "9f43e489e72f65ff9de24887b178af6aae1f505c082805486d76f9bede71855d",
+    "cad/sizing/sizing.py": "93d8cef85cfa87e001f0471a50261a4497d2540c33c031c24d13e3bc88313ee4",
+    "cad/forearm/hand.py": "2b8898da09c38cb80a638cc924e9b2e3f5cc1e740c762bc3e70f44380acf23ed",
+    "cad/forearm/thumb_mount.py": "69bc3adb1f66f2bf80c5d0341649a222e1c7593320f3fd0e1d000c189d0cf00b",
+    "cad/forearm/exports/complete_forearm.step": "8504297fece6299eccb2bbad398afe1e2ca04662986f17a56a7106cd4259e5b2",
+    "cad/forearm/closure_checks.json": "1e95849353933a48d104ff33f3a84c1354644da731878f03645541bc611343fb"
+  },
+  "output_sha256": {
+    "sized_open_preview.png": "a7835c1833e55f115796736d493c98878066ab6a02051c3e074abfc6149ad668",
+    "sized_open.step": "63633a27762a32b1b3501ea1b473d9ab93fbad0ee37e11ee493b39af932e160a",
+    "sized_flexion_hand.step": "36b72ebe3a4508d1fb7ca41248dc37c66484c9e0bce4c6e3ea088ebf2b041c7b",
+    "forearm_lower_head_clearance.step": "50517a840159973f53a751a06298d920e161af5c3735d23d446aeb8dd367a609",
+    "forearm_lower_head_clearance.stl": "e7f3283b2338fa62a56f97c15278793a5c8359de271986ca88f5a16aca02b3e9",
+    "sized_complete.step": "7f993365161438f4c4b097b7be8487267764570c30c3716d29ab7f3096c0bc20",
+    "resized_receiver.stl": "396dbc4b29a160e1ecf104e0d3476009d2274fbde128179b7b4c4dfd80f5dd31",
+    "sized_flexion_preview.png": "78304846d9ca0c591632fdedadd0e23df56a9a4f17cedf9890cbb8afe6d9e285",
+    "resized_receiver.step": "2e9498f7a5db00629cdd1486dd3689792c712796bcfaee2bf5c80bd2be67a076",
+    "sized_complete_preview.png": "0b4ef81f5533674fd36385adffd127a9e5e593a2e176bd3cffe6141e8ad84e60"
+  }
+}

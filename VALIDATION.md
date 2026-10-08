@@ -1,5 +1,11 @@
 # Validation record — 26 September 2026
 
+## Resized receiver candidate — 8 October 2026
+
+`cad/sizing/build_adapter.py` checks the 120% example against the existing fixed hardware. A new receiver preserves the two M4 forearm centres; a revised lower shell adds two local head-clearance pockets. The CAD checks include one-solid/mesh validation for both replacements, cylindrical bore positions, bearing material beneath the screw recesses, static interference, thirteen sampled hand poses against the receiver/fixed components and complete/open export matching. Results and source/output hashes: `cad/sizing/adapter_exports/adapter_checks.json`. Original hand-to-hand checks are inherited by uniform scaling rather than rerun; no loaded or fitted-use acceptance is claimed.
+
+`tests/receiver_geometry_test.py` checks valid receiver solids and fixed bolt geometry at 90% and 140%, and rejects out-of-range or NaN scales. Those boundary tests do not validate complete assemblies at those sizes. The original 0.4.3 assembly remains separate.
+
 ## Anthropometric sizing study — 7 October 2026
 
 `cad/sizing` exports a uniformly scaled original hand and a separate adjustable limb/liner clearance envelope. It checks STEP bounds and volume scaling for all eleven corrected hand solids, and tests the envelope/resized hand against the existing hardware geometry. The seven arithmetic tests cover missing measurements, signed anatomical registration, length/width mismatch and stroke limits. The report never labels these geometric checks as patient fit. The illustrated 120% hand needs a new receiver; the existing forearm and its motion acceptance remain at 100%. See `cad/sizing/README.md` for exact scope.

@@ -16,7 +16,7 @@ One servo drives the thumb, one drives the index and middle fingers, and one dri
 
 ## Adjustable hand sizing
 
-The [sizing study](cad/sizing/README.md) adds an editable Phoenix scale percentage and independent arm-clearance dimensions. It preserves the original hand proportions and corrected fingertip orientation while keeping hardware full size. The illustrated 120% hand is a comparison, not a selected wearer size; a resized wrist receiver and fitted socket are still required.
+The [sizing study](cad/sizing/README.md) adds an editable Phoenix scale percentage and independent arm-clearance dimensions. It preserves the original hand proportions and corrected fingertip orientation while keeping hardware full size. The illustrated 120% hand is a comparison, not a selected wearer size. The [new receiver and matching assembly](cad/sizing/ADAPTER.md) connect that hand to the housing with local screw-head clearances in the lower shell. An individually fitted socket remains outstanding.
 
 ## Build files
 

@@ -6,7 +6,7 @@ The hand can change size while keeping the original v3 proportions. Edit `hand_s
 
 [Scaled hand STEP](exports/scaled_hand.step) · [Limb/liner clearance STEP](exports/limb_clearance_envelope.step) · [Dimension and clearance report](exports/sizing_report.json)
 
-These are sizing studies alongside the [0.4.3 mechanical assembly](../forearm/README.md). The resized hand is **not yet connected by a redesigned wrist adapter**. Changing the profile does not resize or rebuild the current forearm shell. The side view deliberately omits the receiver so an incompatible scaled interface is not presented as a complete assembly.
+These are sizing studies alongside the [0.4.3 mechanical assembly](../forearm/README.md). The [separate adapter build](ADAPTER.md) connects the 120% example to the forearm using a new receiver and two local lower-shell screw-head clearances. Changing the sizing profile alone still does not rebuild the receiver or shell: run that adapter build and check its report. The side view on this page remains the independent sizing study and deliberately omits the receiver.
 
 ## What changes
 

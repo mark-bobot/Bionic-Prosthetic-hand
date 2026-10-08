@@ -1,5 +1,16 @@
 **Current 0.4.3 selection:** [forearm parts and hardware](cad/forearm/README.md#selected-parts-and-hardware), with the [replacement servo/power BOM](cad/slim/README.md#replacement-bom-and-power-changes). The shell includes internal motor, battery and board provisions; it replaces the separate box. Prices and the high-current supply components remain unselected.
 
+**Optional 120% hand candidate:** use the [resized receiver guide](cad/sizing/ADAPTER.md). Replace the two corresponding baseline print parts; do not add duplicate shells or receivers.
+
+| Candidate replacement / constraint | Quantity | Detail |
+| --- | ---: | --- |
+| `cad/sizing/adapter_exports/resized_receiver.stl` | 1 | Replaces the baseline palm receiver; fixed M4 forearm centres |
+| `cad/sizing/adapter_exports/forearm_lower_head_clearance.stl` | 1 | Replaces the lower shell; two local screw-head clearance pockets |
+| Forearm attachment M4 sets | 2 total | Existing count; heads must fit the 8 mm diameter × 2.5 mm allowance. Length, nuts and engagement remain to be selected against the print. |
+| Hand, printed pins and wrist axle | 1 matching set | Example hand scale is 120%. Receiver wrist bore 7.6 mm; ear outer span 88 mm. Verify axle length and retention rather than reusing the earlier pin by assumption. |
+
+Other baseline part quantities remain unchanged. This option is not included in the historical cost total below.
+
 **Prototype 0.2.1 historical mechanical list:** [shells, receiver, connected thumb mount, cassette, inserts, guides, straps and fasteners](cad/bionic/README.md#added-hardware). Use the 0.2 feed-through lid and print list in [BUILD.md](BUILD.md). The older priced electronic/reference list below remains useful for component selection; its total does not price the new integration or patient-specific fitting.
 
 # Bill of materials — three-servo prototype
