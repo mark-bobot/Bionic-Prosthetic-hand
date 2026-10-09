@@ -1,0 +1,16 @@
+9 October 2026 — actual local verification of unchanged firmware
+
+PASS: c++ -std=c++11 tests/control_test.cpp -o /tmp/bionic-production-control
+PASS: /tmp/bionic-production-control
+Output: PASS: calibration, debounce, release, arming, timeout, fault, arithmetic
+
+PASS: c++ -std=c++11 tests/filter_test.cpp firmware/ProstheticHand/EMGFilters.cpp -o /tmp/bionic-production-filter
+PASS: /tmp/bionic-production-filter
+Output: PASS: actual OYMotion filter + controller, synthetic rest/contraction/rest
+
+Initial Arduino compile failed because Servo.h was not in the default library path.
+Resolved using the existing local Servo library:
+arduino-cli compile --fqbn arduino:avr:nano:cpu=atmega328 --libraries /tmp/bionic-arduino/libraries --build-path /tmp/bionic-production-nano firmware/ProstheticHand
+PASS: 7,228 bytes flash; 653 bytes global RAM; AVR core 1.8.8.
+No source change was needed. No board upload, physical timing or real EMG/motor test occurred.
+These checks do not establish fitted-use or production readiness.

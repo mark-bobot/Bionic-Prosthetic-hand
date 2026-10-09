@@ -1,0 +1,257 @@
+{
+  "status": "BENCH_ENGINEERING_KIT_ONLY_NOT_PRODUCTION_APPROVAL",
+  "selected_design": "cad/bottom_drive",
+  "intended_use": "One wearer, right missing hand; fitted use not yet authorised by evidence",
+  "production_ready": false,
+  "open_gates": [
+    {
+      "id": "wearer_fit",
+      "requirement": "Prescribed socket, suspension, alignment, EMG site and wearer-specific fitting evidence",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "hardware",
+      "requirement": "Identified and dimensionally verified servo, horn, fastener, electronics and power parts",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "manufacturing",
+      "requirement": "Qualified material, printing process, dimensional inspection and traceable build record",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "tendons",
+      "requirement": "Complete routes, terminations, force/travel measurements and continuous moving clearance",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "release",
+      "requirement": "Validated accessible mechanical release during power loss, motor seizure and tendon jam",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "structure",
+      "requirement": "Agreed design loads and verified palm, cover, mounts, straps and axle strength/fatigue",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "power",
+      "requirement": "Rated supply/protection/wiring plus measured current, noise, sag and temperature",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "control",
+      "requirement": "Physical timing, EMG artefact/electrode-loss, false activation, inversion calibration and fault tests",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "durability",
+      "requirement": "Predefined cycle-life and wear criteria with recorded repeated-load results",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "fitted_trials",
+      "requirement": "Supervised fitting/functional trial evidence and follow-up/maintenance instructions",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "regulatory",
+      "requirement": "Responsible manufacturer/professional confirms applicable pathway and obligations",
+      "status": "OPEN",
+      "evidence": []
+    }
+  ],
+  "files": {
+    "BUILD.md": {
+      "quantity": null,
+      "sha256": "9fd5558256bed9335d40229ce8ba312dad469c572195f3f8e4334936809ed43d",
+      "bytes": 1862
+    },
+    "LICENSE.md": {
+      "quantity": null,
+      "sha256": "0f5a3cbe9f142b4d194c2a6aef395bde7271cb26e3830a83f7efa77687d8f16a",
+      "bytes": 3425
+    },
+    "cad/bottom_drive/README.md": {
+      "quantity": null,
+      "sha256": "73ea7ac1d2eb964aa05f45139dfe58790e3b00133f95fcf4ba789a1f1571d204",
+      "bytes": 6948
+    },
+    "cad/bottom_drive/exports/arm_adapter.step": {
+      "quantity": 1,
+      "sha256": "7395878c549e5e8ff027f999d7652e1266cfddf935c7630da1cc594534303d0e",
+      "bytes": 922850
+    },
+    "cad/bottom_drive/exports/arm_adapter.stl": {
+      "quantity": 1,
+      "sha256": "2f8af5781ded86f059605641dea252602ee2806f5ce2d7b3cefc8fc507757bfc",
+      "bytes": 328184
+    },
+    "cad/bottom_drive/exports/box_base.step": {
+      "quantity": 1,
+      "sha256": "00dcf55046ce5fd1642ea22bd766d51b70e8d2906d3cfff88ec2d060fe68c378",
+      "bytes": 417397
+    },
+    "cad/bottom_drive/exports/box_base.stl": {
+      "quantity": 1,
+      "sha256": "2348126cfbee0fb54c2ec093b90c7a91b32e069858cd77d28e39a49d4b8de18e",
+      "bytes": 549884
+    },
+    "cad/bottom_drive/exports/box_lid.step": {
+      "quantity": 1,
+      "sha256": "d5d027f3a18580a35f3596989a24cfbc59913ae735a18beb57894791c8479ca2",
+      "bytes": 781720
+    },
+    "cad/bottom_drive/exports/box_lid.stl": {
+      "quantity": 1,
+      "sha256": "9b0ebda4a4ea984352db3f0059abff5e89674cc9930017e5ec46be25f25993db",
+      "bytes": 605684
+    },
+    "cad/bottom_drive/exports/checks.json": {
+      "quantity": null,
+      "sha256": "670a9552cf2be357259dbdcf52575dc910bda75a49a2728ff848b202d6e1943a",
+      "bytes": 13245
+    },
+    "cad/bottom_drive/exports/complete.step": {
+      "quantity": null,
+      "sha256": "bd194b357d4d74f91f4e103bf2576164437faa2af2d30697f1741d8b8e2fcce8",
+      "bytes": 24158945
+    },
+    "cad/bottom_drive/exports/complete_preview.png": {
+      "quantity": null,
+      "sha256": "f213c10646bea9653b389db1bd1bddb7811a89bb19c3b7ae696a0e308dab4ce6",
+      "bytes": 144276
+    },
+    "cad/bottom_drive/exports/drive_detail_preview.png": {
+      "quantity": null,
+      "sha256": "925c9a55d30e837c04e517c202766b63a8ba6d2e4153021accae9ab628fab465",
+      "bytes": 55015
+    },
+    "cad/bottom_drive/exports/drum_hardware_checks.json": {
+      "quantity": null,
+      "sha256": "21b6af7423e79ca0cff4299b6c7df232be19bf21a18ab01ffb6abdda4ba9d4ed",
+      "bytes": 1180
+    },
+    "cad/bottom_drive/exports/mount_checks.json": {
+      "quantity": null,
+      "sha256": "57a5234570dd98f4303774c15c1d0dfbd577b149812ebe617b9b9e6468f0eda2",
+      "bytes": 1025
+    },
+    "cad/bottom_drive/exports/palm_receiver.step": {
+      "quantity": 1,
+      "sha256": "054436a7ffc47477f7b28a4bd7a8eb3578fc5d9de0f4258b0dbd801a7fcc6d70",
+      "bytes": 445464
+    },
+    "cad/bottom_drive/exports/palm_receiver.stl": {
+      "quantity": 1,
+      "sha256": "2bf59c59e30bb403ca2c58dadfa01afdf3a35f6f9d7c5fb293f9ad4ac8b029f6",
+      "bytes": 275584
+    },
+    "cad/bottom_drive/exports/rear_board_carrier.step": {
+      "quantity": 1,
+      "sha256": "afc1c57443c3d1820b8034e4f702b19fca8b4469f5ff45ed49125d1791e8559b",
+      "bytes": 151207
+    },
+    "cad/bottom_drive/exports/rear_board_carrier.stl": {
+      "quantity": 1,
+      "sha256": "3d960458e8ba0e696ffcbfbebeec7d1e526d155249f658eb09303ae186dc79f5",
+      "bytes": 42484
+    },
+    "cad/bottom_drive/exports/routing_comparison.json": {
+      "quantity": null,
+      "sha256": "bf0111065f5096e70dea81de0aed0e7929fde729f9a6fc683ccfda7afd45b8e0",
+      "bytes": 2195
+    },
+    "cad/bottom_drive/exports/routing_comparison.png": {
+      "quantity": null,
+      "sha256": "ebc909fdcf75520f1b128043471d74d597c4dbf6483e751f2d48ad3dc2e3514b",
+      "bytes": 73801
+    },
+    "cad/bottom_drive/exports/thumb_drum.step": {
+      "quantity": 1,
+      "sha256": "c897a20c94a81aa17f28cf34d8eb57b0266403d261b173e0ab3bd04875bedd92",
+      "bytes": 194436
+    },
+    "cad/bottom_drive/exports/thumb_drum.stl": {
+      "quantity": 1,
+      "sha256": "009eab4ff2262ded24d58c198cfabcbe66a064bbce73d368b7e2b997ce252c99",
+      "bytes": 187384
+    },
+    "cad/bottom_drive/exports/two_groove_drum.step": {
+      "quantity": 2,
+      "sha256": "867e4a7aa7141ec379d20ff3bfb7641fb0b163ed187e640c6c4ebd2b8195038c",
+      "bytes": 345799
+    },
+    "cad/bottom_drive/exports/two_groove_drum.stl": {
+      "quantity": 2,
+      "sha256": "4b7718fee0dd974a7b2e670b659a498e17e87b567ffcbc2e981e2dbc5578bb70",
+      "bytes": 306284
+    },
+    "cad/bottom_drive/profile.json": {
+      "quantity": null,
+      "sha256": "167ade8da675749e01477a168d3914a83af47b463f0f46d05fa1a1f03aef6b76",
+      "bytes": 686
+    },
+    "firmware/ProstheticHand/EMGFilters.cpp": {
+      "quantity": null,
+      "sha256": "4f4e728c668ee0d7c08ee8dd27df55165c116c2c17743769ca56ef6702494358",
+      "bytes": 8498
+    },
+    "firmware/ProstheticHand/EMGFilters.h": {
+      "quantity": null,
+      "sha256": "d7d5907331b2d83c024b6da7c031e900e7304b8ef52fd9c3f3ee79df5a2c4694",
+      "bytes": 3140
+    },
+    "firmware/ProstheticHand/HandControl.h": {
+      "quantity": null,
+      "sha256": "80dd678a7ad8c194aad0a1bf50611fe871215ec7ef72d8db855f375d60a21c9d",
+      "bytes": 2204
+    },
+    "firmware/ProstheticHand/OYMOTION-LICENSE.md": {
+      "quantity": null,
+      "sha256": "5dfcc51ec8f877e3a1ff8c6e0eb85325fce7ffb95a6181a68ed9ab4d0a7005b5",
+      "bytes": 1329
+    },
+    "firmware/ProstheticHand/ProstheticHand.ino": {
+      "quantity": null,
+      "sha256": "d1d353ccb2f149d2a1a77b7723f52050f7b8c67efa44b32ae4b751b657a343d9",
+      "bytes": 2842
+    },
+    "firmware/README.md": {
+      "quantity": null,
+      "sha256": "923665173d7bb2baf1ad301ec366230dd24cafc2a5af7929a1e1e2bb2481515a",
+      "bytes": 5275
+    },
+    "release/production/README.md": {
+      "quantity": null,
+      "sha256": "71232c589b095fac6f0f2a3cbf5d6ec0ab85b309db4dc4699c0967af5747adbc",
+      "bytes": 7182
+    },
+    "release/production/package.py": {
+      "quantity": null,
+      "sha256": "865f1be329f4a16335e727e7c7f7d9c49cda34f3f2cfc1ac62af59899feb792b",
+      "bytes": 3768
+    },
+    "release/production/readiness.json": {
+      "quantity": null,
+      "sha256": "0575be6574908ffb5402cb4252ed1148ba1425242f61fc68ec96ef5532861271",
+      "bytes": 2299
+    },
+    "release/production/software_checks.txt": {
+      "quantity": null,
+      "sha256": "6d4bacac7466f7cd96baee288673ddb91792d86c7fe9b21f206b62063725a904",
+      "bytes": 1022
+    }
+  },
+  "source_note": "Full CAD regeneration requires repository sources, including upstream Phoenix and imported forearm/sizing modules. This selected kit contains exports and firmware, not every historical CAD source."
+}

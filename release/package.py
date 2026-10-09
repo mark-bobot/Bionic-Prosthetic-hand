@@ -1,6 +1,7 @@
 """Freeze the prototype package; stdlib only. Run at repository root."""
 from pathlib import Path
 import hashlib,json,subprocess,zipfile
+print("HISTORICAL 0.2.1 KIT ONLY. Current selection: release/production/package.py")
 R=Path(__file__).resolve().parents[1]
 selected={
 'cad/compact/exports/compact_base.stl':1,'cad/compact/exports/compact_tray.stl':1,

@@ -147,3 +147,11 @@ A separate swept-head check reserves a maximum 1.2 mm projection below the drums
 The unchanged 12.3 mm effective radius retains ideal pulling force and 34.35 mm take-up at an assumed 160°. The five parallel-cord, 10 N-per-hand-tendon, 60%-efficiency example reduces internal box pitch from 3.74 to 0.84 Nm. It is not net wearer torque or a measured friction reduction. No full external tendon routing, continuous cord motion, hanging-motor strength, service slack, thermal or fitted-use validation is claimed. Firmware remains unchanged; inverted winding direction and endpoints require unloaded calibration.
 
 Final bottom-drive STEP reimports and source/output hashes passed. Complete and underside-mechanism previews were visually inspected. The illustrated lower drums remain enclosed in the complete model.
+
+## One-wearer preparation audit — 9 October 2026
+
+The build entry point now selects the bottom-drive candidate consistently. The historical 0.2.1 packager is explicitly labelled; a new selected-kit packager verifies geometry source/output hashes, hardware reports, quantities, file presence, ZIP integrity and packaged-file hashes. Its production-required mode returns exit code 2 while fitted-use evidence is incomplete. A negative check confirmed stale CAD hashes block packaging.
+
+The unchanged firmware passed fresh controller and actual OYMotion-filter integration tests. A fresh Nano compile passed after supplying the existing Servo-library path: 7,228 bytes flash and 653 bytes RAM. The initial default-path compile failure and successful retry are recorded in release/production/software_checks.txt. No upload or physical verification occurred.
+
+Eleven physical, fitting, manufacturing and regulatory evidence gates remain open. The generated kit is bench engineering material, not production approval or an accepted fitted device.

@@ -1,0 +1,72 @@
+{
+  "intended_use": "One wearer, right missing hand; fitted use not yet authorised by evidence",
+  "status": "BLOCKED_FOR_FITTED_USE_AND_PRODUCTION",
+  "gates": [
+    {
+      "id": "wearer_fit",
+      "requirement": "Prescribed socket, suspension, alignment, EMG site and wearer-specific fitting evidence",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "hardware",
+      "requirement": "Identified and dimensionally verified servo, horn, fastener, electronics and power parts",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "manufacturing",
+      "requirement": "Qualified material, printing process, dimensional inspection and traceable build record",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "tendons",
+      "requirement": "Complete routes, terminations, force/travel measurements and continuous moving clearance",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "release",
+      "requirement": "Validated accessible mechanical release during power loss, motor seizure and tendon jam",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "structure",
+      "requirement": "Agreed design loads and verified palm, cover, mounts, straps and axle strength/fatigue",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "power",
+      "requirement": "Rated supply/protection/wiring plus measured current, noise, sag and temperature",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "control",
+      "requirement": "Physical timing, EMG artefact/electrode-loss, false activation, inversion calibration and fault tests",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "durability",
+      "requirement": "Predefined cycle-life and wear criteria with recorded repeated-load results",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "fitted_trials",
+      "requirement": "Supervised fitting/functional trial evidence and follow-up/maintenance instructions",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "regulatory",
+      "requirement": "Responsible manufacturer/professional confirms applicable pathway and obligations",
+      "status": "OPEN",
+      "evidence": []
+    }
+  ]
+}

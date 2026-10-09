@@ -1,5 +1,7 @@
 # Bionic Prosthetic Hand
 
+**One-wearer preparation:** [selected build and open acceptance gates](release/production/README.md). The latest files form an engineering bench kit; the device is not production-ready or approved for fitted use.
+
 A three-servo adaptation of the e-NABLE Phoenix Hand v3, using a DFRobot SEN0240 dry-electrode EMG sensor and an Arduino Nano.
 
 One servo drives the thumb, one drives the index and middle fingers, and one drives the ring and little fingers. The controller commands closure on contraction and opening on relaxation; mechanical operation remains untested. The original palm and finger shapes are retained.
