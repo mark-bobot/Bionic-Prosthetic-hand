@@ -1,16 +1,44 @@
-9 October 2026 — actual local verification of unchanged firmware
+10 October 2026: local software checks, not hardware/human test evidence.
+Arduino AVR core 1.8.8; official Servo 1.2.2, commit 8297c322120d9eb21478eb48f1f3d80219b9d800.
+Distributed sketch outputs disabled. Temporary enabled copy differs only in SERVO_OUTPUTS_ENABLED.
 
-PASS: c++ -std=c++11 tests/control_test.cpp -o /tmp/bionic-production-control
-PASS: /tmp/bionic-production-control
-Output: PASS: calibration, debounce, release, arming, timeout, fault, arithmetic
+$ c++ -std=c++11 tests/control_test.cpp -o /tmp/bionic-prehuman-control
+Exit: 0
 
-PASS: c++ -std=c++11 tests/filter_test.cpp firmware/ProstheticHand/EMGFilters.cpp -o /tmp/bionic-production-filter
-PASS: /tmp/bionic-production-filter
-Output: PASS: actual OYMotion filter + controller, synthetic rest/contraction/rest
+$ /tmp/bionic-prehuman-control
+PASS: calibration, startup/restart inhibit, rearming, debounce, release, timeout, latched fault, arithmetic
+Exit: 0
 
-Initial Arduino compile failed because Servo.h was not in the default library path.
-Resolved using the existing local Servo library:
-arduino-cli compile --fqbn arduino:avr:nano:cpu=atmega328 --libraries /tmp/bionic-arduino/libraries --build-path /tmp/bionic-production-nano firmware/ProstheticHand
-PASS: 7,228 bytes flash; 653 bytes global RAM; AVR core 1.8.8.
-No source change was needed. No board upload, physical timing or real EMG/motor test occurred.
-These checks do not establish fitted-use or production readiness.
+$ c++ -std=c++11 tests/filter_test.cpp firmware/ProstheticHand/EMGFilters.cpp -o /tmp/bionic-prehuman-filter
+Exit: 0
+
+$ /tmp/bionic-prehuman-filter
+PASS: actual OYMotion filter + controller, synthetic rest/contraction/rest
+Exit: 0
+
+$ python3 tests/bottom_drive_pull_test.py
+PASS: paired torque, unequal travel, short sweep, overload, missing/unconfirmed data, invalid numbers
+Exit: 0
+
+$ python3 tests/pull_sizing_test.py
+Measured-pull sizing checks passed; no hardware measurements fabricated.
+Exit: 0
+
+$ arduino-cli compile --fqbn arduino:avr:nano:cpu=atmega328 --libraries /tmp/bionic-prehuman-libraries --build-path /tmp/bionic-prehuman-nano firmware/ProstheticHand
+Sketch uses 6686 bytes (21%) of program storage space. Maximum is 30720 bytes.
+Global variables use 635 bytes (31%) of dynamic memory, leaving 1413 bytes for local variables. Maximum is 2048 bytes.
+Exit: 0
+
+$ arduino-cli compile --fqbn arduino:avr:nano:cpu=atmega328 --libraries /tmp/bionic-prehuman-libraries --build-path /tmp/bionic-prehuman-enabled-build /tmp/bionic-prehuman-enabled/ProstheticHand
+Sketch uses 7342 bytes (23%) of program storage space. Maximum is 30720 bytes.
+Global variables use 657 bytes (32%) of dynamic memory, leaving 1391 bytes for local variables. Maximum is 2048 bytes.
+Exit: 0
+
+PASS: empty actual-measurement template remains MEASUREMENTS_REQUIRED (exit 2).
+SHA256 firmware/ProstheticHand/EMGFilters.cpp 4f4e728c668ee0d7c08ee8dd27df55165c116c2c17743769ca56ef6702494358
+SHA256 firmware/ProstheticHand/EMGFilters.h d7d5907331b2d83c024b6da7c031e900e7304b8ef52fd9c3f3ee79df5a2c4694
+SHA256 firmware/ProstheticHand/HandControl.h 6e56c40107958b49a305438cf7817581b532240655e3e7faea1c730b60887c09
+SHA256 firmware/ProstheticHand/OYMOTION-LICENSE.md 5dfcc51ec8f877e3a1ff8c6e0eb85325fce7ffb95a6181a68ed9ab4d0a7005b5
+SHA256 firmware/ProstheticHand/ProstheticHand.ino 3d1a97843ca54808e13087dc05ef1f12c28dd909a8155591b44fb158ccf2efb6
+
+No board upload, physical signal/timing/load test, fitted trial or clinical validation occurred. All physical readiness gates remain open.

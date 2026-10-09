@@ -8,6 +8,8 @@ int main(){
  HandControl h;
  for(int i=0;i<5200;++i) h.sample(f.update(307),307,true);
  assert(h.calibrated&&!h.closed&&!h.fault);
+ for(int i=0;i<50;++i)h.sample(f.update(307),307,false); // Qualified switch release.
+ for(int i=0;i<100;++i) h.sample(f.update(307),307,true);
  for(int i=0;i<500;++i){int raw=307+int(50*sin(2*3.141592653589793*80*i/1000));h.sample(f.update(raw),raw,true);}
  assert(h.closed&&!h.fault);
  for(int i=0;i<500;++i)h.sample(f.update(307),307,true);

@@ -13,3 +13,5 @@ The most immediate mechanical gate is the horn/drum fastener stack: head project
 [Arduino setup and limits](firmware/README.md) · [Tendon measurements](TENDON-TEST.md) · [Open production/fitting gates](release/production/readiness.json) · [Validation evidence](VALIDATION.md)
 
 The firmware is development code. Inversion requires unloaded winding-direction and endpoint calibration. No physical force feedback, validated electrode-loss detection or mechanical release is supplied by the control code.
+
+**Before testing on a person:** start with [the staged bench procedure](docs/PRE-HUMAN-TEST.md), [current wiring](docs/WIRING.md) and [EMG mounting](docs/EMG-MOUNTING.md). The current physical starting point is the original Phoenix print only.

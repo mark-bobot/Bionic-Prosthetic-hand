@@ -1,10 +1,12 @@
+**Selected bottom-drive build:** use [the current procurement requirements](release/production/README.md#purchased-part-completion) and [current power/harness specification](docs/WIRING.md). Exact power components and owned-servo identification remain open. Lists below are historical or alternative variants.
+
 The [bottom-drive variant](cad/bottom_drive/README.md#parts-and-assembly) adds twelve M3 motor-ear bolts/nuts and replaces the box base and structural cover. It retains the shorter replacement-servo requirement. Choose the complete matched variant, not a mixture of covers.
 
 The latest lower-box option has its own [print and hardware list](cad/cuff_box_compact/README.md#print-and-hardware-selection). It uses three FT5425BL replacement candidates, an external supply and a new rigid adapter; do not mix its mechanical or power parts with the older generic-servo version.
 
 **Separate cuff-box option:** use [its own print/hardware list](cad/cuff_box/README.md#hardware-and-electrical-notes). It has six new printed pieces, generic servo clearance assumptions and an external battery/fuse. Do not combine this enclosure with the integrated-forearm part list or assume its motor voltage is known.
 
-**Current 0.4.3 selection:** [forearm parts and hardware](cad/forearm/README.md#selected-parts-and-hardware), with the [replacement servo/power BOM](cad/slim/README.md#replacement-bom-and-power-changes). The shell includes internal motor, battery and board provisions; it replaces the separate box. Prices and the high-current supply components remain unselected.
+**Historical 0.4.3 selection:** [forearm parts and hardware](cad/forearm/README.md#selected-parts-and-hardware), with the [replacement servo/power BOM](cad/slim/README.md#replacement-bom-and-power-changes). The shell includes internal motor, battery and board provisions; it replaces the separate box. Prices and the high-current supply components remain unselected.
 
 **Optional 120% hand candidate:** use the [resized receiver guide](cad/sizing/ADAPTER.md). Replace the two corresponding baseline print parts; do not add duplicate shells or receivers.
 
@@ -17,13 +19,13 @@ The latest lower-box option has its own [print and hardware list](cad/cuff_box_c
 
 Other baseline part quantities remain unchanged. This option is not included in the historical cost total below.
 
-**Prototype 0.2.1 historical mechanical list:** [shells, receiver, connected thumb mount, cassette, inserts, guides, straps and fasteners](cad/bionic/README.md#added-hardware). Use the 0.2 feed-through lid and print list in [BUILD.md](BUILD.md). The older priced electronic/reference list below remains useful for component selection; its total does not price the new integration or patient-specific fitting.
+**Prototype 0.2.1 historical mechanical list:** [shells, receiver, connected thumb mount, cassette, inserts, guides, straps and fasteners](cad/bionic/README.md#added-hardware). This historical list does not describe the selected bottom-drive kit in [BUILD.md](BUILD.md). The older priced electronic/reference list below remains useful for component selection; its total does not price the new integration or patient-specific fitting.
 
 # Bill of materials — three-servo prototype
 
-One thumb servo, one index/middle servo and one ring/little servo. The current hand is the [forearm-integrated Phoenix](cad/forearm/README.md); the costs below remain the revision B baseline. Compact-housing/cradle hardware and any fitted socket are not yet fully costed. This is the complete **reference build list**, including power and mounting consumables. Physical servo fit, hand sizing and load validation remain open; do not treat it as a purchase-ready matched kit.
+One thumb servo, one index/middle servo and one ring/little servo. This historical hand is the [forearm-integrated Phoenix](cad/forearm/README.md); the costs below remain the revision B baseline. Compact-housing/cradle hardware and any fitted socket are not yet fully costed. This is the complete **reference build list**, including power and mounting consumables. Physical servo fit, hand sizing and load validation remain open; do not treat it as a purchase-ready matched kit.
 
-**Current spool set:** print three `cad/compact/exports/single_groove_spool.stl` parts (6.75 mm high); keep two equaliser parts. Recheck M2 horn bolts and knot clearance for the thinner spool. Older double-groove spools do not fit the lowered roof.
+**Historical 0.2.1 spool set (not bottom-drive):** print three `cad/compact/exports/single_groove_spool.stl` parts (6.75 mm high); keep two equaliser parts. Recheck M2 horn bolts and knot clearance for the thinner spool. Older double-groove spools do not fit the lowered roof.
 
 **Historical 0.2.1 rounded-cover hardware:** four M3 through-fastener sets, with heads at most 6 mm diameter × 2 mm high to fit the recesses. Front/rear overall housing heights are 60/57 mm; measure from the recessed screw seat to the nut before selecting or trimming lengths. The older M3 × 45 revision B row below does not fit this housing. Inspect the 1 mm screw-seat thickness in a print sample. Switches need measured bushings and nuts for the 3 mm recessed panel. See [current housing notes](cad/compact/README.md).
 

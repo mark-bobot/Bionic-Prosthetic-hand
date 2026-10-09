@@ -43,7 +43,7 @@ Add twelve M3 motor-ear through-bolts and twelve nuts. Select lengths against th
 
 Assemble motors and horns on the removable upper cartridge. Install drums from below while the cartridge is out of the box. Thread and adjust the cords with the mechanism unpowered. For service, unload/slacken the cords and disconnect power before lifting the cartridge; do not lift the cover against tight finger tendons. Lead slack and the service movement are not fully modelled.
 
-Because the motors are inverted, **do not assume the previous closing direction or endpoint settings remain correct**. Calibrate each motor with its cords disconnected. The existing software is unchanged; its setup positions must be checked against the new winding direction before loading. Keep cords in one layer and verify reliable reopening and a manual means of releasing tension.
+Because the motors are inverted, **do not assume the previous closing direction or endpoint settings remain correct**. Calibrate each motor with its cords disconnected. Firmware now ships with outputs disabled and requires a post-calibration enable-switch release before arming. Its positions remain uncalibrated for real hardware. See [current wiring](../../docs/WIRING.md), [EMG mounting](../../docs/EMG-MOUNTING.md) and [fixed-groove measurements](../../calculations/BOTTOM-DRIVE-PULL.md). Keep cords in one layer and verify reliable reopening and a manual means of releasing tension.
 
 ## Acceptance boundary
 

@@ -1,0 +1,64 @@
+{
+  "notes": "Blank hardware record. Current user hardware: Phoenix v3 print only; no extension or wiring. Load margin 1.5 is a screening assumption to justify, not a certified safety factor.",
+  "load_margin": 1.5,
+  "groups": {
+    "thumb": {
+      "servo_model": null,
+      "effective_radius_mm": null,
+      "usable_sweep_deg": null,
+      "allowed_torque_Nm": null,
+      "servo_and_sweep_confirmed": false
+    },
+    "index_middle": {
+      "servo_model": null,
+      "effective_radius_mm": null,
+      "usable_sweep_deg": null,
+      "allowed_torque_Nm": null,
+      "servo_and_sweep_confirmed": false
+    },
+    "ring_little": {
+      "servo_model": null,
+      "effective_radius_mm": null,
+      "usable_sweep_deg": null,
+      "allowed_torque_Nm": null,
+      "servo_and_sweep_confirmed": false
+    }
+  },
+  "fingers": {
+    "thumb": {
+      "peak_force_N": null,
+      "closure_travel_mm": null,
+      "maximum_tested_travel_mm": null,
+      "full_route_measured": false,
+      "raw_trace_file": null
+    },
+    "index": {
+      "peak_force_N": null,
+      "closure_travel_mm": null,
+      "maximum_tested_travel_mm": null,
+      "full_route_measured": false,
+      "raw_trace_file": null
+    },
+    "middle": {
+      "peak_force_N": null,
+      "closure_travel_mm": null,
+      "maximum_tested_travel_mm": null,
+      "full_route_measured": false,
+      "raw_trace_file": null
+    },
+    "ring": {
+      "peak_force_N": null,
+      "closure_travel_mm": null,
+      "maximum_tested_travel_mm": null,
+      "full_route_measured": false,
+      "raw_trace_file": null
+    },
+    "little": {
+      "peak_force_N": null,
+      "closure_travel_mm": null,
+      "maximum_tested_travel_mm": null,
+      "full_route_measured": false,
+      "raw_trace_file": null
+    }
+  }
+}

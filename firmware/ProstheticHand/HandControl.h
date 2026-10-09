@@ -6,7 +6,7 @@
 class HandControl {
  public:
   uint32_t level = 0, threshold = 100;
-  bool calibrated = false, closed = false, fault = false;
+  bool calibrated = false, closed = false, fault = false, enabled = false;
 
   void sample(int filtered, int raw, bool armed) {
     // Filter first, then average signal power so positive/negative EMG does not cancel.
@@ -14,7 +14,9 @@ class HandControl {
 
     // SEN0240 output is 0–3 V on the classic Nano's default 5 V ADC range.
     // A 1 Mohm A0-to-GND resistor makes an unplugged signal tend towards zero.
-    bad = (raw < 2 || raw > 650) ? bad + 1 : 0;
+    if (raw < 2 || raw > 650) {
+      if (bad < 50) ++bad;
+    } else bad = 0;
     if (bad >= 50) fault = true;  // Reset is required after a fault.
 
     if (!calibrated) {
@@ -28,7 +30,14 @@ class HandControl {
       closed = false;
       return;
     }
-    if (!armed || fault) {
+    // Observe a released switch AFTER calibration. A switch held at startup
+    // must never enable outputs, even when the signal looks relaxed.
+    if (!armed) {
+      if (releaseCount < 50) ++releaseCount;
+      armReleased = releaseCount >= 50; // 50 ms release qualification at 1 kHz.
+    } else releaseCount = 0;
+    enabled = armed && armReleased && !fault;
+    if (!enabled) {
       closed = false; activeCount = 0; holdCount = 0; waitingForRest = true;
       return;
     }
@@ -59,6 +68,6 @@ class HandControl {
 
   uint32_t history[AVERAGE_SAMPLES] = {}, sum = 0, restPeak = 0;
   uint16_t samples = 0, bad = 0, activeCount = 0, holdCount = 0;
-  uint8_t index = 0;
-  bool waitingForRest = true;
+  uint8_t index = 0, releaseCount = 0;
+  bool waitingForRest = true, armReleased = false;
 };

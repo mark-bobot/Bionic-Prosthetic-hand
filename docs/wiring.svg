@@ -2,36 +2,36 @@
 <rect width="1500" height="1040" fill="#f8fafc"/>
 <style>text{font-family:Arial,sans-serif;fill:#182b3a} .small{font-size:17px}.label{font-size:20px}.title{font-size:30px;font-weight:bold}</style>
 <text x="40" y="45" font-size="30">Phoenix v3 • three-servo EMG wiring</text>
-<text x="40" y="77" font-size="19">Classic 5 V Nano / SEN0240 / reference 5 V servo supply — proposed bench wiring</text>
+<text x="40" y="77" font-size="19">BOTTOM DRIVE / FT5425BL candidate only / bench specification / hardware ratings still to be selected</text>
 <rect x="40" y="115" width="290" height="135" rx="9" fill="white" stroke="#54758a" stroke-width="2"/>
-<text x="54" y="145" font-size="22">2S protected battery</text>
+<text x="54" y="145" font-size="22">External protected 2S</text>
 <text x="54" y="174" font-size="17">7.4 V nominal / 8.4 V full</text>
-<text x="54" y="198" font-size="17">1,000 mAh, ≥10 A discharge</text>
+<text x="54" y="198" font-size="17">Pack, BMS and leads: UNSELECTED</text>
 <text x="54" y="222" font-size="17">Charge disconnected from device</text>
 <rect x="390" y="115" width="270" height="135" rx="9" fill="white" stroke="#54758a" stroke-width="2"/>
 <text x="404" y="145" font-size="22">Input protection</text>
-<text x="404" y="174" font-size="17">+ → 7.5 A fuse → DC switch</text>
-<text x="404" y="198" font-size="17">Switch rated ≥10 A DC</text>
+<text x="404" y="174" font-size="17">+ → F1 fuse → S1 disconnect</text>
+<text x="404" y="198" font-size="17">Coordinate all DC path ratings</text>
 <text x="404" y="222" font-size="17">GND → star return below</text>
 <polyline points="330,160 390,160" fill="none" stroke="#d44540" stroke-width="3"/>
 <text x="339" y="148" font-size="18">+</text>
 <rect x="730" y="115" width="310" height="135" rx="9" fill="white" stroke="#54758a" stroke-width="2"/>
-<text x="744" y="145" font-size="22">Servo regulator</text>
-<text x="744" y="174" font-size="17">Pololu D24V90F5</text>
-<text x="744" y="198" font-size="17">VIN = switched battery</text>
-<text x="744" y="222" font-size="17">VOUT = 5 V servo rail</text>
+<text x="744" y="145" font-size="22">Motor branch protection</text>
+<text x="744" y="174" font-size="17">Direct switched 2S motor rail</text>
+<text x="744" y="198" font-size="17">No 5 V servo regulator</text>
+<text x="744" y="222" font-size="17">Branch protection: UNSELECTED</text>
 <rect x="730" y="290" width="310" height="135" rx="9" fill="white" stroke="#54758a" stroke-width="2"/>
-<text x="744" y="320" font-size="22">Logic regulator</text>
-<text x="744" y="349" font-size="17">Pololu D24V5F5</text>
-<text x="744" y="373" font-size="17">VIN = switched battery</text>
+<text x="744" y="320" font-size="22">Protected logic branch</text>
+<text x="744" y="349" font-size="17">Branch fuse → 5 V regulator VIN</text>
+<text x="744" y="373" font-size="17">D24V5F5 candidate; verify load</text>
 <text x="744" y="397" font-size="17">VOUT = 5 V logic rail</text>
 <polyline points="660,160 730,160" fill="none" stroke="#d44540" stroke-width="3"/>
 <polyline points="695,160 695,335 730,335" fill="none" stroke="#d44540" stroke-width="3"/>
 <rect x="1110" y="115" width="345" height="170" rx="9" fill="white" stroke="#54758a" stroke-width="2"/>
 <text x="1124" y="145" font-size="22">Servo power distribution</text>
-<text x="1124" y="174" font-size="17">5 V → all three red / + wires</text>
-<text x="1124" y="198" font-size="17">GND → all three return wires</text>
-<text x="1124" y="222" font-size="17">1,000 µF / 10 V across rail</text>
+<text x="1124" y="174" font-size="17">2S rail → all three + terminals</text>
+<text x="1124" y="198" font-size="17">GND → all three return terminals</text>
+<text x="1124" y="222" font-size="17">1,000 µF / ≥16 V candidate</text>
 <text x="1124" y="246" font-size="17">Do not carry this current via Nano</text>
 <polyline points="1040,160 1110,160" fill="none" stroke="#d44540" stroke-width="3"/>
 <rect x="380" y="490" width="320" height="265" rx="9" fill="white" stroke="#54758a" stroke-width="2"/>
@@ -39,7 +39,7 @@
 <text x="394" y="549" font-size="17">5V ← logic regulator (not VIN)</text>
 <text x="394" y="573" font-size="17">GND → common star return</text>
 <text x="394" y="597" font-size="17">A0 ← EMG analogue output</text>
-<text x="394" y="621" font-size="17">D2 → ARM switch → GND</text>
+<text x="394" y="621" font-size="17">D2 → hold-to-enable S2 → GND</text>
 <text x="394" y="645" font-size="17">D9 → thumb signal</text>
 <text x="394" y="669" font-size="17">D10 → index + middle signal</text>
 <text x="394" y="693" font-size="17">D11 → ring + little signal</text>
@@ -61,17 +61,17 @@
 <text x="54" y="373" font-size="17">SEN0240 + to −: 100 nF ceramic + 10 µF electrolytic.</text>
 <text x="54" y="397" font-size="17">Observe electrolytic capacitor polarity.</text>
 <rect x="1110" y="420" width="345" height="105" rx="9" fill="white" stroke="#54758a" stroke-width="2"/>
-<text x="1124" y="450" font-size="22">Servo 1 • thumb</text>
+<text x="1124" y="450" font-size="22">FT5425BL • thumb</text>
 <text x="1124" y="479" font-size="17">D9 → signal (220 Ω series)</text>
-<text x="1124" y="503" font-size="17">5 V + GND from distribution</text>
+<text x="1124" y="503" font-size="17">2S + GND from distribution</text>
 <rect x="1110" y="555" width="345" height="105" rx="9" fill="white" stroke="#54758a" stroke-width="2"/>
-<text x="1124" y="585" font-size="22">Servo 2 • index + middle</text>
+<text x="1124" y="585" font-size="22">FT5425BL • index + middle</text>
 <text x="1124" y="614" font-size="17">D10 → signal (220 Ω series)</text>
-<text x="1124" y="638" font-size="17">5 V + GND from distribution</text>
+<text x="1124" y="638" font-size="17">2S + GND from distribution</text>
 <rect x="1110" y="690" width="345" height="105" rx="9" fill="white" stroke="#54758a" stroke-width="2"/>
-<text x="1124" y="720" font-size="22">Servo 3 • ring + little</text>
+<text x="1124" y="720" font-size="22">FT5425BL • ring + little</text>
 <text x="1124" y="749" font-size="17">D11 → signal (220 Ω series)</text>
-<text x="1124" y="773" font-size="17">5 V + GND from distribution</text>
+<text x="1124" y="773" font-size="17">2S + GND from distribution</text>
 <polyline points="700,635 850,635 850,472 1110,472" fill="none" stroke="#8b62b5" stroke-width="3"/>
 <polyline points="700,660 930,660 930,607 1110,607" fill="none" stroke="#8b62b5" stroke-width="3"/>
 <polyline points="700,685 850,685 850,742 1110,742" fill="none" stroke="#8b62b5" stroke-width="3"/>
@@ -81,9 +81,9 @@
 <circle cx="885" cy="835" r="6" fill="#263b48"/>
 <circle cx="1250" cy="835" r="6" fill="#263b48"/>
 <text x="60" y="818" font-size="18">COMMON GND / STAR RETURN</text>
-<text x="60" y="872" font-size="19">Battery −, both regulator GNDs, Nano GND, sensor − and servo returns join this net.</text>
+<text x="60" y="872" font-size="19">Battery −, logic regulator GND, Nano GND, sensor − and servo returns join this net.</text>
 <text x="60" y="901" font-size="18">Run servo-current return directly to distribution/star; keep it out of the sensor/Nano ground lead.</text>
-<text x="40" y="952" font-size="18">ARM switch: open = disarmed; closed to GND = armed. This is not a mechanical emergency release.</text>
-<text x="40" y="981" font-size="18">Disconnect external logic power and electrodes before USB programming. For body-connected testing, use battery only.</text>
-<text x="40" y="1010" font-size="18">No charging or mains-connected USB while electrodes are worn. Check connector labels; wire colours can vary.</text>
+<text x="40" y="952" font-size="18">S2 must be released after calibration before enabling. Firmware ships with all servo outputs disabled.</text>
+<text x="40" y="981" font-size="18">S1 power-off and S2 disarm are NOT mechanical grip releases. Confirm connector labels, not wire colours.</text>
+<text x="40" y="1010" font-size="18">No person connected during commissioning. Disconnect electrode, motor power and external logic power for USB.</text>
 </svg>

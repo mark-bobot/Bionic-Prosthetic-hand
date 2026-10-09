@@ -1,5 +1,7 @@
 # Check the actual tendon pull
 
+**Historical equaliser layout.** For the current bottom-drive fixed paired grooves, use [BOTTOM-DRIVE-PULL.md](BOTTOM-DRIVE-PULL.md) and its measurement template/checker. Do not transfer the equaliser travel assumptions to the current kit.
+
 Use this after assembling the hand on a bench fixture. Leave the servo disconnected. Measure at the point where its spool pulls the tendon, through the complete installed route and with the actual return bands. For the paired channels, retain the equaliser and both fingers during the measurement. Record peak pull and input travel, including the worst point in the movement.
 
 Make a copy of `measured_pull_template.json`, enter readings for the thumb, index/middle pair and ring/little pair, and run:

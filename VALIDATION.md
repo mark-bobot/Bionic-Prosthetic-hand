@@ -1,3 +1,17 @@
+## Pre-human-test preparation — 10 October 2026
+
+The user confirmed only the original Phoenix v3 hand is printed; extension and wiring are not built. No physical gate is closed.
+
+Updated the bottom-drive wiring diagram and net table: direct candidate motor rail, separately protected 5 V logic branch, retained A0/D2/D9/D10/D11 mapping, cable/conditioner placement and unresolved power-part ratings. The SVG/PNG was rendered and visually inspected. Actual connector fit and skin contact remain untested.
+
+Firmware now ships with servo outputs disabled. With outputs explicitly enabled for fixture tests, a post-calibration 50 ms switch release is required before enabling; startup with the switch held is inhibited. Disarm/fault detaches at the next processed sample instead of waiting for the servo update. This is not a hardware safety circuit, force feedback or mechanical release.
+
+Added a fixed-groove torque/travel screen, blank actual-measurement template and regression tests. It sums paired torque requirements and rejects non-overlapping common travel; full-route data and confirmed hardware are still required. Historical equaliser instructions are labelled separately.
+
+Fresh controller/filter/calculation tests and both disabled/enabled Nano builds are recorded in release/production/software_checks.txt, with distributed firmware hashes. These are software checks; no board upload, timing measurement, physical movement, release test or human trial occurred. CAD geometry is unchanged; existing CAD reports are checked for matching hashes during packaging, not claimed freshly regenerated.
+
+Added a staged pre-human-test procedure, mounting instructions and blank bench record. Mechanical release design, identified hardware, final power BOM, qualified printed extension, physical tests and professional fitting review remain required. Production and fitted-use status remains blocked.
+
 # Validation record — 26 September 2026
 
 ## Resized receiver candidate — 8 October 2026

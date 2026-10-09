@@ -1,5 +1,7 @@
 # Measuring tendon force and travel
 
+**Current bottom-drive build:** use [the fixed-groove measurement procedure](calculations/BOTTOM-DRIVE-PULL.md). First record hand-only readings, then repeat through the complete extension route. Older equaliser instructions below do not describe the current paired drums.
+
 The first test is mechanical: leave the servo disconnected and find out how hard, and how far, each tendon has to be pulled. This measures the assembled hand, including the friction and return bands that are difficult to estimate from CAD.
 
 ## Equipment

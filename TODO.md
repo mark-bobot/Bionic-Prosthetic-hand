@@ -1,3 +1,7 @@
+## Current next steps — 10 October 2026
+
+Use [the staged pre-human-test procedure](docs/PRE-HUMAN-TEST.md). Current hardware is the original Phoenix v3 print only. First record unpowered hand force/travel and identify the owned servos, then resolve extension fit and mechanical release before powered fitting. The new wiring, mounting notes, output-disabled firmware and calculation checker are preparation, not passed physical tests.
+
 ## Bottom-drive verification
 
 - [ ] Measure full-route tendon forces before and after rerouting; do not infer a pull-force gain from inversion alone.

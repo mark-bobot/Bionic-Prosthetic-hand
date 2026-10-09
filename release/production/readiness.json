@@ -68,5 +68,8 @@
       "status": "OPEN",
       "evidence": []
     }
-  ]
+  ],
+  "reported_hardware": "User report 10 October 2026: original Phoenix v3 print only; extension not printed; no wiring. Not physically inspected.",
+  "pre_human_test_procedure": "docs/PRE-HUMAN-TEST.md",
+  "human_testing_authorised": false
 }

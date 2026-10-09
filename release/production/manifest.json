@@ -74,8 +74,8 @@
   "files": {
     "BUILD.md": {
       "quantity": null,
-      "sha256": "9fd5558256bed9335d40229ce8ba312dad469c572195f3f8e4334936809ed43d",
-      "bytes": 1862
+      "sha256": "6e43fed475f0b5753f1e6975967bced9fdc9190f95261c762352c44871a4e454",
+      "bytes": 2107
     },
     "LICENSE.md": {
       "quantity": null,
@@ -84,8 +84,8 @@
     },
     "cad/bottom_drive/README.md": {
       "quantity": null,
-      "sha256": "73ea7ac1d2eb964aa05f45139dfe58790e3b00133f95fcf4ba789a1f1571d204",
-      "bytes": 6948
+      "sha256": "ee84455b5c795c3a1a2341a08147c156bfa803b8abfd721523aa025dacf9a33d",
+      "bytes": 7150
     },
     "cad/bottom_drive/exports/arm_adapter.step": {
       "quantity": 1,
@@ -202,6 +202,51 @@
       "sha256": "167ade8da675749e01477a168d3914a83af47b463f0f46d05fa1a1f03aef6b76",
       "bytes": 686
     },
+    "calculations/BOTTOM-DRIVE-PULL.md": {
+      "quantity": null,
+      "sha256": "58efe18d5d172061933ad578e16610311a41dfb12a416ac7fa9f90377c35e13d",
+      "bytes": 3633
+    },
+    "calculations/bottom_drive_pull_template.json": {
+      "quantity": null,
+      "sha256": "bce42304c2c95ca7fbbe3a3d382394342251bc3bb737f697ef5e079697e217e5",
+      "bytes": 1778
+    },
+    "calculations/check_bottom_drive_pull.py": {
+      "quantity": null,
+      "sha256": "4f439e4dc7ce38f7a875096b95245676a1db14560c9dd63b8cf6ef51e2df89c9",
+      "bytes": 4443
+    },
+    "docs/EMG-MOUNTING.md": {
+      "quantity": null,
+      "sha256": "6004b350ba92ad93ff5084d8f557f113d90ea0b6567a32a2ad022b0c0a089c9f",
+      "bytes": 3327
+    },
+    "docs/PRE-HUMAN-TEST.md": {
+      "quantity": null,
+      "sha256": "079b38b058250b206ceb2d3e26116bca48061c6e6e10cfee8b80e3838c6de7ba",
+      "bytes": 9081
+    },
+    "docs/WIRING.md": {
+      "quantity": null,
+      "sha256": "3be071343190d8a32a0b2567f1a0f6a5fe4b6b75089041ebcffeb0dfd999bc36",
+      "bytes": 6081
+    },
+    "docs/draw_wiring.py": {
+      "quantity": null,
+      "sha256": "9c2679c264be61513897283c4ccb180d9df5202993cd8cd296defca73f61aa84",
+      "bytes": 4163
+    },
+    "docs/wiring.png": {
+      "quantity": null,
+      "sha256": "cc781818a1d6fb11cb43bc15e2982bf4afc8ac63db6a09c56c1cb9581e434bab",
+      "bytes": 238919
+    },
+    "docs/wiring.svg": {
+      "quantity": null,
+      "sha256": "2dfb501a663e52ea0830b7141e9cbf8e9f5c695e950e6205a1a600ce578ca7a5",
+      "bytes": 7262
+    },
     "firmware/ProstheticHand/EMGFilters.cpp": {
       "quantity": null,
       "sha256": "4f4e728c668ee0d7c08ee8dd27df55165c116c2c17743769ca56ef6702494358",
@@ -214,8 +259,8 @@
     },
     "firmware/ProstheticHand/HandControl.h": {
       "quantity": null,
-      "sha256": "80dd678a7ad8c194aad0a1bf50611fe871215ec7ef72d8db855f375d60a21c9d",
-      "bytes": 2204
+      "sha256": "6e56c40107958b49a305438cf7817581b532240655e3e7faea1c730b60887c09",
+      "bytes": 2650
     },
     "firmware/ProstheticHand/OYMOTION-LICENSE.md": {
       "quantity": null,
@@ -224,33 +269,53 @@
     },
     "firmware/ProstheticHand/ProstheticHand.ino": {
       "quantity": null,
-      "sha256": "d1d353ccb2f149d2a1a77b7723f52050f7b8c67efa44b32ae4b751b657a343d9",
-      "bytes": 2842
+      "sha256": "3d1a97843ca54808e13087dc05ef1f12c28dd909a8155591b44fb158ccf2efb6",
+      "bytes": 3230
     },
     "firmware/README.md": {
       "quantity": null,
-      "sha256": "923665173d7bb2baf1ad301ec366230dd24cafc2a5af7929a1e1e2bb2481515a",
-      "bytes": 5275
+      "sha256": "02b5f0cafc4f7b9d54bba90f2cf54db37b677bd6b95c35dc349a4279a357e756",
+      "bytes": 6015
     },
     "release/production/README.md": {
       "quantity": null,
-      "sha256": "71232c589b095fac6f0f2a3cbf5d6ec0ab85b309db4dc4699c0967af5747adbc",
-      "bytes": 7182
+      "sha256": "b3f544e83d340e96e455c1fbe976fc498d2ee1734152c9e0508766f3526062f6",
+      "bytes": 7549
+    },
+    "release/production/bench_record_template.json": {
+      "quantity": null,
+      "sha256": "6f1cd382418788bab9e69af4bbd5671190d08a10a07402e3702a6838763c1d0e",
+      "bytes": 4902
     },
     "release/production/package.py": {
       "quantity": null,
-      "sha256": "865f1be329f4a16335e727e7c7f7d9c49cda34f3f2cfc1ac62af59899feb792b",
-      "bytes": 3768
+      "sha256": "1bcf4aaabfbc3a0fd7f2f55e1cc44ea0607f999aa91b95574ed6c7b7aa250c7e",
+      "bytes": 4260
     },
     "release/production/readiness.json": {
       "quantity": null,
-      "sha256": "0575be6574908ffb5402cb4252ed1148ba1425242f61fc68ec96ef5532861271",
-      "bytes": 2299
+      "sha256": "31ec6cc2793e836cd322c0af2248c39401f63b77c1eeb228e2d151ad11c73041",
+      "bytes": 2539
     },
     "release/production/software_checks.txt": {
       "quantity": null,
-      "sha256": "6d4bacac7466f7cd96baee288673ddb91792d86c7fe9b21f206b62063725a904",
-      "bytes": 1022
+      "sha256": "21868c4a92046599927bfadab132220e6e8d852f3e315c2c74f3b6dcfcd628f6",
+      "bytes": 2557
+    },
+    "tests/bottom_drive_pull_test.py": {
+      "quantity": null,
+      "sha256": "0277f866407f00a7126f4914e075754db4796a791bb0939c145d8de8dceef83d",
+      "bytes": 2432
+    },
+    "tests/control_test.cpp": {
+      "quantity": null,
+      "sha256": "5079642bccb3fc8f4b0b2dce3d1abc73cc4f03dabb45695a3f5909e621060236",
+      "bytes": 1985
+    },
+    "tests/filter_test.cpp": {
+      "quantity": null,
+      "sha256": "c06a778dbeabdc4a1a68edf3d4edfd8cd0c4949abc104ab5621c1d75cdf63be1",
+      "bytes": 832
     }
   },
   "source_note": "Full CAD regeneration requires repository sources, including upstream Phoenix and imported forearm/sizing modules. This selected kit contains exports and firmware, not every historical CAD source."

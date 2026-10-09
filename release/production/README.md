@@ -2,6 +2,8 @@
 
 **Status: NOT READY FOR FITTED USE OR PRODUCTION.**
 
+**10 October update:** the user has the original Phoenix v3 print only; no extension or wiring. Start with [pre-human-test preparation](../../docs/PRE-HUMAN-TEST.md). The kit now includes current wiring, EMG mounting notes, a fixed-groove measurement checker, blank bench record and output-disabled firmware. These changes do not close any physical acceptance gate.
+
 Target: one wearer with a right missing hand; retain original Phoenix hand geometry, three-motor paired-finger drive, Nano and SEN0240. Selected mechanical candidate: cad/bottom_drive. No commercial distribution or clinical approval is asserted.
 
 The candidate is a starting point for engineering and prosthetic fitting, not a prescribed socket. No wearer measurements, clinical fitting record, physical assembly, measured tendon load, validated manual release or durability evidence has been supplied.

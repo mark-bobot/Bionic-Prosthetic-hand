@@ -4,7 +4,9 @@
 
 A three-servo adaptation of the e-NABLE Phoenix Hand v3, using a DFRobot SEN0240 dry-electrode EMG sensor and an Arduino Nano.
 
-One servo drives the thumb, one drives the index and middle fingers, and one drives the ring and little fingers. The controller commands closure on contraction and opening on relaxation; mechanical operation remains untested. The original palm and finger shapes are retained.
+One servo drives the thumb, one drives the index and middle fingers, and one drives the ring and little fingers. When explicitly enabled for fixture commissioning, the controller commands closure on contraction and opening on relaxation; outputs ship disabled and mechanical operation remains untested. The original palm and finger shapes are retained.
+
+**Before human testing:** [start with the unpowered printed-hand checks](docs/PRE-HUMAN-TEST.md). Current wiring and software preparation are included; physical verification and professional fitting remain outstanding.
 
 ## Latest routing variant — tendon drums underneath
 
@@ -18,9 +20,9 @@ The [lower box and arm adapter](cad/cuff_box_compact/README.md) reduces enclosur
 
 The [separate cuff-box design](cad/cuff_box/README.md) keeps the Phoenix hand and original gauntlet geometry unchanged. Three servos and upright Nano/EMG boards fit inside a strap-on enclosure; the battery stays external. This is a separate, minimally invasive packaging option. Its cuff view is an envelope, and wrist stabilisation and wearer fit remain unresolved.
 
-## Current design — components inside the forearm
+## Historical alternative — components inside the forearm
 
-[Start with the 0.4.3 forearm guide](cad/forearm/README.md). A split, curved arm shell houses the motors, battery, electronics and tendon mechanism; the separate top box is removed. The original v3 placemat confirms the finger order; the previously inverted fingertips are now rolled correctly, with their pads toward the palm. The thumb now uses the original palm hinge, and the added side bracket is removed. The maximum forearm section is about **102 × 102 mm**. This version retains the low-profile replacement-servo candidate and revised power requirements.
+[Historical 0.4.3 forearm guide](cad/forearm/README.md). A split, curved arm shell houses the motors, battery, electronics and tendon mechanism; the separate top box is removed. The original v3 placemat confirms the finger order; the previously inverted fingertips are now rolled correctly, with their pads toward the palm. The thumb now uses the original palm hinge, and the added side bracket is removed. The maximum forearm section is about **102 × 102 mm**. This version retains the low-profile replacement-servo candidate and revised power requirements.
 
 ![Forearm-integrated design](cad/forearm/exports/complete_preview.png)
 
@@ -54,7 +56,7 @@ The [sizing study](cad/sizing/README.md) adds an editable Phoenix scale percenta
 
 This is a newly reconstructed bench-prototype design. The Nano sketch compiles and the software control tests pass. The newly generated add-on parts pass solid/mesh checks; some original Phoenix STEP-to-STL conversions fail watertightness checks, so use the official source STLs. The hardware has not been assembled or tested: motor fit, tendon load, grip performance, electrical noise and thermal performance remain unverified.
 
-The servos owned for this project are generic units advertised as 25 kg·cm with 180° travel. DS3225 dimensions and 5 V electrical specifications are used as a reference, not as identification of those units. The initial code uses a small test movement; calibrate endpoints before expecting full finger closure.
+The servos owned for this project are generic units advertised as 25 kg·cm with 180° travel. DS3225 dimensions and 5 V electrical specifications were historical references. The selected bottom-drive candidate instead uses FT5425BL references and its own power specification; neither identifies the owned motors. The initial code uses a small test movement; calibrate endpoints before expecting full finger closure.
 
 The source project description mentions improved electrode contact, averaging sensor readings, tendon actuation and sharing a servo between two fingers. The files here implement a new version of that idea; they are not recovered original firmware or CAD, and do not establish earlier test results.
 

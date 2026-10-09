@@ -1,5 +1,7 @@
 # Firmware
 
+**10 October 2026: servo outputs are disabled by default.** `SERVO_OUTPUTS_ENABLED = false` is a commissioning lock, not a human-use approval mechanism. Read [pre-human-test preparation](../docs/PRE-HUMAN-TEST.md) and [current wiring](../docs/WIRING.md). No person connected during initial commissioning.
+
 Open `ProstheticHand/ProstheticHand.ino` in Arduino IDE. Select **Arduino Nano / ATmega328P** and install Arduino's **Servo** library. The OYMotion EMG filter is included beside the sketch, so there is no separate EMG library to install. Some older Nano bootloaders require the IDE's Old Bootloader option.
 
 ## The simple averaging step
@@ -27,7 +29,7 @@ There is one EMG channel. It commands all three groups together; it cannot indep
 | Pin | Connection |
 | --- | --- |
 | A0 | SEN0240 A; add 1 MΩ to GND |
-| D2 | Arm switch to GND, using internal pull-up |
+| D2 | Normally-open momentary hold-to-enable switch to GND, internal pull-up |
 | D9 | Thumb servo signal |
 | D10 | Index/middle servo signal |
 | D11 | Ring/little servo signal |
@@ -37,12 +39,12 @@ There is one EMG channel. It commands all three groups together; it cannot indep
 ## First run
 
 1. Program with electrodes removed, servo supply off and external logic supply disconnected from the Nano. Unplug USB before body-connected battery testing.
-2. Leave the arm switch open. Power from the battery system, keep the muscle relaxed and wait five seconds. The onboard LED lights when calibration is complete; rapid blinking indicates a latched fault.
-3. For the first servo check, remove horns/tendons. Closing the arm switch lets the servos move to `OPEN_US`. Relax, contract and relax again.
+2. On the fixture, provide a resting test input and leave the enable switch open. Wait five seconds. The LED lights when calibration completes; rapid blinking indicates a latched fault. Calibration alone does not enable outputs.
+3. For the first servo check, remove horns/tendons and confirm motor model and supply. Deliberately set `SERVO_OUTPUTS_ENABLED = true` and recompile for the fixture test. Release the switch **after calibration** for at least 50 ms, then hold it to enable. A switch held across startup/reset remains inhibited. Simulate rest, activity and rest; never use a person as the initial test input. Reattaching commands `OPEN_US`; it does not know the motor's physical position.
 4. `OPEN_US = 1100` and `CLOSE_US = 1300` are deliberately small test movements, not full closure. Determine unloaded endpoints one servo at a time, then attach loose tendons and increase travel gradually. Never use nominal angle alone to establish the real range. Change the arrays separately if a servo must turn in the other direction.
 5. Set `PLOT = true` only for diagnostic logging using an appropriately isolated arrangement, or with electrodes disconnected. Output columns are activity, threshold and close command. Do not connect a mains-connected computer while electrodes are worn.
 
-A relaxed signal that stays above threshold will prevent rearming; reposition the electrode and reset while relaxed. Motor noise can also trigger false contractions: test the sensor with motor power off, then on, before connecting loaded tendons.
+A signal that stays above threshold prevents a new grip after rearming or timeout. Motor noise can trigger false contractions: test with motor power off and on before loaded tendons. Wearer calibration is a separate professionally reviewed stage. A lost or noisy electrode can still look plausible.
 
 ## Limits
 

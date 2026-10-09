@@ -29,6 +29,13 @@ def create(output):
   selected[str(path.relative_to(R))]=None
  for path in (R/'firmware/ProstheticHand').iterdir():
   if path.is_file():selected[str(path.relative_to(R))]=None
+ for name in ['docs/WIRING.md','docs/wiring.svg','docs/wiring.png','docs/draw_wiring.py',
+              'docs/EMG-MOUNTING.md','docs/PRE-HUMAN-TEST.md',
+              'calculations/BOTTOM-DRIVE-PULL.md','calculations/check_bottom_drive_pull.py',
+              'calculations/bottom_drive_pull_template.json',
+              'release/production/bench_record_template.json',
+              'tests/control_test.cpp','tests/filter_test.cpp','tests/bottom_drive_pull_test.py']:
+  selected[name]=None
  readiness=json.loads((D/'readiness.json').read_text())
  manifest={'status':'BENCH_ENGINEERING_KIT_ONLY_NOT_PRODUCTION_APPROVAL','selected_design':'cad/bottom_drive','intended_use':readiness['intended_use'],'production_ready':False,'open_gates':readiness['gates'],'files':{n:{'quantity':q,'sha256':sha(R/n),'bytes':(R/n).stat().st_size} for n,q in sorted(selected.items())},'source_note':'Full CAD regeneration requires repository sources, including upstream Phoenix and imported forearm/sizing modules. This selected kit contains exports and firmware, not every historical CAD source.'}
  (D/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
