@@ -1,3 +1,10 @@
+## Bottom-drive verification
+
+- [ ] Measure full-route tendon forces before and after rerouting; do not infer a pull-force gain from inversion alone.
+- [ ] Verify motor-ear bolt/nut lengths, cover attachment and hanging-motor retention on a bench.
+- [ ] Recalibrate winding direction and endpoints with cords disconnected.
+- [ ] Check service lead slack, cord anchors, full moving wraps, manual release and enclosed motor temperature.
+
 ## Lower box and rigid adapter follow-up
 
 - [ ] Measure replacement servo/horn/connector fit before printing.

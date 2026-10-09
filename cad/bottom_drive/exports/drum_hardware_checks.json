@@ -1,0 +1,29 @@
+{
+  "scope": "Geometric sweep against case base only, using assumed 4.5 mm diameter heads at 8 mm radius and maximum 1.2 mm projection. Not identification of actual screws or horn fit. Tolerance/deflection not included.",
+  "required_maximum_head_projection_mm": 1.2,
+  "rows": [
+    {
+      "drum": "index_middle_spool",
+      "swept_head_base_intersection_mm3": 0.0,
+      "nominal_lowest_head_z_mm": 4.599999899999993,
+      "nominal_floor_clearance_mm": 0.5999998999999931
+    },
+    {
+      "drum": "thumb_spool",
+      "swept_head_base_intersection_mm3": 0.0,
+      "nominal_lowest_head_z_mm": 7.599999899999998,
+      "nominal_floor_clearance_mm": 3.5999998999999976
+    },
+    {
+      "drum": "ring_little_spool",
+      "swept_head_base_intersection_mm3": 0.0,
+      "nominal_lowest_head_z_mm": 4.5999999,
+      "nominal_floor_clearance_mm": 0.5999999000000003
+    }
+  ],
+  "source_sha256": {
+    "check_drum_hardware.py": "ab1a6e3588f31a285dbf26f3e99fe181e0f4e5a6cab01e2822d20413aae96bd9",
+    "checks.json": "670a9552cf2be357259dbdcf52575dc910bda75a49a2728ff848b202d6e1943a",
+    "box_base.step": "00dcf55046ce5fd1642ea22bd766d51b70e8d2906d3cfff88ec2d060fe68c378"
+  }
+}

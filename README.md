@@ -4,7 +4,11 @@ A three-servo adaptation of the e-NABLE Phoenix Hand v3, using a DFRobot SEN0240
 
 One servo drives the thumb, one drives the index and middle fingers, and one drives the ring and little fingers. The controller commands closure on contraction and opening on relaxation; mechanical operation remains untested. The original palm and finger shapes are retained.
 
-## Latest box variant — lower enclosure and rigid arm adapter
+## Latest routing variant — tendon drums underneath
+
+The [bottom-drive candidate](cad/bottom_drive/README.md) inverts the three motors inside the enclosure and lowers the cord exits by 29.9–42.1 mm. The arm adapter and original hand are retained. A bolted upper motor carrier replaces reliance on hanging ties. Ideal pulling force is unchanged; reduced friction remains a bench-test question.
+
+## Lower enclosure and rigid arm adapter
 
 The [lower box and arm adapter](cad/cuff_box_compact/README.md) reduces enclosure height by 23.2%, retains one motor per pair of fingers, and adds a bolted arm carrier and palm receiver. It requires the shorter replacement-servo candidate; actual component fit and fitted use remain unverified.
 

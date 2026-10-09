@@ -1,0 +1,14 @@
+{
+  "scope": "Nominal box/receiver screws and twelve M3 motor shanks/nuts against printed parts and exported servo references. Motor head allowances are checked in checks.json. Not purchased-fastener fit, tool access or structural acceptance.",
+  "collisions_mm3": [],
+  "source_sha256": {
+    "verify_mounts.py": "42e633c4b2501277116fff1509ecdb7e75194b7410acb2c2e539bfbc8253f135",
+    "checks.json": "670a9552cf2be357259dbdcf52575dc910bda75a49a2728ff848b202d6e1943a",
+    "complete.step": "bd194b357d4d74f91f4e103bf2576164437faa2af2d30697f1741d8b8e2fcce8",
+    "box_base.step": "00dcf55046ce5fd1642ea22bd766d51b70e8d2906d3cfff88ec2d060fe68c378",
+    "box_lid.step": "d5d027f3a18580a35f3596989a24cfbc59913ae735a18beb57894791c8479ca2",
+    "rear_board_carrier.step": "afc1c57443c3d1820b8034e4f702b19fca8b4469f5ff45ed49125d1791e8559b",
+    "arm_adapter.step": "7395878c549e5e8ff027f999d7652e1266cfddf935c7630da1cc594534303d0e",
+    "palm_receiver.step": "054436a7ffc47477f7b28a4bd7a8eb3578fc5d9de0f4258b0dbd801a7fcc6d70"
+  }
+}

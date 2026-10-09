@@ -1,0 +1,73 @@
+{
+  "scope": "Geometric box reactions and illustrative friction sensitivity, not measured external routing, wearer torque or strength.",
+  "ports": [
+    {
+      "group": "index_middle",
+      "groove": 0,
+      "old_height_mm": 42.4,
+      "new_height_mm": 12.5,
+      "lowered_by_mm": 29.9
+    },
+    {
+      "group": "index_middle",
+      "groove": 1,
+      "old_height_mm": 48.5,
+      "new_height_mm": 6.399999999999999,
+      "lowered_by_mm": 42.1
+    },
+    {
+      "group": "thumb",
+      "groove": 0,
+      "old_height_mm": 42.4,
+      "new_height_mm": 12.5,
+      "lowered_by_mm": 29.9
+    },
+    {
+      "group": "ring_little",
+      "groove": 0,
+      "old_height_mm": 42.4,
+      "new_height_mm": 12.5,
+      "lowered_by_mm": 29.9
+    },
+    {
+      "group": "ring_little",
+      "groove": 1,
+      "old_height_mm": 48.5,
+      "new_height_mm": 6.399999999999999,
+      "lowered_by_mm": 42.1
+    }
+  ],
+  "unchanged_effective_radius_mm": 12.3,
+  "ideal_takeup_at_160deg_mm": 34.34807967924841,
+  "assumed_hand_tendon_N_each": 10,
+  "assumed_efficiency_for_mount_load": 0.6,
+  "old_internal_box_pitch_Nm": 3.736666666666667,
+  "new_internal_box_pitch_Nm": 0.8383333333333334,
+  "internal_pitch_reduction_percent": 77.56467439785905,
+  "friction_example_only": [
+    {
+      "assumed_mu": 0.05,
+      "assumed_old_contact_deg": 90,
+      "assumed_new_contact_deg": 45,
+      "driving_tension_reduction_percent": 3.8508840198592464
+    },
+    {
+      "assumed_mu": 0.1,
+      "assumed_old_contact_deg": 90,
+      "assumed_new_contact_deg": 45,
+      "driving_tension_reduction_percent": 7.553474962374418
+    },
+    {
+      "assumed_mu": 0.2,
+      "assumed_old_contact_deg": 90,
+      "assumed_new_contact_deg": 45,
+      "driving_tension_reduction_percent": 14.536400084676659
+    }
+  ],
+  "measured_pull_reduction": null,
+  "source_sha256": {
+    "cad/bottom_drive/comparison.py": "1a609ddc05e3203942dcef6bc9487bd2e931206fe06b54ee06feb0a7c31ca6e7",
+    "cad/bottom_drive/exports/checks.json": "670a9552cf2be357259dbdcf52575dc910bda75a49a2728ff848b202d6e1943a",
+    "cad/cuff_box_compact/exports/checks.json": "2b4378d62d048fc1b34ac16a4bf30728395f110747829a7a76a09534869c07bd"
+  }
+}

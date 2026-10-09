@@ -135,3 +135,15 @@ Seven print types (eight pieces) pass valid-single-solid and positive-volume wat
 The new open arm carrier connects to the box through four M4 positions and to the unchanged Phoenix hand through the palm receiver. Static component/cord, ear-envelope, adapter/receiver and reserved limb-volume checks pass. Thirteen sampled finger/thumb poses clear the new assembly. Six nominal mounting-screw shank/head allowances clear the exported print geometry. Source/output hashes and reimported assembly placements were checked; complete and open previews were inspected. See cad/cuff_box_compact/exports/checks.json and mount_checks.json.
 
 A reproducible 10 N per hand-tendon, 60% efficiency scenario gives 0.410 Nm required paired-motor torque and a 3.74 Nm internal box pitch reaction around its seating plane. This is not net wearer torque: tendon reactions also enter the palm. No structural, suspension, pressure, actual motor/horn fit, complete cord routing or continuous-motion acceptance is claimed. Wrist axle retention, the palm restraint/stop pads and individual residual-limb fitting require physical work. Firmware is unchanged.
+
+## Bottom-drive cartridge — 9 October 2026
+
+The three replacement-servo references are inverted inside the existing-size 94 × 96 × 54.9 mm housing. The arm adapter, palm receiver and original hand geometry are retained. Cord exits move down by 29.9–42.1 mm. A 4 mm structural cover, twelve motor-ear pillars/bolts and captive-nut pockets replace reliance on hanging retaining ties.
+
+Static part/component/internal-cord checks, drawing-positioned ear checks, adapter/receiver and reserved limb-space checks pass. Thirteen sampled hand poses clear the revised assembly. Seven print types remain eight pieces. Nominal box/receiver fasteners and twelve M3 motor-shank/nut sets clear exported printed parts and servo references.
+
+A separate swept-head check reserves a maximum 1.2 mm projection below the drums for 4.5 mm diameter heads at 8 mm radius. Its minimum nominal floor clearance is only 0.6 mm; actual horn/fastener dimensions, tolerances and deflection remain acceptance gates. This is not compatibility with arbitrary M2 cap heads or nuts.
+
+The unchanged 12.3 mm effective radius retains ideal pulling force and 34.35 mm take-up at an assumed 160°. The five parallel-cord, 10 N-per-hand-tendon, 60%-efficiency example reduces internal box pitch from 3.74 to 0.84 Nm. It is not net wearer torque or a measured friction reduction. No full external tendon routing, continuous cord motion, hanging-motor strength, service slack, thermal or fitted-use validation is claimed. Firmware remains unchanged; inverted winding direction and endpoints require unloaded calibration.
+
+Final bottom-drive STEP reimports and source/output hashes passed. Complete and underside-mechanism previews were visually inspected. The illustrated lower drums remain enclosed in the complete model.
