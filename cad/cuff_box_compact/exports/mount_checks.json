@@ -1,0 +1,13 @@
+{
+  "scope": "Nominal screw shanks and heads against exported printed parts only; not identified purchased screws, nuts, access sweeps or structural acceptance. Box screws are countersunk; receiver screws have cylindrical heads.",
+  "collisions_mm3": [],
+  "source_sha256": {
+    "verify_mounts.py": "f8dde7a09128832b0ada88fa9c88f755222cde02a0d51c117316264ac132e487",
+    "checks.json": "2b4378d62d048fc1b34ac16a4bf30728395f110747829a7a76a09534869c07bd",
+    "box_base.step": "5a8db3a1dd41a7b9fa58d1b6c2ff0374feb7fb57679b41d499cd0e738abcafce",
+    "box_lid.step": "274133fb331028633d7c39a6c4ed36a6b384872b5b6c4a3f88bae1ffb08bb6cd",
+    "rear_board_carrier.step": "b075103512c7c87b3d9f122e6ceac672801062da9cab71c1633633744967f202",
+    "arm_adapter.step": "9a9abd32aa487cb3da5fa5267eade94c6ab2b65e65da99adcd67bbde9d01ea35",
+    "palm_receiver.step": "db6e47b725f6be30db22e4797dcfc6be3098838b32916507367fa8b4f0fc10ac"
+  }
+}

@@ -4,7 +4,11 @@ A three-servo adaptation of the e-NABLE Phoenix Hand v3, using a DFRobot SEN0240
 
 One servo drives the thumb, one drives the index and middle fingers, and one drives the ring and little fingers. The controller commands closure on contraction and opening on relaxation; mechanical operation remains untested. The original palm and finger shapes are retained.
 
-## New alternative — removable box above the original cuff
+## Latest box variant — lower enclosure and rigid arm adapter
+
+The [lower box and arm adapter](cad/cuff_box_compact/README.md) reduces enclosure height by 23.2%, retains one motor per pair of fingers, and adds a bolted arm carrier and palm receiver. It requires the shorter replacement-servo candidate; actual component fit and fitted use remain unverified.
+
+## Earlier alternative — removable box above the original cuff
 
 The [separate cuff-box design](cad/cuff_box/README.md) keeps the Phoenix hand and original gauntlet geometry unchanged. Three servos and upright Nano/EMG boards fit inside a strap-on enclosure; the battery stays external. This is a separate, minimally invasive packaging option. Its cuff view is an envelope, and wrist stabilisation and wearer fit remain unresolved.
 

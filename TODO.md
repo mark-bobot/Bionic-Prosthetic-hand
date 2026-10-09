@@ -1,3 +1,10 @@
+## Lower box and rigid adapter follow-up
+
+- [ ] Measure replacement servo/horn/connector fit before printing.
+- [ ] Fit and test wrist axle, palm strap and broad stop pads on a bench.
+- [ ] Verify mounting fasteners, print strength and strap retention under measured tendon loads.
+- [ ] Establish individual residual-limb fit, liner, suspension and electrode contact before powered wear.
+
 # Remaining work
 
 ## Separate cuff-box option

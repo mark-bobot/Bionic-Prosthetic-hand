@@ -1,3 +1,5 @@
+The latest lower-box option has its own [print and hardware list](cad/cuff_box_compact/README.md#print-and-hardware-selection). It uses three FT5425BL replacement candidates, an external supply and a new rigid adapter; do not mix its mechanical or power parts with the older generic-servo version.
+
 **Separate cuff-box option:** use [its own print/hardware list](cad/cuff_box/README.md#hardware-and-electrical-notes). It has six new printed pieces, generic servo clearance assumptions and an external battery/fuse. Do not combine this enclosure with the integrated-forearm part list or assume its motor voltage is known.
 
 **Current 0.4.3 selection:** [forearm parts and hardware](cad/forearm/README.md#selected-parts-and-hardware), with the [replacement servo/power BOM](cad/slim/README.md#replacement-bom-and-power-changes). The shell includes internal motor, battery and board provisions; it replaces the separate box. Prices and the high-current supply components remain unselected.

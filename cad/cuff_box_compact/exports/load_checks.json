@@ -1,0 +1,20 @@
+{
+  "scope": "Quasistatic free body of the motor box: five parallel cords with equal tensions. Internal tendon forces also react at the palm; these moments are not net wearer/joint loads.",
+  "assumed_hand_tendon_force_each_N": 10,
+  "assumed_routing_efficiency": 0.6,
+  "pair_motor_torque_Nm": 0.41000000000000003,
+  "thumb_motor_torque_Nm": 0.20500000000000002,
+  "five_exit_tensions_sum_N": 83.33333333333334,
+  "new_box_pitch_reaction_about_mount_plane_Nm": 3.736666666666667,
+  "equivalent_56mm_mount_couple_N": 66.72619047619048,
+  "old_box_pitch_reaction_about_cuff_crown_Nm": 5.591666666666667,
+  "geometric_lever_reduction_percent": 33.17436661698957,
+  "takeup_at_assumed_160deg_mm": 34.34807967924841,
+  "enclosure_height_reduction_percent": 23.21678321678322,
+  "limitations": [
+    "Actual cord angles and loads unknown.",
+    "No material strength, bolt load sharing, fatigue, local skin pressure or suspension rating established.",
+    "The arm carrier also receives palm/tendon reactions; do not treat this internal box reaction as the overall wearer torque."
+  ],
+  "geometry_report_sha256": "2b4378d62d048fc1b34ac16a4bf30728395f110747829a7a76a09534869c07bd"
+}
